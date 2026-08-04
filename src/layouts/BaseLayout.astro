@@ -45,7 +45,7 @@ const alternate = alternatePath === null
 const defaultAlternate = defaultAlternatePath === null
   ? null
   : new URL(defaultAlternatePath ?? pathFor('es', page), Astro.site);
-const ogImage = new URL('/brand/og-default.png', Astro.site);
+const ogImage = new URL(`/brand/og-default-dark-${locale}-v2.png`, Astro.site);
 const studioRevealCss = `
   /* Tina replaces the island after each edit. Keep the new nodes visible;
      the public build never emits this editor-only rule. */
@@ -132,6 +132,10 @@ const organizationSchema = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={content.brand.logoAlt} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />

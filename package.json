@@ -17,6 +17,7 @@
     "preview": "astro preview",
     "publications:graph": "node scripts/build-publication-network.mjs",
     "publications:refresh": "node scripts/refresh-publications.mjs",
+    "brand:social": "node scripts/generate-social-cards.mjs",
     "media:import": "node scripts/media/import-media.mjs",
     "test": "npm run check && npm run test:content && npm run test:media && npm run test:studio && astro build && node scripts/validate-build.mjs",
     "test:content": "node --test tests/content/*.test.mjs",

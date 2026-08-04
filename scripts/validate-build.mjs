@@ -84,6 +84,13 @@ function tags(html, name) {
   return html.match(new RegExp(`<${name}\\b[^>]*>`, "gi")) ?? [];
 }
 
+function metaContents(html, keyAttribute, keyValue) {
+  return tags(html, "meta")
+    .map((tag) => parseAttributes(tag))
+    .filter((attributes) => (attributes.get(keyAttribute) ?? "").toLowerCase() === keyValue.toLowerCase())
+    .map((attributes) => attributes.get("content") ?? "");
+}
+
 function normalizeComparableUrl(raw, base) {
   try {
     const url = new URL(raw, base);
@@ -340,6 +347,32 @@ async function main() {
       if (actual !== expected) fail(scope, `hreflang=\"x-default\" must point to ${expected}`);
     }
 
+    const expectedSocialImage = canonicalUrl(site, `/brand/og-default-dark-${expectedLang}-v2.png`);
+    const requiredSocialMeta = [
+      ["property", "og:image", expectedSocialImage],
+      ["property", "og:image:secure_url", expectedSocialImage],
+      ["property", "og:image:type", "image/png"],
+      ["property", "og:image:width", "1200"],
+      ["property", "og:image:height", "630"],
+      ["name", "twitter:card", "summary_large_image"],
+      ["name", "twitter:image", expectedSocialImage],
+    ];
+    for (const [keyAttribute, keyValue, expectedContent] of requiredSocialMeta) {
+      const values = metaContents(html, keyAttribute, keyValue);
+      if (values.length !== 1 || values[0] !== expectedContent) {
+        fail(scope, `${keyValue} must be ${expectedContent}, found ${values.length === 1 ? values[0] : values.length}`);
+      }
+    }
+
+    for (const [keyAttribute, keyValue] of [["property", "og:image:alt"], ["name", "twitter:image:alt"]]) {
+      const values = metaContents(html, keyAttribute, keyValue);
+      if (values.length !== 1 || !values[0].trim()) fail(scope, `${keyValue} must contain localized alternative text`);
+    }
+
+    const socialImageFile = await findInternalTarget(buildDir, new URL(expectedSocialImage).pathname);
+    if (!socialImageFile) fail(scope, `missing social image ${expectedSocialImage}`);
+    else checkedFiles.add(socialImageFile);
+
     const { duplicates } = getDocumentIds(html);
     for (const id of duplicates) fail(scope, `duplicate id=\"${id}\"`);
   }
@@ -415,7 +448,7 @@ async function main() {
 
   console.log(
     `Build validation passed: ${requiredRoutes.length} localized routes, ${htmlFiles.length} HTML files, ` +
-      `${checkedFiles.size} internal targets, canonical/hreflang metadata, and placeholder checks.`,
+      `${checkedFiles.size} internal targets, canonical/hreflang and localized social metadata, and placeholder checks.`,
   );
 }
 
