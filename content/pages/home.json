@@ -1,0 +1,387 @@
+{
+  "_template": "home",
+  "pageKey": "home",
+  "schemaVersion": 1,
+  "state": "published",
+  "routesLocked": true,
+  "route": {
+    "es": "/",
+    "en": "/en/"
+  },
+  "seo": {
+    "es": {
+      "title": "Laboratorio de Neurodinámica Respiratoria | Díaz-Jara Lab",
+      "description": "Laboratorio de la Universidad Autónoma de Chile que investiga cómo los circuitos respiratorios y los astrocitos influyen en la actividad cerebral, la fisiología y la enfermedad."
+    },
+    "en": {
+      "title": "Respiratory Neurodynamics Laboratory | Díaz-Jara Lab",
+      "description": "A Universidad Autónoma de Chile laboratory studying how respiratory circuits and astrocytes influence brain activity, physiology, and disease."
+    }
+  },
+  "blocks": [
+    {
+      "id": "home-hero",
+      "type": "hero",
+      "enabled": true,
+      "locked": true,
+      "order": 1,
+      "variant": "immersive"
+    },
+    {
+      "id": "home-public-entry",
+      "type": "publicEntry",
+      "enabled": true,
+      "locked": false,
+      "order": 2,
+      "variant": "editorial"
+    },
+    {
+      "id": "home-research",
+      "type": "researchPreview",
+      "enabled": true,
+      "locked": false,
+      "order": 3,
+      "variant": "chapters"
+    },
+    {
+      "id": "home-image-register",
+      "type": "imageRegister",
+      "enabled": true,
+      "locked": false,
+      "order": 4,
+      "variant": "scientific-register"
+    },
+    {
+      "id": "home-techniques",
+      "type": "techniquesPreview",
+      "enabled": true,
+      "locked": false,
+      "order": 5,
+      "variant": "pipeline"
+    },
+    {
+      "id": "home-funding",
+      "type": "fundingPreview",
+      "enabled": true,
+      "locked": false,
+      "order": 6,
+      "variant": "register"
+    },
+    {
+      "id": "home-publications",
+      "type": "publicationsPreview",
+      "enabled": true,
+      "locked": false,
+      "order": 7,
+      "variant": "list"
+    },
+    {
+      "id": "home-team",
+      "type": "teamPreview",
+      "enabled": true,
+      "locked": false,
+      "order": 8,
+      "variant": "portrait-led"
+    },
+    {
+      "id": "home-join",
+      "type": "callToAction",
+      "enabled": true,
+      "locked": false,
+      "order": 9,
+      "variant": "quiet"
+    }
+  ],
+  "content": {
+    "es": {
+      "eyebrow": "Neurodinámica Respiratoria · Universidad Autónoma de Chile",
+      "title": "Control neural y glial de la respiración",
+      "introduction": "Investigamos cómo neuronas y astrocitos del tronco encefálico regulan la respiración y cómo esas señales se relacionan con la fisiología, la cognición y la enfermedad.",
+      "affiliation": "Instituto de Ciencias Biomédicas",
+      "location": "Huechuraba · Santiago de Chile",
+      "primaryAction": {
+        "label": "Líneas de investigación",
+        "page": "research"
+      },
+      "secondaryAction": {
+        "label": "Publicaciones",
+        "page": "publications"
+      },
+      "heroActionsLabel": "Accesos científicos",
+      "heroFacts": [
+        {
+          "label": "Foco",
+          "value": "Neuronas y astrocitos del tronco encefálico"
+        },
+        {
+          "label": "Modelos",
+          "value": "Hipoxia intermitente e isquemia cortical"
+        },
+        {
+          "label": "Mediciones",
+          "value": "Fisiología, electrofisiología y microscopía"
+        }
+      ],
+      "heroImageAlt": "Micrografía de inmunofluorescencia del laboratorio con señales verdes, rojas, cian y azules sobre fondo negro.",
+      "heroImageCaption": "DJL-IMG-H01 · Adquisición multicanal · Anatomía y escala en verificación",
+      "media": {
+        "hero": "content/media/science-rvlm-network.json",
+        "registerOne": "content/media/science-rvlm-astrocytes.json",
+        "registerTwo": "content/media/science-nts-gfap.json",
+        "registerThree": "content/media/science-cih-iba1.json",
+        "teamEsteban": "content/media/team-esteban-diaz-jara.json",
+        "teamSinay": "content/media/team-sinay-vicencio.json"
+      },
+      "publicEntry": {
+        "eyebrow": "Para comenzar",
+        "title": "Respirar parece automático. Para el cerebro, es una tarea coordinada segundo a segundo.",
+        "introduction": "Al dormir, caminar o hacer ejercicio, el cuerpo cambia sus necesidades. Circuitos del cerebro reciben esa información y ajustan el ritmo respiratorio sin que tengamos que pensarlo.",
+        "body": [
+          "Parte de ese trabajo ocurre en el tronco encefálico, donde neuronas y astrocitos participan en redes que generan y modulan la respiración. El Dr. Esteban Díaz Jara estudia cómo se coordinan esas células y cómo sus señales se relacionan con la actividad respiratoria, cardiovascular y cerebral.",
+          "El laboratorio observa qué cambia frente a la hipoxia intermitente o una lesión cerebral isquémica. Para seguir el proceso desde la célula hasta el organismo, combina fisiología, electrofisiología, microscopía y análisis de datos."
+        ],
+        "questionLabel": "La pregunta que conecta el trabajo",
+        "question": "¿Cómo cambia la coordinación entre células y circuitos respiratorios antes de que la alteración se vuelva visible en todo el organismo?",
+        "glossaryLabel": "Tres conceptos para leer el sitio",
+        "glossary": [
+          {
+            "term": "Tronco encefálico",
+            "definition": "Región que conecta el encéfalo con la médula y participa en funciones automáticas esenciales, entre ellas la respiración."
+          },
+          {
+            "term": "Astrocito",
+            "definition": "Célula glial que mantiene el entorno de las neuronas y también interviene en la comunicación de los circuitos."
+          },
+          {
+            "term": "Modelo preclínico",
+            "definition": "Sistema experimental que permite poner a prueba un mecanismo biológico; sus resultados no equivalen directamente a lo que ocurre en pacientes."
+          }
+        ],
+        "scopeLabel": "Alcance",
+        "scope": "Estos estudios buscan comprender mecanismos biológicos. No entregan diagnósticos ni consejo médico, y una hipótesis se presenta como tal hasta que la evidencia permita evaluarla.",
+        "linksLabel": "Continúa según lo que quieras conocer",
+        "links": [
+          {
+            "label": "Entender las preguntas",
+            "page": "research"
+          },
+          {
+            "label": "Ver cómo investigamos",
+            "page": "techniques"
+          },
+          {
+            "label": "Conocer al equipo",
+            "page": "team"
+          }
+        ]
+      },
+      "imageRegister": {
+        "label": "DJL / REGISTRO DE IMAGEN / 01–03",
+        "title": "Imágenes tratadas como evidencia, no como decoración",
+        "introduction": "Estas adquisiciones se presentan en sus canales originales. La anatomía, los marcadores y la escala solo se atribuyen cuando el registro experimental asociado permite confirmarlos.",
+        "statusLabel": "Estado del registro",
+        "status": "Descripción provisional",
+        "criterionLabel": "Criterio de publicación",
+        "criterion": "No inferir identidad celular, región anatómica o escala desde la imagen aislada.",
+        "figures": [
+          {
+            "code": "DJL-IMG-01",
+            "title": "Campo multicanal 01",
+            "note": "Inmunofluorescencia · canales originales",
+            "alt": "Campo experimental multicanal con señales verdes, magenta y azules sobre fondo negro."
+          },
+          {
+            "code": "DJL-IMG-02",
+            "title": "Campo multicanal 02",
+            "note": "Registro tisular · metadatos en verificación",
+            "alt": "Campo experimental con estructuras verdes y núcleos azules sobre fondo negro."
+          },
+          {
+            "code": "DJL-IMG-03",
+            "title": "Campo multicanal 03",
+            "note": "Registro tisular · escala en verificación",
+            "alt": "Campo experimental con estructuras magenta y núcleos azules sobre fondo negro."
+          }
+        ]
+      },
+      "researchEyebrow": "Investigación",
+      "researchTitle": "Tres preguntas que ordenan el trabajo actual",
+      "researchIntroduction": "Del mecanismo celular a la cognición, estudiamos cómo se genera la respiración, cómo sincroniza otras redes cerebrales y qué cambia en la enfermedad.",
+      "pipelineEyebrow": "Métodos",
+      "pipelineTitle": "De la perturbación al registro interpretable",
+      "pipelineIntroduction": "Combinamos modelos de enfermedad, registros fisiológicos en animales despiertos, microscopía, electrofisiología y análisis computacional para relacionar cambios celulares con la actividad cardiorrespiratoria y cerebral.",
+      "fundingEyebrow": "Financiamiento vigente",
+      "fundingTitle": "Proyectos ANID y FONDECYT",
+      "fundingIntroduction": "El programa cuenta con financiamiento para estudiar el control neural cardiorrespiratorio y la señalización astrocitaria.",
+      "publicationsEyebrow": "Registro científico",
+      "publicationsTitle": "Publicaciones recientes",
+      "publicationsIntroduction": "Una selección de artículos recientes de la trayectoria científica de Esteban Díaz-Jara. Cada registro enlaza su fuente editorial y el catálogo conserva la procedencia bibliográfica.",
+      "publicationsActionLabel": "Explorar todas las publicaciones",
+      "publicationLinkLabel": "Abrir publicación",
+      "openAccessLabel": "Acceso abierto",
+      "singleCitationLabel": "cita en Scholar",
+      "citationsLabel": "citas en Scholar",
+      "publicationAuthorsContinuation": "y cols.",
+      "teamEyebrow": "Equipo",
+      "teamTitle": "Personas y trabajo experimental",
+      "teamIntroduction": "Esteban Díaz Jara dirige el programa científico; Sinay C. Vicencio Orellana coordina la operación del laboratorio y participa en biología molecular, fisiología y microscopía.",
+      "teamPortraitAlt": {
+        "principalInvestigator": "Retrato de Esteban Díaz Jara",
+        "laboratoryCoordinator": "Retrato de Sinay C. Vicencio Orellana"
+      },
+      "teamActionLabel": "Ver perfiles y funciones",
+      "joinEyebrow": "Tesis · colaboración · formación",
+      "joinTitle": "Conversaciones científicas con un problema concreto",
+      "joinIntroduction": "Podemos conversar con estudiantes e investigadores que traigan una pregunta definida en neurofisiología respiratoria, señalización astrocitaria, microscopía o análisis computacional.",
+      "joinAction": {
+        "label": "Información de contacto",
+        "page": "contact"
+      }
+    },
+    "en": {
+      "eyebrow": "Respiratory Neurodynamics · Universidad Autónoma de Chile",
+      "title": "Neural and glial control of breathing",
+      "introduction": "We investigate how brainstem neurons and astrocytes regulate breathing, and how these signals relate to physiology, cognition, and disease.",
+      "affiliation": "Institute of Biomedical Sciences",
+      "location": "Huechuraba · Santiago, Chile",
+      "primaryAction": {
+        "label": "Research areas",
+        "page": "research"
+      },
+      "secondaryAction": {
+        "label": "Publications",
+        "page": "publications"
+      },
+      "heroActionsLabel": "Scientific links",
+      "heroFacts": [
+        {
+          "label": "Focus",
+          "value": "Brainstem neurons and astrocytes"
+        },
+        {
+          "label": "Models",
+          "value": "Intermittent hypoxia and cortical ischemia"
+        },
+        {
+          "label": "Measurements",
+          "value": "Physiology, electrophysiology, and microscopy"
+        }
+      ],
+      "heroImageAlt": "Immunofluorescence micrograph from the lab showing green, red, cyan, and blue signals against a black background.",
+      "heroImageCaption": "DJL-IMG-H01 · Multichannel acquisition · Anatomy and scale under verification",
+      "media": {
+        "hero": "content/media/science-rvlm-network.json",
+        "registerOne": "content/media/science-rvlm-astrocytes.json",
+        "registerTwo": "content/media/science-nts-gfap.json",
+        "registerThree": "content/media/science-cih-iba1.json",
+        "teamEsteban": "content/media/team-esteban-diaz-jara.json",
+        "teamSinay": "content/media/team-sinay-vicencio.json"
+      },
+      "publicEntry": {
+        "eyebrow": "A place to begin",
+        "title": "Breathing feels automatic. For the brain, it is a task coordinated second by second.",
+        "introduction": "As we sleep, walk, or exercise, the body’s needs change. Brain circuits receive that information and adjust the breathing rhythm without requiring conscious thought.",
+        "body": [
+          "Part of this work takes place in the brainstem, where neurons and astrocytes participate in networks that generate and modulate breathing. Dr. Esteban Díaz Jara studies how these cells coordinate and how their signals relate to respiratory, cardiovascular, and brain activity.",
+          "The laboratory examines what changes during intermittent hypoxia or after ischemic brain injury. To follow the process from the cell to the whole organism, it combines physiology, electrophysiology, microscopy, and data analysis."
+        ],
+        "questionLabel": "The question connecting the work",
+        "question": "How does coordination among cells and respiratory circuits change before disruption becomes visible across the whole organism?",
+        "glossaryLabel": "Three concepts for reading this site",
+        "glossary": [
+          {
+            "term": "Brainstem",
+            "definition": "The region linking the brain and spinal cord, involved in essential automatic functions, including breathing."
+          },
+          {
+            "term": "Astrocyte",
+            "definition": "A glial cell that maintains the neuronal environment and also participates in communication within neural circuits."
+          },
+          {
+            "term": "Preclinical model",
+            "definition": "An experimental system used to test a biological mechanism; its results do not translate directly to what occurs in patients."
+          }
+        ],
+        "scopeLabel": "Scope",
+        "scope": "These studies seek to understand biological mechanisms. They do not provide diagnoses or medical advice, and a hypothesis remains identified as such until evidence allows it to be evaluated.",
+        "linksLabel": "Continue according to what you want to explore",
+        "links": [
+          {
+            "label": "Understand the questions",
+            "page": "research"
+          },
+          {
+            "label": "See how we investigate",
+            "page": "techniques"
+          },
+          {
+            "label": "Meet the team",
+            "page": "team"
+          }
+        ]
+      },
+      "imageRegister": {
+        "label": "DJL / IMAGE REGISTER / 01–03",
+        "title": "Images treated as evidence, not decoration",
+        "introduction": "These acquisitions are shown in their original channels. Anatomy, markers, and scale are attributed only when the associated experimental record supports them.",
+        "statusLabel": "Record status",
+        "status": "Provisional description",
+        "criterionLabel": "Publication criterion",
+        "criterion": "Do not infer cell identity, anatomical region, or scale from an isolated image.",
+        "figures": [
+          {
+            "code": "DJL-IMG-01",
+            "title": "Multichannel field 01",
+            "note": "Immunofluorescence · original channels",
+            "alt": "Multichannel experimental field with green, magenta, and blue signals against a black background."
+          },
+          {
+            "code": "DJL-IMG-02",
+            "title": "Multichannel field 02",
+            "note": "Tissue record · metadata under verification",
+            "alt": "Experimental field with green structures and blue nuclei against a black background."
+          },
+          {
+            "code": "DJL-IMG-03",
+            "title": "Multichannel field 03",
+            "note": "Tissue record · scale under verification",
+            "alt": "Experimental field with magenta structures and blue nuclei against a black background."
+          }
+        ]
+      },
+      "researchEyebrow": "Research",
+      "researchTitle": "Three questions organizing our current work",
+      "researchIntroduction": "From cellular mechanisms to cognition, we study how breathing is generated, how it synchronizes other brain networks, and what changes in disease.",
+      "pipelineEyebrow": "Methods",
+      "pipelineTitle": "From perturbation to an interpretable record",
+      "pipelineIntroduction": "We combine disease models, physiological recordings in awake animals, microscopy, electrophysiology, and computational analysis to connect cellular changes with cardiorespiratory and brain activity.",
+      "fundingEyebrow": "Current funding",
+      "fundingTitle": "ANID and FONDECYT projects",
+      "fundingIntroduction": "The program receives funding to investigate neural cardiorespiratory control and astrocyte signaling.",
+      "publicationsEyebrow": "Scientific record",
+      "publicationsTitle": "Recent publications",
+      "publicationsIntroduction": "A selection of recent papers from Esteban Díaz-Jara’s scientific record. Each entry links to its editorial source, while the catalog preserves its bibliographic provenance.",
+      "publicationsActionLabel": "Explore all publications",
+      "publicationLinkLabel": "Open publication",
+      "openAccessLabel": "Open access",
+      "singleCitationLabel": "Scholar citation",
+      "citationsLabel": "Scholar citations",
+      "publicationAuthorsContinuation": "et al.",
+      "teamEyebrow": "Team",
+      "teamTitle": "People and experimental work",
+      "teamIntroduction": "Esteban Díaz Jara leads the scientific program; Sinay C. Vicencio Orellana coordinates laboratory operations and contributes to molecular biology, physiology, and microscopy.",
+      "teamPortraitAlt": {
+        "principalInvestigator": "Portrait of Esteban Díaz Jara",
+        "laboratoryCoordinator": "Portrait of Sinay C. Vicencio Orellana"
+      },
+      "teamActionLabel": "View profiles and roles",
+      "joinEyebrow": "Theses · collaboration · training",
+      "joinTitle": "Scientific conversations around a concrete problem",
+      "joinIntroduction": "We can talk with students and researchers who bring a defined question in respiratory neurophysiology, astrocyte signaling, microscopy, or computational analysis.",
+      "joinAction": {
+        "label": "Contact information",
+        "page": "contact"
+      }
+    }
+  }
+}

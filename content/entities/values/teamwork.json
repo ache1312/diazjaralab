@@ -1,0 +1,16 @@
+{
+  "id": "teamwork",
+  "order": 5,
+  "translations": {
+    "es": {
+      "number": "05",
+      "title": "Trabajo en equipo",
+      "description": "Protocolos, decisiones y dificultades se comparten para que el conocimiento no dependa de una sola persona."
+    },
+    "en": {
+      "number": "05",
+      "title": "Teamwork",
+      "description": "Protocols, decisions, and difficulties are shared so that knowledge does not depend on one person."
+    }
+  }
+}

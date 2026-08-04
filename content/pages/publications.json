@@ -1,0 +1,309 @@
+{
+  "_template": "publications",
+  "pageKey": "publications",
+  "schemaVersion": 1,
+  "state": "published",
+  "routesLocked": true,
+  "route": {
+    "es": "/publicaciones/",
+    "en": "/en/publications/"
+  },
+  "seo": {
+    "es": {
+      "title": "Publicaciones | Díaz-Jara Lab",
+      "description": "Catálogo de 46 registros académicos atribuidos a Esteban Díaz-Jara, incluidos 25 artículos y revisiones, contrastados con Scholar y OpenAlex."
+    },
+    "en": {
+      "title": "Publications | Díaz-Jara Lab",
+      "description": "Catalogue of 46 academic records attributed to Esteban Díaz-Jara, including 25 articles and reviews, cross-checked with Scholar and OpenAlex."
+    }
+  },
+  "blocks": [
+    {
+      "id": "publications-hero",
+      "type": "hero",
+      "enabled": true,
+      "locked": true,
+      "order": 1,
+      "variant": "editorial"
+    },
+    {
+      "id": "publications-network",
+      "type": "publicationNetwork",
+      "enabled": true,
+      "locked": true,
+      "order": 2,
+      "variant": "network"
+    },
+    {
+      "id": "publications-catalog",
+      "type": "publicationCatalog",
+      "enabled": true,
+      "locked": true,
+      "order": 3,
+      "variant": "list"
+    },
+    {
+      "id": "publications-provenance",
+      "type": "provenance",
+      "enabled": true,
+      "locked": false,
+      "order": 4,
+      "variant": "register"
+    }
+  ],
+  "content": {
+    "es": {
+      "eyebrow": "Publicaciones",
+      "title": "Trayectoria científica del investigador principal",
+      "introduction": "El catálogo reúne trabajos atribuidos a Esteban Díaz-Jara sobre neuroglía, quimiorrecepción y control cardiorrespiratorio. Cada registro conserva enlaces a sus fuentes académicas para facilitar su revisión.",
+      "profilesTitle": "Perfiles académicos",
+      "profiles": [
+        {
+          "id": "openalex",
+          "label": "OpenAlex",
+          "href": "https://openalex.org/A5103209783",
+          "state": "published"
+        },
+        {
+          "id": "google-scholar",
+          "label": "Google Scholar",
+          "href": "https://scholar.google.com/citations?user=aREuxgcAAAAJ&hl=es",
+          "state": "published"
+        }
+      ],
+      "status": "published",
+      "statusTitle": "Fuentes y criterios de integración",
+      "statusText": "Esta reconstrucción es putativa: integra coincidencias por DOI, título, coautoría y trayectoria temática. Las fichas se enlazan a sus fuentes para que puedan ser revisadas por el autor. Las diferencias entre año online-first y año de volumen se resolvieron con Crossref cuando estuvo disponible.",
+      "emptyListLabel": "No hay registros que coincidan con la búsqueda.",
+      "metrics": {
+        "ariaLabel": "Resumen bibliométrico",
+        "papers": "Artículos y revisión",
+        "works": "Obras canónicas",
+        "citations": "Citas en Scholar",
+        "hIndex": "Índice h",
+        "openAccess": "Con acceso abierto"
+      },
+      "network": {
+        "eyebrow": "Red bibliográfica",
+        "title": "Relaciones entre publicaciones y temas de investigación",
+        "introduction": "La red incluye {papers} artículos y revisiones visibles del catálogo, organizados en {topics} temas. Las aristas se estiman mediante referencias compartidas en OpenAlex, coautoría y proximidad temporal. Pase el cursor o use el teclado para previsualizar; seleccione un nodo para mantenerlo en foco.",
+        "papers": "publicaciones",
+        "themes": "temas",
+        "contentsLabel": "Contenido de la red",
+        "graphLabel": "Red interactiva de publicaciones y temas de investigación",
+        "focusLabel": "Filtrar por relaciones con publicaciones de referencia",
+        "complete": "Vista completa",
+        "export": "Descargar BibTeX",
+        "paperLegend": "Nodo turquesa: publicación",
+        "sizeLegend": "Tamaño: citas en Google Scholar",
+        "recentLegend": "Brillo: año de publicación",
+        "relationLegend": "Línea turquesa · grosor y opacidad: afinidad bibliográfica",
+        "selectedPaper": "Publicación en foco",
+        "selectedTheme": "Tema en foco",
+        "citations": "citas",
+        "topicHeading": "Temas asignados",
+        "connectedHeading": "Conexiones bibliográficas",
+        "connectionOrder": "Ordenadas por peso de la relación; ante empates, se priorizan citas y recencia. No es un ranking de calidad.",
+        "exploreConnection": "Enfocar en la red",
+        "noConnections": "No hay publicaciones relacionadas en esta vista.",
+        "source": "Abrir fuente",
+        "catalogue": "Ver registro en el catálogo",
+        "inferredTheme": "Tema inferido a partir del corpus de publicaciones",
+        "themeNote": "Clasificación editorial para facilitar la exploración; no constituye una categoría bibliométrica.",
+        "method": "Modelo exploratorio. Las relaciones no constituyen una evaluación bibliométrica y pueden revisarse desde las fuentes enlazadas.",
+        "nodePaper": "Publicación",
+        "nodeTheme": "Tema",
+        "legendLabel": "Leyenda de la red"
+      },
+      "catalogue": {
+        "eyebrow": "Catálogo completo",
+        "title": "Producción académica de Esteban Díaz-Jara",
+        "introduction": "El listado cruza el perfil público de Google Scholar con cinco identidades de autor en OpenAlex, elimina duplicados editoriales y conserva abstracts, correcciones, capítulos y tesis como registros independientes.",
+        "filterLabel": "Filtrar publicaciones",
+        "filterArticles": "Artículos",
+        "filterAbstracts": "Abstracts",
+        "filterOther": "Otros",
+        "filterAll": "Todo",
+        "searchLabel": "Buscar por título, autor o revista",
+        "searchPlaceholder": "Ej. astrocytes, heart failure…",
+        "sortLabel": "Ordenar",
+        "sortCurated": "Selección del laboratorio",
+        "sortNewest": "Más recientes",
+        "sortCited": "Más citadas",
+        "sortOldest": "Más antiguas",
+        "topicLabel": "Tema de investigación",
+        "topicAll": "Todos los temas",
+        "featured": "Selección del laboratorio",
+        "shown": "registros visibles",
+        "citedBy": "citas",
+        "scholar": "Scholar",
+        "openAlex": "OpenAlex",
+        "doi": "DOI",
+        "openAccess": "Texto abierto",
+        "sourceCrossed": "Scholar + OpenAlex",
+        "sourceScholar": "Solo Scholar",
+        "downloadBib": "Descargar BibTeX",
+        "scholarOnlyNote": "Presentación oral OS 14-05, IUPS 2025; no se localizó DOI ni registro en OpenAlex.",
+        "backToFilters": "Volver a filtros"
+      },
+      "typeLabels": {
+        "journalArticle": "Artículo",
+        "review": "Revisión",
+        "conferenceAbstract": "Abstract de congreso",
+        "conferenceProceedingsChapter": "Capítulo / proceedings",
+        "correction": "Corrección",
+        "doctoralThesis": "Tesis doctoral"
+      },
+      "provenance": {
+        "eyebrow": "Proveniencia de datos",
+        "updatedLabel": "Actualizado",
+        "sourcesLabel": "Fuentes consultadas",
+        "sources": [
+          {
+            "label": "Google Scholar",
+            "href": "https://scholar.google.com/citations?user=aREuxgcAAAAJ&hl=es"
+          },
+          {
+            "label": "OpenAlex",
+            "href": "https://openalex.org/A5103209783"
+          },
+          {
+            "label": "Crossref",
+            "href": "https://www.crossref.org/"
+          },
+          {
+            "label": "IUPS 2025",
+            "href": "https://www.iups.org/wp-content/uploads/2025/08/programme-2025-08-22.pdf"
+          }
+        ]
+      }
+    },
+    "en": {
+      "eyebrow": "Publications",
+      "title": "Scientific record of the principal investigator",
+      "introduction": "The catalog brings together work attributed to Esteban Díaz-Jara on neuroglia, chemoreception, and cardiorespiratory control. Each record preserves links to its academic sources for review.",
+      "profilesTitle": "Academic profiles",
+      "profiles": [
+        {
+          "id": "openalex",
+          "label": "OpenAlex",
+          "href": "https://openalex.org/A5103209783",
+          "state": "published"
+        },
+        {
+          "id": "google-scholar",
+          "label": "Google Scholar",
+          "href": "https://scholar.google.com/citations?user=aREuxgcAAAAJ&hl=en",
+          "state": "published"
+        }
+      ],
+      "status": "published",
+      "statusTitle": "Sources and integration criteria",
+      "statusText": "This reconstruction is putative: it combines matches by DOI, title, co-authorship, and research trajectory. Every record links back to its sources so the author can review it. Differences between online-first and volume year were resolved with Crossref when available.",
+      "emptyListLabel": "No records match this search.",
+      "metrics": {
+        "ariaLabel": "Bibliometric summary",
+        "papers": "Articles and review",
+        "works": "Canonical works",
+        "citations": "Scholar citations",
+        "hIndex": "h-index",
+        "openAccess": "Open access"
+      },
+      "network": {
+        "eyebrow": "Bibliographic network",
+        "title": "Relationships among publications and research topics",
+        "introduction": "The network includes {papers} visible articles and reviews from the catalogue, organized into {topics} topics. Edges are estimated from shared OpenAlex references, co-authorship, and temporal proximity. Hover or use the keyboard to preview; select a node to keep it in focus.",
+        "papers": "publications",
+        "themes": "topics",
+        "contentsLabel": "Network contents",
+        "graphLabel": "Interactive network of publications and research topics",
+        "focusLabel": "Filter by relationships with reference publications",
+        "complete": "Complete view",
+        "export": "Download BibTeX",
+        "paperLegend": "Teal node: publication",
+        "sizeLegend": "Size: Google Scholar citations",
+        "recentLegend": "Brightness: publication year",
+        "relationLegend": "Teal line · weight and opacity: bibliographic affinity",
+        "selectedPaper": "Publication in focus",
+        "selectedTheme": "Topic in focus",
+        "citations": "citations",
+        "topicHeading": "Assigned topics",
+        "connectedHeading": "Bibliographic connections",
+        "connectionOrder": "Ordered by connection weight; citations and recency break ties. This is not a quality ranking.",
+        "exploreConnection": "Focus in the network",
+        "noConnections": "No related publications are available in this view.",
+        "source": "Open source record",
+        "catalogue": "View catalogue record",
+        "inferredTheme": "Topic inferred from the publication corpus",
+        "themeNote": "An editorial classification for exploration; it is not a bibliometric category.",
+        "method": "Exploratory model. Relationships are not a bibliometric assessment and can be checked against the linked sources.",
+        "nodePaper": "Publication",
+        "nodeTheme": "Topic",
+        "legendLabel": "Network legend"
+      },
+      "catalogue": {
+        "eyebrow": "Complete catalogue",
+        "title": "Academic output of Esteban Díaz-Jara",
+        "introduction": "This catalogue cross-references the public Google Scholar profile with five OpenAlex author identities, removes editorial duplicates, and retains abstracts, corrections, chapters, and the thesis as separate records.",
+        "filterLabel": "Filter publications",
+        "filterArticles": "Articles",
+        "filterAbstracts": "Abstracts",
+        "filterOther": "Other",
+        "filterAll": "All",
+        "searchLabel": "Search by title, author, or journal",
+        "searchPlaceholder": "E.g. astrocytes, heart failure…",
+        "sortLabel": "Sort",
+        "sortCurated": "Lab selection",
+        "sortNewest": "Newest first",
+        "sortCited": "Most cited",
+        "sortOldest": "Oldest first",
+        "topicLabel": "Research topic",
+        "topicAll": "All topics",
+        "featured": "Lab selection",
+        "shown": "visible records",
+        "citedBy": "citations",
+        "scholar": "Scholar",
+        "openAlex": "OpenAlex",
+        "doi": "DOI",
+        "openAccess": "Open text",
+        "sourceCrossed": "Scholar + OpenAlex",
+        "sourceScholar": "Scholar only",
+        "downloadBib": "Download BibTeX",
+        "scholarOnlyNote": "Oral presentation OS 14-05, IUPS 2025; no DOI or OpenAlex record was located.",
+        "backToFilters": "Back to filters"
+      },
+      "typeLabels": {
+        "journalArticle": "Article",
+        "review": "Review",
+        "conferenceAbstract": "Conference abstract",
+        "conferenceProceedingsChapter": "Chapter / proceedings",
+        "correction": "Correction",
+        "doctoralThesis": "Doctoral thesis"
+      },
+      "provenance": {
+        "eyebrow": "Data provenance",
+        "updatedLabel": "Updated",
+        "sourcesLabel": "Sources consulted",
+        "sources": [
+          {
+            "label": "Google Scholar",
+            "href": "https://scholar.google.com/citations?user=aREuxgcAAAAJ&hl=en"
+          },
+          {
+            "label": "OpenAlex",
+            "href": "https://openalex.org/A5103209783"
+          },
+          {
+            "label": "Crossref",
+            "href": "https://www.crossref.org/"
+          },
+          {
+            "label": "IUPS 2025",
+            "href": "https://www.iups.org/wp-content/uploads/2025/08/programme-2025-08-22.pdf"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "principal-investigator",
+  "order": 1,
+  "translations": {
+    "es": {
+      "label": "Investigador principal"
+    },
+    "en": {
+      "label": "Principal investigator"
+    }
+  }
+}

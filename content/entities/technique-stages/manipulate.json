@@ -1,0 +1,53 @@
+{
+  "id": "manipulate",
+  "order": 1,
+  "accent": "amber",
+  "translations": {
+    "es": {
+      "number": "01",
+      "verb": "Manipular",
+      "title": "Modelos y causalidad",
+      "question": "¿Qué cambia cuando alteramos una condición fisiológica o una población celular definida?",
+      "description": "Generamos condiciones experimentales controladas y modulamos circuitos específicos para poner a prueba relaciones causales entre astrocitos, redes respiratorias y enfermedad.",
+      "items": [
+        {
+          "label": "Hipoxia intermitente crónica",
+          "kind": "Modelo experimental"
+        },
+        {
+          "label": "Accidente cerebrovascular isquémico cortical",
+          "kind": "Modelo experimental"
+        },
+        {
+          "label": "Quimiogenética (DREADDs)",
+          "kind": "Perturbación de circuitos"
+        }
+      ],
+      "scope": "Modelos preclínicos de hipoxia intermitente crónica y accidente cerebrovascular isquémico cortical.",
+      "output": "Perturbaciones definidas para evaluar relaciones causales en circuitos y poblaciones celulares."
+    },
+    "en": {
+      "number": "01",
+      "verb": "Manipulate",
+      "title": "Models and causality",
+      "question": "What changes when we alter a physiological condition or a defined cell population?",
+      "description": "We generate controlled experimental conditions and modulate specific circuits to test causal relationships among astrocytes, respiratory networks, and disease.",
+      "items": [
+        {
+          "label": "Chronic intermittent hypoxia",
+          "kind": "Experimental model"
+        },
+        {
+          "label": "Cortical ischemic stroke",
+          "kind": "Experimental model"
+        },
+        {
+          "label": "Chemogenetics (DREADDs)",
+          "kind": "Circuit perturbation"
+        }
+      ],
+      "scope": "Preclinical models of chronic intermittent hypoxia and cortical ischemic stroke.",
+      "output": "Defined perturbations for testing causal relationships in circuits and cell populations."
+    }
+  }
+}

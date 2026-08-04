@@ -1,0 +1,67 @@
+{
+  "_template": "team",
+  "pageKey": "team",
+  "schemaVersion": 1,
+  "state": "published",
+  "routesLocked": true,
+  "route": {
+    "es": "/equipo/",
+    "en": "/en/team/"
+  },
+  "seo": {
+    "es": {
+      "title": "Equipo | Díaz-Jara Lab",
+      "description": "Integrantes del Laboratorio de Neurodinámica Respiratoria de la Universidad Autónoma de Chile."
+    },
+    "en": {
+      "title": "Team | Díaz-Jara Lab",
+      "description": "Members of the Respiratory Neurodynamics Laboratory at Universidad Autónoma de Chile."
+    }
+  },
+  "blocks": [
+    {
+      "id": "team-hero",
+      "type": "hero",
+      "enabled": true,
+      "locked": true,
+      "order": 1,
+      "variant": "editorial"
+    },
+    {
+      "id": "team-members",
+      "type": "teamDirectory",
+      "enabled": true,
+      "locked": true,
+      "order": 2,
+      "variant": "grouped"
+    }
+  ],
+  "content": {
+    "es": {
+      "eyebrow": "Equipo",
+      "title": "Equipo de investigación",
+      "introduction": "El equipo reúne investigadores y estudiantes con formación en fisiología, neurobiología, microscopía y análisis de datos.",
+      "asideLabel": "Nuestra forma de trabajar",
+      "asideText": "Autonomía, colaboración, curiosidad y rigor.",
+      "scientificResponsibilityLabel": "Responsabilidad científica",
+      "profileLinksLabel": "Perfiles académicos de Esteban Díaz Jara",
+      "media": {
+        "estebanDiazJara": "content/media/team-esteban-diaz-jara.json",
+        "sinayVicencio": "content/media/team-sinay-vicencio.json"
+      }
+    },
+    "en": {
+      "eyebrow": "Team",
+      "title": "Research team",
+      "introduction": "The team includes researchers and students trained in physiology, neurobiology, microscopy, and data analysis.",
+      "asideLabel": "How we work",
+      "asideText": "Autonomy, collaboration, curiosity, and rigor.",
+      "scientificResponsibilityLabel": "Scientific responsibility",
+      "profileLinksLabel": "Esteban Díaz Jara academic profiles",
+      "media": {
+        "estebanDiazJara": "content/media/team-esteban-diaz-jara.json",
+        "sinayVicencio": "content/media/team-sinay-vicencio.json"
+      }
+    }
+  }
+}

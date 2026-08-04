@@ -1,0 +1,81 @@
+{
+  "_template": "philosophy",
+  "pageKey": "philosophy",
+  "schemaVersion": 1,
+  "state": "published",
+  "routesLocked": true,
+  "route": {
+    "es": "/filosofia/",
+    "en": "/en/philosophy/"
+  },
+  "seo": {
+    "es": {
+      "title": "Cómo trabajamos | Díaz-Jara Lab",
+      "description": "Honestidad, curiosidad, autocrítica, responsabilidad y trabajo en equipo orientan nuestra forma de hacer ciencia."
+    },
+    "en": {
+      "title": "How we work | Díaz-Jara Lab",
+      "description": "Honesty, curiosity, critical self-reflection, responsibility, and teamwork guide the way we do science."
+    }
+  },
+  "blocks": [
+    {
+      "id": "philosophy-hero",
+      "type": "hero",
+      "enabled": true,
+      "locked": true,
+      "order": 1,
+      "variant": "editorial"
+    },
+    {
+      "id": "philosophy-statement",
+      "type": "statement",
+      "enabled": true,
+      "locked": true,
+      "order": 2,
+      "variant": "prose"
+    },
+    {
+      "id": "philosophy-values",
+      "type": "values",
+      "enabled": true,
+      "locked": true,
+      "order": 3,
+      "variant": "numbered"
+    }
+  ],
+  "content": {
+    "es": {
+      "eyebrow": "Prácticas del laboratorio",
+      "title": "Cómo registramos, revisamos y aprendemos",
+      "introduction": "Criterios operativos para registrar datos, revisar resultados, formar investigadores y coordinar el trabajo experimental.",
+      "asideLabel": "Alcance",
+      "asideText": "Datos · formación · colaboración",
+      "generalCriterionLabel": "Criterio general",
+      "statement": "La honestidad con los datos, con el propio trabajo y con el equipo es un principio central del laboratorio. Mantenemos estándares altos y reconocemos que la formación científica requiere tiempo, supervisión y autonomía progresiva. La curiosidad y la autocrítica orientan el diseño experimental y la interpretación de resultados. Cada integrante desarrolla su proyecto con responsabilidad individual y colaboración cotidiana; los errores se analizan para corregir procedimientos y aprender.",
+      "missionLabel": "Misión",
+      "mission": "Investigar cómo los circuitos respiratorios del tronco encefálico interactúan con las redes cerebrales para comprender la fisiología, el comportamiento y la enfermedad, formando en el proceso investigadores honestos, autónomos, autocríticos y capaces de trabajar en equipo.",
+      "visionLabel": "Visión",
+      "vision": "Consolidar en Latinoamérica un programa de investigación en neurodinámica respiratoria que produzca conocimiento reproducible y forme investigadores íntegros, autónomos y rigurosos.",
+      "valuesEyebrow": "Cómo trabajamos",
+      "valuesTitle": "Criterios observables de trabajo",
+      "valuesIntroduction": "Cada principio se expresa como una conducta observable en el trabajo cotidiano."
+    },
+    "en": {
+      "eyebrow": "Laboratory practices",
+      "title": "How we record, review, and learn",
+      "introduction": "Operational criteria for recording data, reviewing results, training researchers, and coordinating experimental work.",
+      "asideLabel": "Scope",
+      "asideText": "Data · training · collaboration",
+      "generalCriterionLabel": "General criterion",
+      "statement": "Honesty with data, one’s own work, and the team is a central principle of the laboratory. We maintain high standards and recognize that scientific training requires time, supervision, and progressive autonomy. Curiosity and critical self-reflection guide experimental design and the interpretation of results. Each member develops an individual project with personal responsibility and day-to-day collaboration; mistakes are analyzed to correct procedures and support learning.",
+      "missionLabel": "Mission",
+      "mission": "To investigate how brainstem respiratory circuits interact with brain networks in order to understand physiology, behavior, and disease, while training researchers who are honest, independent, self-critical, and able to work as part of a team.",
+      "visionLabel": "Vision",
+      "vision": "To consolidate a respiratory neurodynamics research program in Latin America that produces reproducible knowledge and trains researchers who are principled, independent, and rigorous.",
+      "valuesEyebrow": "How we work",
+      "valuesTitle": "Observable working criteria",
+      "valuesIntroduction": "Each principle is expressed as observable conduct in day-to-day work."
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "id": "site",
+  "schemaVersion": 1,
+  "defaultLocale": "es",
+  "languages": {
+    "es": {
+      "htmlLang": "es-CL",
+      "languageName": "Español",
+      "alternateLanguageLabel": "English"
+    },
+    "en": {
+      "htmlLang": "en",
+      "languageName": "English",
+      "alternateLanguageLabel": "Español"
+    }
+  },
+  "routes": {
+    "home": {
+      "es": "/",
+      "en": "/en/",
+      "locked": true
+    },
+    "research": {
+      "es": "/investigacion/",
+      "en": "/en/research/",
+      "locked": true
+    },
+    "techniques": {
+      "es": "/tecnicas/",
+      "en": "/en/techniques/",
+      "locked": true
+    },
+    "team": {
+      "es": "/equipo/",
+      "en": "/en/team/",
+      "locked": true
+    },
+    "publications": {
+      "es": "/publicaciones/",
+      "en": "/en/publications/",
+      "locked": true
+    },
+    "philosophy": {
+      "es": "/filosofia/",
+      "en": "/en/philosophy/",
+      "locked": true
+    },
+    "outreach": {
+      "es": "/divulgacion/",
+      "en": "/en/outreach/",
+      "locked": true
+    },
+    "contact": {
+      "es": "/contacto/",
+      "en": "/en/contact/",
+      "locked": true
+    }
+  },
+  "brand": {
+    "name": {
+      "es": "Díaz-Jara Lab",
+      "en": "Díaz-Jara Lab"
+    },
+    "scientificName": {
+      "es": "Laboratorio de Neurodinámica Respiratoria",
+      "en": "Respiratory Neurodynamics Laboratory"
+    },
+    "shortDescription": {
+      "es": "Respiración, circuitos cerebrales y enfermedad.",
+      "en": "Breathing, brain circuits, and disease."
+    },
+    "logoAlt": {
+      "es": "Díaz-Jara Lab, Laboratorio de Neurodinámica Respiratoria",
+      "en": "Díaz-Jara Lab, Respiratory Neurodynamics Laboratory"
+    },
+    "primaryLogo": "/brand/lab-mark-original-optimized.webp",
+    "horizontalLogo": "/brand/logo-horizontal.svg"
+  },
+  "navigation": {
+    "ariaLabel": {
+      "es": "Navegación principal",
+      "en": "Main navigation"
+    },
+    "openMenuLabel": {
+      "es": "Abrir menú",
+      "en": "Open menu"
+    },
+    "closeMenuLabel": {
+      "es": "Cerrar menú",
+      "en": "Close menu"
+    },
+    "laboratoryMenuLabel": {
+      "es": "Laboratorio",
+      "en": "Laboratory"
+    },
+    "languageSwitcherLabel": {
+      "es": "Cambiar idioma",
+      "en": "Change language"
+    },
+    "items": [
+      {
+        "id": "nav-research",
+        "page": "research",
+        "menu": "primary",
+        "label": {
+          "es": "Investigación",
+          "en": "Research"
+        }
+      },
+      {
+        "id": "nav-techniques",
+        "page": "techniques",
+        "menu": "primary",
+        "label": {
+          "es": "Técnicas",
+          "en": "Techniques"
+        }
+      },
+      {
+        "id": "nav-team",
+        "page": "team",
+        "menu": "primary",
+        "label": {
+          "es": "Equipo",
+          "en": "Team"
+        }
+      },
+      {
+        "id": "nav-publications",
+        "page": "publications",
+        "menu": "primary",
+        "label": {
+          "es": "Publicaciones",
+          "en": "Publications"
+        }
+      },
+      {
+        "id": "nav-philosophy",
+        "page": "philosophy",
+        "menu": "laboratory",
+        "label": {
+          "es": "Cómo trabajamos",
+          "en": "Lab practices"
+        }
+      },
+      {
+        "id": "nav-outreach",
+        "page": "outreach",
+        "menu": "laboratory",
+        "label": {
+          "es": "Divulgación",
+          "en": "Outreach"
+        }
+      },
+      {
+        "id": "nav-contact",
+        "page": "contact",
+        "menu": "primary",
+        "label": {
+          "es": "Contacto",
+          "en": "Contact"
+        }
+      }
+    ]
+  },
+  "common": {
+    "skipToContent": {
+      "es": "Saltar al contenido",
+      "en": "Skip to content"
+    },
+    "readMore": {
+      "es": "Leer más",
+      "en": "Read more"
+    },
+    "learnMore": {
+      "es": "Más información",
+      "en": "More information"
+    },
+    "backToHome": {
+      "es": "Volver al inicio",
+      "en": "Back to home"
+    },
+    "stateLabels": {
+      "published": {
+        "es": "Publicado",
+        "en": "Published"
+      },
+      "forthcoming": {
+        "es": "En preparación",
+        "en": "In preparation"
+      }
+    }
+  },
+  "footer": {
+    "description": {
+      "es": "Estudiamos la relación entre circuitos respiratorios, actividad cerebral, fisiología y enfermedad.",
+      "en": "We study relationships among respiratory circuits, brain activity, physiology, and disease."
+    },
+    "navigationLabel": {
+      "es": "Navegación",
+      "en": "Navigation"
+    },
+    "contactLabel": {
+      "es": "Contacto",
+      "en": "Contact"
+    },
+    "location": {
+      "es": "Santiago · Chile",
+      "en": "Santiago · Chile"
+    },
+    "affiliation": {
+      "es": "Instituto de Ciencias Biomédicas · Universidad Autónoma de Chile",
+      "en": "Institute of Biomedical Sciences · Universidad Autónoma de Chile"
+    },
+    "copyright": {
+      "es": "© 2026 Díaz-Jara Lab. Todos los derechos reservados.",
+      "en": "© 2026 Díaz-Jara Lab. All rights reserved."
+    }
+  }
+}

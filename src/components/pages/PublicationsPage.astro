@@ -1,0 +1,379 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BodyOnlyLayout from '@/layouts/BodyOnlyLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import PublicationNetwork from '@/components/publications/PublicationNetwork.astro';
+import { getContent, type Locale, type SiteContent } from '@/content-data';
+import { blockAttributes } from '@/lib/cms/layout';
+import {
+  isPrimaryPublication,
+  localizedPublicationNote,
+  localizedPublicationTopicsFor,
+  preferredPublicationUrl,
+  publicationCatalog,
+  publicationFeaturedOrderByIdentity,
+  publicationGroup,
+  publicationId,
+  publicationTopics,
+  sortPublicationsByCuration,
+  type PublicationDisplayType,
+} from '@/lib/publications';
+
+interface Props { locale: Locale; content?: SiteContent; embedded?: boolean }
+const { locale, content: suppliedContent, embedded = false } = Astro.props;
+const content = suppliedContent ?? getContent(locale);
+const Layout = embedded ? BodyOnlyLayout : BaseLayout;
+const copy = content.publications;
+const isEs = locale === 'es';
+const heroBlock = blockAttributes(content, 'publications', 'hero', 1);
+const networkBlock = blockAttributes(content, 'publications', 'publicationNetwork', 2);
+const catalogueBlock = blockAttributes(content, 'publications', 'publicationCatalog', 3);
+const provenanceBlock = blockAttributes(content, 'publications', 'provenance', 4);
+const metrics = copy.metrics;
+const catalogue = copy.catalogue;
+const provenance = copy.provenance;
+const academicProfiles = copy.profiles.filter((profile) => profile.state === 'published' && profile.href);
+
+const typeLabels: Record<PublicationDisplayType, string> = {
+  'journal-article': copy.typeLabels.journalArticle,
+  review: copy.typeLabels.review,
+  'conference-abstract': copy.typeLabels.conferenceAbstract,
+  'conference-proceedings-chapter': copy.typeLabels.conferenceProceedingsChapter,
+  correction: copy.typeLabels.correction,
+  'doctoral-thesis': copy.typeLabels.doctoralThesis,
+};
+
+const works = sortPublicationsByCuration(publicationCatalog.works);
+const entries = works.map((work, index) => ({
+  work,
+  id: publicationId(work, index),
+  group: publicationGroup(work),
+  featuredOrder: publicationFeaturedOrderByIdentity({ publicationId: work.openalex_id, doi: work.doi }),
+  topics: localizedPublicationTopicsFor(work, locale),
+  editorialNote: localizedPublicationNote(work, locale),
+}));
+const primaryCount = works.filter(isPrimaryPublication).length;
+const openAccessCount = works.filter((work) => Boolean(work.open_access_url)).length;
+const abstractCount = publicationCatalog.counts.by_display_type['conference-abstract'];
+const otherCount = works.length - primaryCount - abstractCount;
+const updatedDate = new Intl.DateTimeFormat(isEs ? 'es-CL' : 'en-GB', { dateStyle: 'long', timeZone: 'UTC' })
+  .format(new Date(`${publicationCatalog.generated_at}T12:00:00Z`));
+
+const publicationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: content.seo.publications.title,
+  description: content.seo.publications.description,
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: primaryCount,
+    itemListElement: works.filter(isPrimaryPublication).map((work, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'ScholarlyArticle',
+        headline: work.title,
+        datePublished: work.publication_date,
+        author: work.authors.map((name) => ({ '@type': 'Person', name })),
+        isPartOf: { '@type': 'Periodical', name: work.journal_or_source },
+        identifier: work.doi ? `https://doi.org/${work.doi}` : work.openalex_id,
+        url: preferredPublicationUrl(work),
+      },
+    })),
+  },
+};
+---
+
+<Layout locale={locale} page="publications" title={content.seo.publications.title} description={content.seo.publications.description} structuredData={publicationSchema} content={content}>
+  <PageHero
+    index="04"
+    eyebrow={copy.eyebrow}
+    title={copy.title}
+    introduction={copy.introduction}
+    source={copy}
+    asideLabel={copy.profilesTitle}
+    asideText={`${publicationCatalog.identity.scholar_total_citations} ${metrics.citations.toLocaleLowerCase(locale)} · h=${publicationCatalog.identity.scholar_h_index} · ${publicationCatalog.counts.canonical_works} ${metrics.works.toLocaleLowerCase(locale)}`}
+    block={heroBlock}
+  />
+
+  <div {...networkBlock}>
+    <section class="publication-overview paper-band">
+      <dl class="shell publication-stats" aria-label={metrics.ariaLabel}>
+        <div><dt>{metrics.works}</dt><dd><strong>{publicationCatalog.counts.canonical_works}</strong></dd></div>
+        <div><dt>{metrics.papers}</dt><dd><strong>{primaryCount}</strong></dd></div>
+        <div><dt>{metrics.citations}</dt><dd><strong>{publicationCatalog.identity.scholar_total_citations}</strong></dd></div>
+        <div><dt>{metrics.hIndex}</dt><dd><strong>{publicationCatalog.identity.scholar_h_index}</strong></dd></div>
+        <div><dt>{metrics.openAccess}</dt><dd><strong>{openAccessCount}</strong></dd></div>
+      </dl>
+    </section>
+    <PublicationNetwork {locale} copy={copy.network} />
+  </div>
+
+  <section class="content-section publication-catalogue" data-publication-explorer data-visible-label={catalogue.shown} {...catalogueBlock}>
+    <div class="shell">
+      <div class="section-heading publication-heading">
+        <div data-reveal><span class="eyebrow">{catalogue.eyebrow}</span><h2 class="section-title">{catalogue.title}</h2></div>
+        <div data-reveal data-reveal-delay="1">
+          <p class="lead">{catalogue.introduction}</p>
+          <div class="publication-profile-links">
+            {academicProfiles.map((profile) => (
+              <a href={profile.href!} target="_blank" rel="noreferrer">{profile.label}<span aria-hidden="true">↗</span></a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="publication-toolbar" id="publication-toolbar" data-reveal>
+        <div class="publication-filters" role="group" aria-label={catalogue.filterLabel}>
+          <button type="button" class="publication-filter" data-publication-filter="articles" aria-pressed="false">{catalogue.filterArticles}<span>{primaryCount}</span></button>
+          <button type="button" class="publication-filter" data-publication-filter="abstracts" aria-pressed="false">{catalogue.filterAbstracts}<span>{abstractCount}</span></button>
+          <button type="button" class="publication-filter" data-publication-filter="other" aria-pressed="false">{catalogue.filterOther}<span>{otherCount}</span></button>
+          <button type="button" class="publication-filter is-active" data-publication-filter="all" aria-pressed="true">{catalogue.filterAll}<span>{works.length}</span></button>
+        </div>
+        <div class="publication-search">
+          <label for={`publication-search-${locale}`}>{catalogue.searchLabel}</label>
+          <input id={`publication-search-${locale}`} type="search" data-publication-search placeholder={catalogue.searchPlaceholder} autocomplete="off" />
+        </div>
+        <div class="publication-sort">
+          <label for={`publication-sort-${locale}`}>{catalogue.sortLabel}</label>
+          <select id={`publication-sort-${locale}`} data-publication-sort>
+            <option value="curated">{catalogue.sortCurated}</option>
+            <option value="newest">{catalogue.sortNewest}</option>
+            <option value="cited">{catalogue.sortCited}</option>
+            <option value="oldest">{catalogue.sortOldest}</option>
+          </select>
+        </div>
+        <div class="publication-topic-filter">
+          <label for={`publication-topic-${locale}`}>{catalogue.topicLabel}</label>
+          <select id={`publication-topic-${locale}`} data-publication-topic>
+            <option value="all">{catalogue.topicAll}</option>
+            {publicationTopics.map((topic) => <option value={topic.id}>{topic.label[locale]}</option>)}
+          </select>
+        </div>
+      </div>
+
+      <div class="publication-results-bar">
+        <p role="status" aria-live="polite"><strong data-publication-count>{works.length}</strong> {catalogue.shown}</p>
+        <a class="filter-return" href="#publication-toolbar">↑ {catalogue.backToFilters}</a>
+        <a class="text-link" href="/esteban-diaz-jara-publications.bib" download>{catalogue.downloadBib}<span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="publication-list" id="publication-list" data-publication-list>
+        {entries.map(({ work, id, group, featuredOrder, topics, editorialNote }, index) => (
+          <article
+            class="publication-entry"
+            id={id}
+            data-publication
+            data-group={group}
+            data-year={work.display_year_recommended}
+            data-citations={work.scholar_citations}
+            data-curation-order={Number.isFinite(featuredOrder) ? featuredOrder : 9999}
+            data-topics={topics.map(({ id }) => id).join(' ')}
+            data-search={`${work.title} ${work.authors.join(' ')} ${work.journal_or_source} ${topics.map(({ label }) => label).join(' ')}`.toLocaleLowerCase('en')}
+          >
+            <div class="publication-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</div>
+            <div class="publication-body">
+              <div class="publication-kicker">
+                <span>{typeLabels[work.display_type]}</span>
+                <time datetime={String(work.display_year_recommended)}>{work.display_year_recommended}</time>
+                <span>{work.openalex_id ? catalogue.sourceCrossed : catalogue.sourceScholar}</span>
+                {Number.isFinite(featuredOrder) && <span class="publication-featured-label">{catalogue.featured} · {featuredOrder}</span>}
+              </div>
+              <h3><a href={preferredPublicationUrl(work)} target="_blank" rel="noreferrer">{work.title}</a></h3>
+              <p class="publication-authors">{work.authors.join(' · ')}</p>
+              <p class="publication-journal">{work.journal_or_source}</p>
+              {topics.length > 0 && (
+                <ul class="publication-topics" aria-label={catalogue.topicLabel}>
+                  {topics.map((topic) => (
+                    <li style={`--topic-color:${topic.color}`}><span aria-hidden="true"></span>{topic.label}</li>
+                  ))}
+                </ul>
+              )}
+              {editorialNote && <p class="publication-editorial-note">{editorialNote}</p>}
+              {work.notes && <p class="publication-note">{work.openalex_id ? work.notes : catalogue.scholarOnlyNote}</p>}
+              <div class="publication-links">
+                <span class="citation-pill"><strong>{work.scholar_citations}</strong> {catalogue.citedBy}</span>
+                {work.doi && <a href={`https://doi.org/${work.doi}`} target="_blank" rel="noreferrer">{catalogue.doi}<span aria-hidden="true">↗</span></a>}
+                {work.openalex_id && <a href={work.openalex_id} target="_blank" rel="noreferrer">{catalogue.openAlex}<span aria-hidden="true">↗</span></a>}
+                <a href={work.scholar_detail_url} target="_blank" rel="noreferrer">{catalogue.scholar}<span aria-hidden="true">↗</span></a>
+                {work.open_access_url && <a class="oa-link" href={work.open_access_url} target="_blank" rel="noreferrer">{catalogue.openAccess}<span aria-hidden="true">↗</span></a>}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p class="publication-empty" data-publication-empty hidden>{copy.emptyListLabel}</p>
+    </div>
+  </section>
+
+  <section class="publication-provenance paper-band" {...provenanceBlock}>
+    <div class="shell provenance-grid">
+      <div><span class="eyebrow">{provenance.eyebrow}</span><h2 class="section-title">{copy.statusTitle}</h2></div>
+      <div>
+        <p>{copy.statusText}</p>
+        <p class="provenance-date"><span>{provenance.updatedLabel}</span> <time datetime={publicationCatalog.generated_at}>{updatedDate}</time></p>
+        <nav class="provenance-sources" aria-label={provenance.sourcesLabel}>
+          {provenance.sources.map((source) => (
+            <a href={source.href} target="_blank" rel="noreferrer">{source.label}</a>
+          ))}
+        </nav>
+      </div>
+    </div>
+  </section>
+
+<script>
+  const explorers = document.querySelectorAll<HTMLElement>('[data-publication-explorer]');
+  explorers.forEach((explorer) => {
+    const list = explorer.querySelector<HTMLElement>('[data-publication-list]');
+    const items = Array.from(explorer.querySelectorAll<HTMLElement>('[data-publication]'));
+    const buttons = Array.from(explorer.querySelectorAll<HTMLButtonElement>('[data-publication-filter]'));
+    const search = explorer.querySelector<HTMLInputElement>('[data-publication-search]');
+    const sort = explorer.querySelector<HTMLSelectElement>('[data-publication-sort]');
+    const topic = explorer.querySelector<HTMLSelectElement>('[data-publication-topic]');
+    const count = explorer.querySelector<HTMLElement>('[data-publication-count]');
+    const empty = explorer.querySelector<HTMLElement>('[data-publication-empty]');
+    let activeFilter = 'all';
+
+    const normalize = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('en');
+    const apply = () => {
+      const query = normalize(search?.value.trim() ?? '');
+      const order = sort?.value ?? 'curated';
+      const ordered = [...items].sort((a, b) => {
+        const yearA = Number(a.dataset.year);
+        const yearB = Number(b.dataset.year);
+        const citationsA = Number(a.dataset.citations);
+        const citationsB = Number(b.dataset.citations);
+        if (order === 'oldest') return yearA - yearB || citationsB - citationsA;
+        if (order === 'cited') return citationsB - citationsA || yearB - yearA;
+        if (order === 'curated') {
+          return Number(a.dataset.curationOrder) - Number(b.dataset.curationOrder)
+            || yearB - yearA
+            || citationsB - citationsA;
+        }
+        return yearB - yearA || citationsB - citationsA;
+      });
+      ordered.forEach((item) => list?.append(item));
+      let visible = 0;
+      ordered.forEach((item) => {
+        const matchesFilter = activeFilter === 'all' || item.dataset.group === activeFilter;
+        const matchesSearch = !query || normalize(item.dataset.search ?? '').includes(query);
+        const activeTopic = topic?.value ?? 'all';
+        const matchesTopic = activeTopic === 'all' || (item.dataset.topics ?? '').split(' ').includes(activeTopic);
+        item.hidden = !(matchesFilter && matchesSearch && matchesTopic);
+        if (!item.hidden) {
+          visible += 1;
+          const number = item.querySelector<HTMLElement>('.publication-number');
+          if (number) number.textContent = String(visible).padStart(2, '0');
+        }
+      });
+      if (count) count.textContent = String(visible);
+      if (empty) empty.hidden = visible !== 0;
+    };
+
+    buttons.forEach((button) => button.addEventListener('click', () => {
+      activeFilter = button.dataset.publicationFilter ?? 'all';
+      buttons.forEach((candidate) => {
+        const selected = candidate === button;
+        candidate.classList.toggle('is-active', selected);
+        candidate.setAttribute('aria-pressed', String(selected));
+      });
+      apply();
+    }));
+    search?.addEventListener('input', apply);
+    sort?.addEventListener('change', apply);
+    topic?.addEventListener('change', apply);
+    const initialArticlesButton = buttons.find((button) => button.dataset.publicationFilter === 'articles');
+    if (initialArticlesButton) initialArticlesButton.click();
+    else apply();
+
+    document.addEventListener('publication:show-articles', () => {
+      const articlesButton = buttons.find((button) => button.dataset.publicationFilter === 'articles');
+      if (search) search.value = '';
+      if (articlesButton && activeFilter !== 'articles') articlesButton.click();
+      else apply();
+    });
+  });
+</script>
+</Layout>
+
+<style>
+  .publication-overview { padding-block: 34px; }
+  .publication-stats { display: grid; grid-template-columns: repeat(5, 1fr); }
+  .publication-stats div { display: grid; min-height: 132px; align-content: center; padding: 20px 28px; border-right: 1px solid var(--line-strong); }
+  .publication-stats div:last-child { border-right: 0; }
+  .publication-stats strong { font-family: var(--font-data); font-size: clamp(1.7rem, 2.4vw, 2.5rem); font-weight: 520; letter-spacing: -.03em; line-height: 1; }
+  .publication-stats dt { margin-top: 10px; color: var(--ink-2); font-family: var(--font-mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; }
+  .publication-stats dd { order: -1; margin: 0; }
+
+  .publication-heading { margin-bottom: 62px; }
+  .publication-profile-links { display: flex; flex-wrap: wrap; gap: 12px 22px; margin-top: 28px; }
+  .publication-profile-links a { display: inline-flex; gap: 9px; color: var(--teal-dark); font-weight: 650; }
+  .publication-toolbar { display: grid; grid-template-columns: 1.35fr .78fr .48fr .62fr; gap: 18px; align-items: end; padding: 24px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--surface-raised); box-shadow: var(--toolbar-shadow); }
+  .publication-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+  .publication-filter { min-height: 44px; padding: 9px 12px; border: 1px solid var(--line-strong); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; font-family: var(--font-mono); font-size: .72rem; font-weight: 650; letter-spacing: .04em; }
+  .publication-filter span { display: inline-grid; min-width: 23px; height: 23px; margin-left: 6px; place-items: center; border-radius: 50%; background: var(--paper-2); }
+  .publication-filter:hover, .publication-filter.is-active { border-color: var(--solid-bg); background: var(--solid-bg); color: var(--solid-fg); }
+  .publication-filter.is-active span { background: rgba(255,255,255,.16); }
+  .publication-search, .publication-sort, .publication-topic-filter { display: grid; gap: 7px; }
+  .publication-search label, .publication-sort label, .publication-topic-filter label { font-family: var(--font-mono); font-size: .7rem; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; }
+  .publication-search input, .publication-sort select, .publication-topic-filter select { min-height: 47px; width: 100%; padding: 10px 12px; border: 1px solid var(--line-strong); border-radius: 5px; background: var(--paper); color: var(--ink); }
+  .publication-results-bar { position: sticky; z-index: 4; top: var(--header-height); display: flex; min-height: 84px; align-items: center; justify-content: space-between; gap: 25px; border-bottom: 1px solid var(--line-strong); background: color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter: blur(14px); }
+  .publication-results-bar p { margin: 0; color: var(--ink-2); font-family: var(--font-mono); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; }
+  .filter-return { margin-left: auto; color: var(--teal-dark); font-family: var(--font-mono); font-size: .72rem; font-weight: 650; }
+  .publication-list { border-bottom: 1px solid var(--line-strong); }
+  .publication-entry { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 26px; padding: 42px 0 45px; border-top: 1px solid var(--line-strong); scroll-margin-top: calc(var(--header-height) + 105px); }
+  .publication-entry:first-child { border-top: 0; }
+  .publication-entry[hidden] { display: none; }
+  .publication-number { color: var(--teal-dark); font-family: var(--font-mono); font-size: .72rem; font-weight: 650; }
+  .publication-kicker { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; color: var(--ink-3); font-family: var(--font-mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; }
+  .publication-kicker span:first-child { color: var(--teal-dark); font-weight: 700; }
+  .publication-kicker .publication-featured-label { color: var(--ink-2); font-weight: 700; }
+  .publication-body h3 { max-width: 1020px; margin: 17px 0 14px; font-family: var(--font-body); font-size: clamp(1.25rem, 1.55vw, 1.65rem); font-weight: 650; letter-spacing: -.015em; line-height: 1.25; }
+  .publication-body h3 a { text-decoration: none; }
+  .publication-body h3 a:hover { color: var(--teal-dark); }
+  .publication-authors { max-width: 1050px; margin-bottom: 7px; color: var(--ink-2); font-size: .95rem; }
+  .publication-journal { margin-bottom: 18px; color: var(--ink); font-style: italic; }
+  .publication-topics { display: flex; flex-wrap: wrap; gap: 7px 14px; margin: -4px 0 20px; padding: 0; color: var(--ink-2); list-style: none; }
+  .publication-topics li { display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-mono); font-size: .67rem; line-height: 1.4; }
+  .publication-topics li > span { width: 8px; height: 8px; flex: 0 0 auto; border: 1px solid color-mix(in srgb, var(--topic-color) 72%, var(--ink)); border-radius: 50%; background: var(--topic-color); }
+  .publication-editorial-note { max-width: 78ch; margin: -2px 0 18px; color: var(--ink-2); font-size: .88rem; }
+  .publication-note { padding-left: 14px; border-left: 2px solid var(--amber); color: var(--ink-2); font-size: .88rem; }
+  .publication-links { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; }
+  .publication-links a, .citation-pill { display: inline-flex; min-height: 36px; align-items: center; gap: 6px; padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px; font-family: var(--font-mono); font-size: .7rem; font-weight: 650; letter-spacing: .03em; text-decoration: none; }
+  .publication-links a:hover { border-color: var(--ink); background: var(--paper-2); }
+  .publication-links .oa-link { border-color: var(--oa-line); color: var(--teal-dark); }
+  .citation-pill { border-color: transparent; background: var(--paper-2); }
+  .publication-empty { padding: 70px 25px; text-align: center; }
+
+  .publication-provenance { padding-block: clamp(75px, 9vw, 120px); }
+  .provenance-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 8vw; align-items: start; }
+  .provenance-grid > div:last-child > p:first-child { color: var(--ink-2); font-size: 1.15rem; }
+  .provenance-date { margin-top: 35px; font-family: var(--font-mono); font-size: .72rem; text-transform: uppercase; }
+  .provenance-date span { color: var(--teal-dark); }
+  .provenance-sources { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 22px; }
+  .provenance-sources a { color: var(--teal-dark); font-family: var(--font-mono); font-size: .7rem; font-weight: 650; }
+
+  @media (max-width: 1059px) {
+    .publication-stats { grid-template-columns: repeat(3, 1fr); }
+    .publication-stats div { border-bottom: 1px solid var(--line-strong); }
+    .provenance-grid { grid-template-columns: 1fr; }
+    .publication-toolbar { grid-template-columns: 1fr 1fr; }
+    .publication-filters { grid-column: 1 / -1; }
+  }
+  @media (max-width: 760px) {
+    .publication-overview { padding-block: 0; }
+    .publication-stats { grid-template-columns: 1fr 1fr; }
+    .publication-stats div { min-height: 108px; padding-inline: 16px; }
+    .publication-stats div:nth-child(even) { border-right: 0; }
+    .publication-stats dt { font-size: .7rem; }
+    .publication-toolbar { grid-template-columns: 1fr; padding: 18px; }
+    .publication-filters { grid-column: auto; }
+    .publication-filter { flex: 1 1 calc(50% - 8px); }
+    .publication-results-bar { flex-wrap: wrap; min-height: 96px; gap: 8px 18px; padding-block: 14px; }
+    .publication-results-bar .text-link { flex-basis: 100%; }
+    .publication-entry { grid-template-columns: 1fr; gap: 10px; padding-block: 34px; }
+    .publication-number { font-size: .7rem; }
+    .publication-body h3 { font-size: 1.45rem; }
+    .publication-authors { font-size: .9rem; }
+  }
+</style>

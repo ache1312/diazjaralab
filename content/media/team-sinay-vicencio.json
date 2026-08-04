@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "team-sinay-vicencio",
+  "kind": "photograph",
+  "status": "metadata-pending",
+  "focalPoint": {
+    "x": 50,
+    "y": 50
+  },
+  "source": {
+    "format": "jpeg",
+    "mimeType": "image/jpeg",
+    "byteLength": 91244,
+    "sha256": "cff3ede56d92cb011f0d387c89f582df613b09c7ca0a69b9caac91dd72de83e7",
+    "originalStoredLocally": false,
+    "storageKey": null
+  },
+  "master": {
+    "path": "src/assets/images/team/sinay-vicencio.jpg",
+    "format": "jpeg",
+    "mimeType": "image/jpeg",
+    "byteLength": 91244,
+    "width": 599,
+    "height": 730,
+    "pages": 1,
+    "hasAlpha": false
+  },
+  "editorial": {
+    "alt": {
+      "es": "Retrato de Sinay C. Vicencio Orellana en el laboratorio.",
+      "en": "Portrait of Sinay C. Vicencio Orellana in the laboratory."
+    },
+    "caption": {
+      "es": "",
+      "en": ""
+    },
+    "credit": {
+      "es": "Díaz-Jara Lab",
+      "en": "Díaz-Jara Lab"
+    },
+    "technique": {
+      "es": "",
+      "en": ""
+    },
+    "provenance": {
+      "es": "Registro del laboratorio.",
+      "en": "Laboratory record."
+    }
+  },
+  "preservation": {
+    "policy": "legacy-unverified",
+    "sourceIccProfilePreserved": false,
+    "operations": [
+      "legacy-asset-registration"
+    ]
+  },
+  "importedAt": "2026-08-03T12:00:00.000Z",
+  "warnings": [
+    {
+      "code": "ORIGINAL_NOT_ARCHIVED",
+      "message": "Activo legado registrado desde la versión web; el original científico aún no está archivado por el importador."
+    }
+  ]
+}

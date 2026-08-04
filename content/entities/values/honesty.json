@@ -1,0 +1,16 @@
+{
+  "id": "honesty",
+  "order": 1,
+  "translations": {
+    "es": {
+      "number": "01",
+      "title": "Honestidad",
+      "description": "Registramos resultados esperados e inesperados, conservamos los datos originales y comunicamos desviaciones del protocolo."
+    },
+    "en": {
+      "number": "01",
+      "title": "Honesty",
+      "description": "We record expected and unexpected results, preserve original data, and report deviations from protocol."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+---
+import { getContent, type Locale, type PageId, type SiteContent } from '@/content-data';
+import HomePage from '@/components/pages/HomePage.astro';
+import ResearchPage from '@/components/pages/ResearchPage.astro';
+import TechniquesPage from '@/components/pages/TechniquesPage.astro';
+import TeamPage from '@/components/pages/TeamPage.astro';
+import PublicationsPage from '@/components/pages/PublicationsPage.astro';
+import PhilosophyPage from '@/components/pages/PhilosophyPage.astro';
+import OutreachPage from '@/components/pages/OutreachPage.astro';
+import ContactPage from '@/components/pages/ContactPage.astro';
+
+interface Props { locale: Locale; page: PageId; content?: SiteContent; embedded?: boolean }
+const { locale, page, content: suppliedContent, embedded = false } = Astro.props;
+const studioMode = process.env.STUDIO_MODE === 'true';
+let content = suppliedContent ?? getContent(locale);
+if (studioMode && !suppliedContent) {
+  const { getLiveCmsContent } = await import('@/lib/cms/tina-live');
+  content = await getLiveCmsContent(locale, page);
+}
+---
+
+{page === 'home' && <HomePage {locale} {content} {embedded} />}
+{page === 'research' && <ResearchPage {locale} {content} {embedded} />}
+{page === 'techniques' && <TechniquesPage {locale} {content} {embedded} />}
+{page === 'team' && <TeamPage {locale} {content} {embedded} />}
+{page === 'publications' && <PublicationsPage {locale} {content} {embedded} />}
+{page === 'philosophy' && <PhilosophyPage {locale} {content} {embedded} />}
+{page === 'outreach' && <OutreachPage {locale} {content} {embedded} />}
+{page === 'contact' && <ContactPage {locale} {content} {embedded} />}

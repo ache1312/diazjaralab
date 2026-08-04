@@ -1,0 +1,12 @@
+{
+  "id": "graduate",
+  "order": 3,
+  "translations": {
+    "es": {
+      "label": "Estudiantes de posgrado"
+    },
+    "en": {
+      "label": "Graduate students"
+    }
+  }
+}

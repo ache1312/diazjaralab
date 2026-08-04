@@ -1,0 +1,33 @@
+---
+import { tinaField } from '@tinacms/astro/tina-field';
+
+interface Props {
+  index: string;
+  eyebrow: string;
+  title: string;
+  introduction: string;
+  asideLabel?: string;
+  asideText?: string;
+  source?: unknown;
+  block?: Record<string, string | boolean | undefined>;
+}
+
+const { eyebrow, title, introduction, asideLabel, asideText, source, block = {} } = Astro.props;
+const editableField = (field: string) => tinaField(source as Record<string, unknown> | undefined, field) || undefined;
+---
+
+<section class="page-hero" {...block}>
+  <div class="shell page-hero-grid">
+    <div>
+      <span class="eyebrow" data-tina-field={editableField('eyebrow')}>{eyebrow}</span>
+      <h1 class="display-title" data-tina-field={editableField('title')}>{title}</h1>
+      <p class="lead" data-tina-field={editableField('introduction')}>{introduction}</p>
+    </div>
+    {asideText && (
+      <aside class="page-hero-aside">
+        {asideLabel && <strong>{asideLabel}</strong>}
+        <p>{asideText}</p>
+      </aside>
+    )}
+  </div>
+</section>

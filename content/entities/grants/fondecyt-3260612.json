@@ -1,0 +1,30 @@
+{
+  "id": "fondecyt-3260612",
+  "order": 2,
+  "state": "published",
+  "endDateIso": "2029-03-31",
+  "translations": {
+    "es": {
+      "agency": "FONDECYT",
+      "number": "N.º 3260612",
+      "title": "La activación de astrocitos en el núcleo del tracto solitario impulsa trastornos cardiorrespiratorios en las etapas tempranas de la hipoxia intermitente crónica: rol del estrés oxidativo mitocondrial y del desborde de glutamato",
+      "officialTitle": "Astrocyte Activation in the Nucleus Tractus Solitarii Drives Cardiorespiratory Disorders in the Early Stages of Chronic Intermittent Hypoxia: The Role of Mitochondrial Oxidative Stress and Glutamate Spillover",
+      "officialLang": "en",
+      "principalInvestigatorLabel": "Investigador principal",
+      "principalInvestigator": "Dr. Esteban Díaz Jara",
+      "endDateLabel": "Término",
+      "endDate": "31 de marzo de 2029"
+    },
+    "en": {
+      "agency": "FONDECYT",
+      "number": "No. 3260612",
+      "title": "Astrocyte Activation in the Nucleus Tractus Solitarii Drives Cardiorespiratory Disorders in the Early Stages of Chronic Intermittent Hypoxia: The Role of Mitochondrial Oxidative Stress and Glutamate Spillover",
+      "officialTitle": "Astrocyte Activation in the Nucleus Tractus Solitarii Drives Cardiorespiratory Disorders in the Early Stages of Chronic Intermittent Hypoxia: The Role of Mitochondrial Oxidative Stress and Glutamate Spillover",
+      "officialLang": "en",
+      "principalInvestigatorLabel": "Principal investigator",
+      "principalInvestigator": "Dr. Esteban Díaz Jara",
+      "endDateLabel": "End date",
+      "endDate": "March 31, 2029"
+    }
+  }
+}

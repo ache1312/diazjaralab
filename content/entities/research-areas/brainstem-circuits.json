@@ -1,0 +1,55 @@
+{
+  "id": "brainstem-circuits",
+  "order": 1,
+  "imageMedia": "content/media/science-rvlm-astrocytes.json",
+  "relatedDois": [
+    "10.1186/s40659-023-00463-0",
+    "10.1152/ajplung.00280.2024"
+  ],
+  "translations": {
+    "es": {
+      "number": "01",
+      "title": "Cómo se genera y regula el ritmo respiratorio",
+      "summary": "Estudiamos cómo neuronas y astrocitos generan y regulan el ritmo respiratorio y la homeostasis cardiorrespiratoria.",
+      "body": "Estudiamos cómo neuronas y astrocitos de núcleos como el núcleo del tracto solitario (NTS), el complejo preBötzinger, Kölliker-Fuse y el núcleo retrotrapezoide (RTN) generan y regulan el ritmo respiratorio y la homeostasis cardiorrespiratoria. Un foco particular de nuestro trabajo es el rol de los astrocitos del NTS como moduladores activos, y no solo como células de soporte, en la aparición de desórdenes respiratorios, tanto en condiciones de hipoxia intermitente crónica como tras un accidente cerebrovascular isquémico cortical.",
+      "imageAlt": "Micrografía de inmunofluorescencia obtenida en el laboratorio, presentada con los colores originales de los fluoróforos.",
+      "figureCaption": "Micrografía de inmunofluorescencia obtenida por el laboratorio. Los canales se muestran en los colores originales de adquisición; la anatomía y la escala se documentarán con el registro experimental asociado.",
+      "question": "¿Qué mecanismos neuronales y astrocitarios sostienen el ritmo respiratorio y la homeostasis cardiorrespiratoria?",
+      "hypothesis": "Los astrocitos de núcleos respiratorios participan activamente en la regulación del circuito y contribuyen a su disfunción en enfermedad.",
+      "systems": [
+        "NTS",
+        "Complejo preBötzinger",
+        "Kölliker-Fuse",
+        "RTN"
+      ],
+      "measurements": [
+        "Fisiología cardiorrespiratoria",
+        "Electrofisiología",
+        "Microscopía"
+      ],
+      "status": "Pregunta activa · antecedentes publicados"
+    },
+    "en": {
+      "number": "01",
+      "title": "How breathing rhythm is generated and regulated",
+      "summary": "We study how neurons and astrocytes generate and regulate breathing rhythm and cardiorespiratory homeostasis.",
+      "body": "We study how neurons and astrocytes in nuclei such as the nucleus tractus solitarius (NTS), the preBötzinger complex, the Kölliker-Fuse nucleus, and the retrotrapezoid nucleus (RTN) generate and regulate breathing rhythm and cardiorespiratory homeostasis. A particular focus of our work is the role of NTS astrocytes as active modulators, and not merely support cells, in the emergence of respiratory disorders during chronic intermittent hypoxia and following cortical ischemic stroke.",
+      "imageAlt": "Immunofluorescence micrograph acquired in the lab and shown in the fluorophores’ original colors.",
+      "figureCaption": "Immunofluorescence micrograph acquired by the lab. Channels are shown in their original acquisition colors; anatomy and scale will be documented with the associated experimental record.",
+      "question": "Which neuronal and astrocytic mechanisms sustain breathing rhythm and cardiorespiratory homeostasis?",
+      "hypothesis": "Astrocytes in respiratory nuclei actively regulate the circuit and contribute to its dysfunction in disease.",
+      "systems": [
+        "NTS",
+        "preBötzinger complex",
+        "Kölliker-Fuse",
+        "RTN"
+      ],
+      "measurements": [
+        "Cardiorespiratory physiology",
+        "Electrophysiology",
+        "Microscopy"
+      ],
+      "status": "Active question · published background"
+    }
+  }
+}

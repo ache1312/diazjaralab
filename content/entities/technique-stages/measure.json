@@ -1,0 +1,69 @@
+{
+  "id": "measure",
+  "order": 2,
+  "accent": "teal",
+  "translations": {
+    "es": {
+      "number": "02",
+      "verb": "Medir",
+      "title": "Fisiología en tiempo real",
+      "question": "¿Cómo se expresa una intervención en la respiración, la función cardiovascular y la actividad cerebral?",
+      "description": "Registramos señales respiratorias, cardiovasculares y cerebrales en animales despiertos, procurando que compartan una referencia temporal común.",
+      "items": [
+        {
+          "label": "Pletismografía",
+          "kind": "Registro respiratorio"
+        },
+        {
+          "label": "Registro cardiorrespiratorio",
+          "kind": "Registro fisiológico"
+        },
+        {
+          "label": "Instrumentación cardiorrespiratoria",
+          "kind": "Plataforma experimental"
+        },
+        {
+          "label": "Open Ephys",
+          "kind": "Plataforma abierta"
+        },
+        {
+          "label": "LFP multicanal (32 canales)",
+          "kind": "Registro electrofisiológico"
+        }
+      ],
+      "scope": "Animales despiertos, registros cardiorrespiratorios y LFP multicanal de 32 canales.",
+      "output": "Series temporales sincronizadas de ventilación, variables cardiovasculares y actividad neuronal."
+    },
+    "en": {
+      "number": "02",
+      "verb": "Measure",
+      "title": "Physiology in real time",
+      "question": "How does an intervention appear in breathing, cardiovascular function, and brain activity?",
+      "description": "We record respiratory, cardiovascular, and brain signals in awake animals, aiming to preserve a shared temporal reference across measurements.",
+      "items": [
+        {
+          "label": "Plethysmography",
+          "kind": "Respiratory recording"
+        },
+        {
+          "label": "Cardiorespiratory recording",
+          "kind": "Physiological recording"
+        },
+        {
+          "label": "Cardiorespiratory instrumentation",
+          "kind": "Experimental platform"
+        },
+        {
+          "label": "Open Ephys",
+          "kind": "Open platform"
+        },
+        {
+          "label": "Multichannel LFP (32 channels)",
+          "kind": "Electrophysiological recording"
+        }
+      ],
+      "scope": "Awake animals, cardiorespiratory recordings, and 32-channel multichannel LFP.",
+      "output": "Synchronized time series of ventilation, cardiovascular variables, and neuronal activity."
+    }
+  }
+}

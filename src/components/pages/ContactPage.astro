@@ -1,0 +1,141 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BodyOnlyLayout from '@/layouts/BodyOnlyLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { getContent, type Locale, type SiteContent } from '@/content-data';
+import { blockAttributes } from '@/lib/cms/layout';
+
+interface Props { locale: Locale; content?: SiteContent; embedded?: boolean }
+const { locale, content: suppliedContent, embedded = false } = Astro.props;
+const content = suppliedContent ?? getContent(locale);
+const Layout = embedded ? BodyOnlyLayout : BaseLayout;
+const copy = content.contact;
+const heroBlock = blockAttributes(content, 'contact', 'hero', 1);
+const detailsBlock = blockAttributes(content, 'contact', 'contactDetails', 2);
+const formBlock = blockAttributes(content, 'contact', 'contactForm', 3);
+const mapBlock = blockAttributes(content, 'contact', 'map', 4);
+const joinBlock = blockAttributes(content, 'contact', 'callToAction', 5);
+const formId = import.meta.env.PUBLIC_FORMSPREE_FORM_ID?.trim() ?? '';
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(copy.mapQuery)}`;
+const mapsEmbed = `https://www.google.com/maps?q=${encodeURIComponent(copy.mapQuery)}&output=embed`;
+const joinMail = `mailto:${copy.email}?subject=${encodeURIComponent(copy.join.emailSubject)}`;
+---
+
+<Layout locale={locale} page="contact" title={content.seo.contact.title} description={content.seo.contact.description} content={content}>
+  <PageHero index="07" eyebrow={copy.eyebrow} title={copy.title} introduction={copy.introduction} source={copy} asideLabel={copy.asideLabel} asideText={copy.email} block={heroBlock} />
+
+  <section class="content-section" data-cms-block="contact-details-form" style={detailsBlock.style}>
+    <div class="shell contact-grid">
+      <div class="contact-details" data-reveal {...detailsBlock}>
+        <span class="eyebrow">{copy.locationTitle}</span>
+        <h2>{copy.institution}</h2>
+        <div class="address-card">
+          <p>{copy.center}<br />{copy.faculty}<br />{copy.laboratory}<br /><strong>{copy.streetAddress}</strong></p>
+        </div>
+        <a class="direct-email" href={`mailto:${copy.email}`}><span>{copy.directEmailLabel}</span><strong>{copy.email}</strong></a>
+      </div>
+
+      <div class="contact-form-wrap" data-reveal data-reveal-delay="1" {...formBlock}>
+        <h2>{copy.form.title}</h2>
+        <p>{copy.form.introduction}</p>
+        <div class="form-status success" data-fs-success role="status" aria-live="polite">{copy.form.successMessage}</div>
+        <div class="form-status error" data-fs-error role="alert" aria-live="assertive">{copy.form.errorMessage}</div>
+        <form class="contact-form" id="contact-form" action={formId ? `https://formspree.io/f/${formId}` : `mailto:${copy.email}`} method="POST" data-form-id={formId} data-fallback-email={copy.email} data-fallback-subject={copy.form.fallbackSubject} data-fallback-name-label={copy.form.fallbackNameLabel} data-fallback-email-label={copy.form.fallbackEmailLabel}>
+          <input type="hidden" name="locale" value={locale} />
+          <div class="form-field">
+            <label for="contact-name">{copy.form.nameLabel}</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" placeholder={copy.form.namePlaceholder} required aria-describedby="contact-name-error" data-fs-field />
+            <span class="field-error" id="contact-name-error" data-fs-error="name" aria-live="polite"></span>
+          </div>
+          <div class="form-field">
+            <label for="contact-email">{copy.form.emailLabel}</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" placeholder={copy.form.emailPlaceholder} required aria-describedby="contact-email-error" data-fs-field />
+            <span class="field-error" id="contact-email-error" data-fs-error="email" aria-live="polite"></span>
+          </div>
+          <div class="form-field">
+            <label for="contact-message">{copy.form.messageLabel}</label>
+            <textarea id="contact-message" name="message" placeholder={copy.form.messagePlaceholder} required aria-describedby="contact-message-error" data-fs-field></textarea>
+            <span class="field-error" id="contact-message-error" data-fs-error="message" aria-live="polite"></span>
+          </div>
+          <div class="sr-only" aria-hidden="true">
+            <label for="contact-company">{copy.form.honeypotLabel}</label>
+            <input id="contact-company" type="text" name="company" tabindex="-1" autocomplete="off" />
+          </div>
+          <button class="button" type="submit" data-fs-submit-btn>{copy.form.submitLabel}<span aria-hidden="true">→</span></button>
+          {!formId && <p class="form-fallback">{copy.form.unavailableMessage} {copy.form.fallbackHint}</p>}
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-shell" data-map-shell data-map-src={mapsEmbed} data-map-iframe-title={copy.mapIframeTitle} {...mapBlock}>
+    <div class="map-placeholder">
+      <span class="eyebrow">{copy.mapEyebrow}</span>
+      <h2>{copy.mapTitle}</h2>
+      <p>{copy.streetAddress}</p>
+      <div class="map-actions">
+        <button class="button" type="button" data-load-map>{copy.mapLoadLabel}</button>
+        <a class="button secondary" href={mapsUrl} target="_blank" rel="noreferrer">{copy.mapExternalLabel}<span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section ink-band" {...joinBlock}>
+    <div class="shell join-contact-grid">
+      <div data-reveal><span class="eyebrow">{copy.join.eyebrow}</span><h2 class="section-title">{copy.join.title}</h2></div>
+      <div class="join-contact-copy" data-reveal data-reveal-delay="1">
+        {copy.join.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        <a class="button light" href={joinMail} style="margin-top: 22px">{copy.join.actionLabel}<span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+<script>
+  const mapShell = document.querySelector<HTMLElement>('[data-map-shell]');
+  mapShell?.querySelector('[data-load-map]')?.addEventListener('click', () => {
+    const src = mapShell.dataset.mapSrc;
+    if (!src || mapShell.querySelector('iframe')) return;
+    const iframe = document.createElement('iframe');
+    iframe.src = src;
+    iframe.title = mapShell.dataset.mapIframeTitle || '';
+    iframe.loading = 'lazy';
+    iframe.tabIndex = 0;
+    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    iframe.allowFullscreen = true;
+    mapShell.replaceChildren(iframe);
+    iframe.addEventListener('load', () => iframe.focus(), { once: true });
+  });
+
+  const form = document.querySelector<HTMLFormElement>('#contact-form');
+  if (form) {
+    const formId = form.dataset.formId;
+    if (formId) {
+      const invalidObserver = new MutationObserver(() => {
+        const firstInvalid = form.querySelector<HTMLElement>('[data-fs-field][aria-invalid="true"]');
+        if (firstInvalid && document.activeElement !== firstInvalid) firstInvalid.focus();
+      });
+      form.querySelectorAll('[data-fs-field]').forEach((field) => invalidObserver.observe(field, { attributes: true, attributeFilter: ['aria-invalid'] }));
+      import('@formspree/ajax').then(({ initForm }) => {
+        initForm({ formElement: form, formId });
+      });
+    } else {
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        const data = new FormData(form);
+        const email = form.dataset.fallbackEmail;
+        const subject = form.dataset.fallbackSubject || '';
+        const nameLabel = form.dataset.fallbackNameLabel || '';
+        const emailLabel = form.dataset.fallbackEmailLabel || '';
+        const body = [
+          `${nameLabel}: ${data.get('name') ?? ''}`,
+          `${emailLabel}: ${data.get('email') ?? ''}`,
+          '',
+          String(data.get('message') ?? ''),
+        ].join('\n');
+        window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      });
+    }
+  }
+</script>
+</Layout>

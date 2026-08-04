@@ -1,0 +1,53 @@
+{
+  "name": "diaz-jara-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "edit": "node scripts/studio/start.mjs",
+    "edit:stop": "node scripts/studio/stop.mjs",
+    "cms:generate": "tinacms build --local --noTelemetry --skip-indexing --skip-cloud-checks",
+    "check": "astro check",
+    "build": "npm run check && astro build && node scripts/validate-build.mjs",
+    "build:astro": "astro build",
+    "preview": "astro preview",
+    "publications:graph": "node scripts/build-publication-network.mjs",
+    "publications:refresh": "node scripts/refresh-publications.mjs",
+    "media:import": "node scripts/media/import-media.mjs",
+    "test": "npm run check && npm run test:content && npm run test:media && npm run test:studio && astro build && node scripts/validate-build.mjs",
+    "test:content": "node --test tests/content/*.test.mjs",
+    "test:media": "node --test tests/media/*.test.mjs",
+    "test:studio": "node --test tests/studio/*.test.mjs",
+    "test:editor": "npm run test:content && npm run test:media && npm run test:studio",
+    "test:e2e": "playwright test",
+    "test:all": "npm test && npm run test:editor && npm run test:e2e"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "7.0.5",
+    "@astrojs/node": "11.0.3",
+    "@astrojs/sitemap": "3.7.3",
+    "@fontsource-variable/jetbrains-mono": "5.2.8",
+    "@fontsource-variable/source-sans-3": "5.2.9",
+    "@formspree/ajax": "1.1.5",
+    "@tinacms/astro": "0.6.1",
+    "astro": "7.1.1",
+    "react": "18.3.1",
+    "sharp": "0.35.3",
+    "tinacms": "3.11.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.9",
+    "@axe-core/playwright": "4.12.1",
+    "@playwright/test": "1.61.1",
+    "@tinacms/cli": "2.5.6",
+    "@types/react": "18.3.12",
+    "concurrently": "10.0.4",
+    "cross-env": "10.1.0",
+    "typescript": "6.0.3"
+  }
+}

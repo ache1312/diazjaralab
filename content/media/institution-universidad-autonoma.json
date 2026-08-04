@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "institution-universidad-autonoma",
+  "kind": "logo",
+  "status": "metadata-pending",
+  "focalPoint": {
+    "x": 50,
+    "y": 50
+  },
+  "source": {
+    "format": "png",
+    "mimeType": "image/png",
+    "byteLength": 7829,
+    "sha256": "39eefaccd6e432cdca8909e21ca5d24d35bb7bcca8c610aaa282b6d968250b16",
+    "originalStoredLocally": false,
+    "storageKey": null
+  },
+  "master": {
+    "path": "src/assets/images/institution/universidad-autonoma.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "byteLength": 7829,
+    "width": 219,
+    "height": 90,
+    "pages": 1,
+    "hasAlpha": true
+  },
+  "editorial": {
+    "alt": {
+      "es": "Logo de la Universidad Autónoma de Chile.",
+      "en": "Universidad Autónoma de Chile logo."
+    },
+    "caption": {
+      "es": "",
+      "en": ""
+    },
+    "credit": {
+      "es": "Díaz-Jara Lab",
+      "en": "Díaz-Jara Lab"
+    },
+    "technique": {
+      "es": "",
+      "en": ""
+    },
+    "provenance": {
+      "es": "Registro del laboratorio.",
+      "en": "Laboratory record."
+    }
+  },
+  "preservation": {
+    "policy": "legacy-unverified",
+    "sourceIccProfilePreserved": false,
+    "operations": [
+      "legacy-asset-registration"
+    ]
+  },
+  "importedAt": "2026-08-03T12:00:00.000Z",
+  "warnings": [
+    {
+      "code": "ORIGINAL_NOT_ARCHIVED",
+      "message": "Activo legado registrado desde la versión web; el original científico aún no está archivado por el importador."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "self-criticism",
+  "order": 3,
+  "translations": {
+    "es": {
+      "number": "03",
+      "title": "Autocrítica",
+      "description": "Revisamos supuestos, controles y análisis antes de atribuir una diferencia observada al mecanismo estudiado."
+    },
+    "en": {
+      "number": "03",
+      "title": "Critical self-reflection",
+      "description": "We review assumptions, controls, and analyses before assigning an observed difference to the mechanism under study."
+    }
+  }
+}

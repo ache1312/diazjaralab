@@ -1,0 +1,30 @@
+---
+import OutreachEntryPage from '@/components/outreach/OutreachEntryPage.astro';
+import {
+  findPublishedTranslation,
+  getPublishedOutreachEntries,
+  type PublishedOutreachEntry,
+} from '@/lib/outreach';
+
+interface Props {
+  entry: PublishedOutreachEntry;
+  translation?: PublishedOutreachEntry;
+}
+
+export async function getStaticPaths() {
+  const allEntries = await getPublishedOutreachEntries();
+  return allEntries
+    .filter((entry) => entry.data.locale === 'es')
+    .map((entry) => ({
+      params: { slug: entry.data.slug },
+      props: {
+        entry,
+        translation: findPublishedTranslation(entry, allEntries),
+      },
+    }));
+}
+
+const { entry, translation } = Astro.props;
+---
+
+<OutreachEntryPage locale="es" {entry} {translation} />

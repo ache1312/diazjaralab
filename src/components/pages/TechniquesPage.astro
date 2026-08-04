@@ -1,0 +1,202 @@
+---
+import { Image } from 'astro:assets';
+import { tinaField } from '@tinacms/astro/tina-field';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BodyOnlyLayout from '@/layouts/BodyOnlyLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { getContent, type Locale, type SiteContent, type TechniqueCapability } from '@/content-data';
+import { blockAttributes } from '@/lib/cms/layout';
+import { resolveMediaAsset } from '@/lib/media';
+import { pathFor } from '@/lib/routes';
+
+interface Props { locale: Locale; content?: SiteContent; embedded?: boolean }
+const { locale, content: suppliedContent, embedded = false } = Astro.props;
+const content = suppliedContent ?? getContent(locale);
+const Layout = embedded ? BodyOnlyLayout : BaseLayout;
+const copy = content.techniques;
+const heroBlock = blockAttributes(content, 'techniques', 'hero', 1);
+const stagesBlock = blockAttributes(content, 'techniques', 'techniqueStages', 2);
+const closingBlock = blockAttributes(content, 'techniques', 'closing', 3);
+const editableField = (source: unknown, field: string) => tinaField(source as Record<string, unknown> | undefined, field) || undefined;
+const totalStages = String(copy.stages.length).padStart(2, '0');
+const questionLabel = copy.questionLabel ?? (locale === 'es' ? 'Pregunta que guía la etapa' : 'Question guiding this stage');
+const capability = (item: string | TechniqueCapability): TechniqueCapability =>
+  typeof item === 'string' ? { label: item, kind: '' } : item;
+
+const resolveImage = (reference: unknown) => {
+  const asset = resolveMediaAsset(reference, { locale, allowedKinds: ['micrograph', 'figure'] });
+  if (asset.type !== 'image') throw new Error(`El medio «${asset.id}» no es una imagen.`);
+  return asset;
+};
+const evidenceMedia = copy.media
+  ? {
+      primary: resolveImage(copy.media.evidencePrimary),
+      secondary: resolveImage(copy.media.evidenceSecondary),
+    }
+  : null;
+const showEvidence = evidenceMedia
+  && copy.evidenceEyebrow
+  && copy.evidenceTitle
+  && copy.evidenceIntroduction
+  && copy.evidencePrimaryCaption
+  && copy.evidenceSecondaryCaption
+  && copy.evidenceNote;
+---
+
+<Layout locale={locale} page="techniques" title={content.seo.techniques.title} description={content.seo.techniques.description} content={content}>
+  <PageHero index="02" eyebrow={copy.eyebrow} title={copy.title} introduction={copy.introduction} source={copy} asideLabel={copy.railLabel} asideText={copy.asideText} block={heroBlock} />
+
+  <div class="techniques-workflow" {...stagesBlock}>
+    <nav class="tech-rail-nav" aria-label={copy.railLabel} data-tech-nav>
+      <ol class="shell" style={`--tech-stage-count: ${copy.stages.length}`}>
+        {copy.stages.map((stage, index) => (
+          <li data-accent={stage.accent}>
+            <a href={`#${stage.id}`} data-tech-link={stage.id} aria-current={index === 0 ? 'step' : undefined}>
+              <span class="tech-rail-number">{stage.number}</span>
+              <span class="tech-rail-copy"><strong>{stage.verb}</strong><small>{stage.title}</small></span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+
+    <div class="tech-stage-list">
+      {copy.stages.map((stage) => {
+        const headingId = `${stage.id}-title`;
+        const methodsId = `${stage.id}-methods`;
+        return (
+          <section class="tech-stage" id={stage.id} data-accent={stage.accent} aria-labelledby={headingId} data-tech-stage>
+            <div class="shell tech-stage-grid">
+              <header class="tech-stage-heading">
+                <p class="tech-stage-number"><span>{stage.number}</span> / {totalStages}</p>
+                <h2 id={headingId}>
+                  <span data-tina-field={editableField(stage, 'verb')}>{stage.verb}</span>
+                  <small data-tina-field={editableField(stage, 'title')}>{stage.title}</small>
+                </h2>
+                {stage.question && (
+                  <div class="tech-stage-question">
+                    <span data-tina-field={editableField(copy, 'questionLabel')}>{questionLabel}</span>
+                    <p data-tina-field={editableField(stage, 'question')}>{stage.question}</p>
+                  </div>
+                )}
+              </header>
+
+              <div class="tech-stage-body">
+                <p class="tech-stage-description" data-tina-field={editableField(stage, 'description')}>{stage.description}</p>
+                <dl class="method-specification">
+                  <div>
+                    <dt data-tina-field={editableField(copy, 'scopeLabel')}>{copy.scopeLabel}</dt>
+                    <dd data-tina-field={editableField(stage, 'scope')}>{stage.scope}</dd>
+                  </div>
+                  <div>
+                    <dt data-tina-field={editableField(copy, 'outputLabel')}>{copy.outputLabel}</dt>
+                    <dd data-tina-field={editableField(stage, 'output')}>{stage.output}</dd>
+                  </div>
+                </dl>
+                <section class="tech-capabilities" aria-labelledby={methodsId}>
+                  <h3 id={methodsId} data-tina-field={editableField(copy, 'methodsLabel')}>{copy.methodsLabel}</h3>
+                  <ul>
+                    {stage.items.map((item, index) => {
+                      const entry = capability(item);
+                      return (
+                        <li>
+                          <span class="tech-capability-index">{String(index + 1).padStart(2, '0')}</span>
+                          <strong data-tina-field={typeof item === 'string' ? undefined : editableField(item, 'label')}>{entry.label}</strong>
+                          {entry.kind && <small data-tina-field={typeof item === 'string' ? undefined : editableField(item, 'kind')}>{entry.kind}</small>}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </section>
+        );
+      })}
+    </div>
+
+    {showEvidence && evidenceMedia && (
+      <section class="tech-evidence" aria-labelledby="tech-evidence-title">
+        <div class="shell tech-evidence-grid">
+          <header class="tech-evidence-copy">
+            <span class="eyebrow" data-tina-field={editableField(copy, 'evidenceEyebrow')}>{copy.evidenceEyebrow}</span>
+            <h2 id="tech-evidence-title" data-tina-field={editableField(copy, 'evidenceTitle')}>{copy.evidenceTitle}</h2>
+            <p data-tina-field={editableField(copy, 'evidenceIntroduction')}>{copy.evidenceIntroduction}</p>
+            <aside class="tech-evidence-note">
+              <span aria-hidden="true">i</span>
+              <p data-tina-field={editableField(copy, 'evidenceNote')}>{copy.evidenceNote}</p>
+            </aside>
+          </header>
+          <div class="tech-evidence-register">
+            <figure class="tech-evidence-primary">
+              <Image src={evidenceMedia.primary.image} alt={evidenceMedia.primary.alt} widths={[480, 720, 900, 1024]} sizes="(max-width: 760px) calc(100vw - 36px), min(48vw, 680px)" format="webp" quality={74} loading="lazy" decoding="async" style={`object-position: ${evidenceMedia.primary.objectPosition}`} />
+              <figcaption data-tina-field={editableField(copy, 'evidencePrimaryCaption')}>{copy.evidencePrimaryCaption}</figcaption>
+            </figure>
+            <figure class="tech-evidence-secondary">
+              <Image src={evidenceMedia.secondary.image} alt={evidenceMedia.secondary.alt} widths={[320, 480, 640]} sizes="(max-width: 760px) 54vw, min(24vw, 330px)" format="webp" quality={74} loading="lazy" decoding="async" style={`object-position: ${evidenceMedia.secondary.objectPosition}`} />
+              <figcaption data-tina-field={editableField(copy, 'evidenceSecondaryCaption')}>{copy.evidenceSecondaryCaption}</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    )}
+  </div>
+
+  <section class="content-section tech-closing" {...closingBlock}>
+    <div class="shell tech-closing-grid">
+      <header>
+        <span class="eyebrow" data-tina-field={editableField(copy, 'closingEyebrow')}>{copy.closingEyebrow}</span>
+        <h2 class="section-title" data-tina-field={editableField(copy, 'closingTitle')}>{copy.closingTitle}</h2>
+        <p class="lead" data-tina-field={editableField(copy, 'closingText')}>{copy.closingText}</p>
+        {copy.closingActionLabel && <a class="text-link" href={pathFor(locale, 'contact')} data-tina-field={editableField(copy, 'closingActionLabel')}>{copy.closingActionLabel}<span aria-hidden="true">→</span></a>}
+      </header>
+      {copy.integrationLabel && copy.integrationSteps && copy.integrationSteps.length > 0 && (
+        <div class="tech-integration">
+          <p id="tech-integration-label" data-tina-field={editableField(copy, 'integrationLabel')}>{copy.integrationLabel}</p>
+          <ol aria-labelledby="tech-integration-label">
+            {copy.integrationSteps.map((step, index) => <li><span>{String(index + 1).padStart(2, '0')}</span>{step}</li>)}
+          </ol>
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+  (() => {
+    const navigation = document.querySelector('[data-tech-nav]');
+    if (!(navigation instanceof HTMLElement) || navigation.dataset.ready === 'true') return;
+    navigation.dataset.ready = 'true';
+
+    const links = [...navigation.querySelectorAll('[data-tech-link]')];
+    const stages = [...document.querySelectorAll('[data-tech-stage]')];
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const activate = (id) => {
+      for (const link of links) {
+        const active = link.getAttribute('data-tech-link') === id;
+        if (active) link.setAttribute('aria-current', 'step');
+        else link.removeAttribute('aria-current');
+        if (active && link instanceof HTMLElement && navigation.scrollWidth - navigation.clientWidth > 4) {
+          const centeredLeft = link.offsetLeft - ((navigation.clientWidth - link.offsetWidth) / 2);
+          navigation.scrollTo({ left: Math.max(0, centeredLeft), behavior: reducedMotion ? 'auto' : 'smooth' });
+        }
+      }
+    };
+
+    for (const link of links) {
+      link.addEventListener('click', () => activate(link.getAttribute('data-tech-link')));
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible?.target.id) activate(visible.target.id);
+    }, { rootMargin: '-24% 0px -58% 0px', threshold: [0, 0.15, 0.35, 0.6] });
+
+    stages.forEach((stage) => observer.observe(stage));
+    const initialId = window.location.hash.slice(1);
+    if (initialId && stages.some((stage) => stage.id === initialId)) activate(initialId);
+  })();
+</script>

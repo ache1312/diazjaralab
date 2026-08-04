@@ -1,0 +1,53 @@
+{
+  "id": "visualize",
+  "order": 3,
+  "accent": "cyan",
+  "translations": {
+    "es": {
+      "number": "03",
+      "verb": "Visualizar",
+      "title": "Células y circuitos",
+      "question": "¿Qué células y circuitos participan, y qué cambia en su organización o actividad?",
+      "description": "Identificamos y caracterizamos in vitro poblaciones celulares vinculadas con los circuitos respiratorios, preservando el contexto de muestra, marcaje y adquisición.",
+      "items": [
+        {
+          "label": "Inmunofluorescencia",
+          "kind": "Marcaje tisular"
+        },
+        {
+          "label": "Microscopía confocal",
+          "kind": "Imagen estructural"
+        },
+        {
+          "label": "Imagen de calcio en cortes cerebrales",
+          "kind": "Imagen funcional"
+        }
+      ],
+      "scope": "Tejido marcado por inmunofluorescencia y cortes cerebrales para estudios in vitro.",
+      "output": "Distribución celular, morfología y señales de calcio en células y circuitos definidos."
+    },
+    "en": {
+      "number": "03",
+      "verb": "Visualize",
+      "title": "Cells and circuits",
+      "question": "Which cells and circuits participate, and what changes in their organization or activity?",
+      "description": "We identify and characterize, in vitro, cell populations linked to respiratory circuits while preserving sample, labelling, and acquisition context.",
+      "items": [
+        {
+          "label": "Immunofluorescence",
+          "kind": "Tissue labelling"
+        },
+        {
+          "label": "Confocal microscopy",
+          "kind": "Structural imaging"
+        },
+        {
+          "label": "Calcium imaging in brain slices",
+          "kind": "Functional imaging"
+        }
+      ],
+      "scope": "Immunofluorescence-labelled tissue and brain slices for in vitro studies.",
+      "output": "Cell distribution, morphology, and calcium signals in defined cells and circuits."
+    }
+  }
+}

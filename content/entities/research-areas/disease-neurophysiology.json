@@ -1,0 +1,53 @@
+{
+  "id": "disease-neurophysiology",
+  "order": 3,
+  "imageMedia": "content/media/science-cih-iba1.json",
+  "relatedDois": [
+    "10.1016/j.ebiom.2022.104044",
+    "10.1007/s00395-025-01154-5"
+  ],
+  "translations": {
+    "es": {
+      "number": "03",
+      "title": "Qué cambia en la enfermedad",
+      "summary": "Abordamos la relación bidireccional entre alteraciones cerebrales, función respiratoria, fisiología y cognición.",
+      "body": "Las alteraciones cerebrales pueden modificar profundamente la función respiratoria y, a su vez, la disfunción respiratoria puede agravar el curso de una enfermedad. Trabajamos con dos modelos que abordan esta relación bidireccional: hipoxia intermitente crónica y accidente cerebrovascular isquémico cortical. En ambos estudiamos cómo las alteraciones de núcleos respiratorios mediadas por astrocitos afectan la fisiología y la cognición.",
+      "imageAlt": "Micrografía multicanal del laboratorio con señales fluorescentes sobre fondo negro.",
+      "figureCaption": "Micrografía multicanal obtenida por el laboratorio. La imagen se presenta como registro experimental, sin atribuir marcadores o regiones que no estén confirmados en sus metadatos.",
+      "question": "¿Cómo se modifican recíprocamente la respiración, la actividad cerebral y la progresión de la enfermedad?",
+      "hypothesis": "La alteración glial de núcleos respiratorios puede conectar la disfunción cardiorrespiratoria con cambios cerebrales y cognitivos.",
+      "systems": [
+        "Hipoxia intermitente crónica",
+        "Isquemia cortical",
+        "Insuficiencia cardíaca"
+      ],
+      "measurements": [
+        "Ventilación",
+        "Control autonómico",
+        "Actividad glial"
+      ],
+      "status": "Evidencia previa · nuevos modelos activos"
+    },
+    "en": {
+      "number": "03",
+      "title": "What changes in disease",
+      "summary": "We examine the two-way relationship between brain alterations, respiratory function, physiology, and cognition.",
+      "body": "Brain alterations can profoundly modify respiratory function, while respiratory dysfunction can, in turn, worsen the course of disease. We work with two models that address this bidirectional relationship: chronic intermittent hypoxia and cortical ischemic stroke. In both, we focus on how astrocyte-mediated alterations in respiratory nuclei affect physiology and cognition.",
+      "imageAlt": "Multichannel micrograph from the lab showing fluorescent signals against a black background.",
+      "figureCaption": "Multichannel micrograph acquired by the lab. It is presented as an experimental record without assigning markers or regions not confirmed in its metadata.",
+      "question": "How do breathing, brain activity, and disease progression modify one another?",
+      "hypothesis": "Glial alterations in respiratory nuclei may connect cardiorespiratory dysfunction with brain and cognitive changes.",
+      "systems": [
+        "Chronic intermittent hypoxia",
+        "Cortical ischemia",
+        "Heart failure"
+      ],
+      "measurements": [
+        "Ventilation",
+        "Autonomic control",
+        "Glial activity"
+      ],
+      "status": "Previous evidence · new models active"
+    }
+  }
+}

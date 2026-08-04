@@ -1,0 +1,53 @@
+{
+  "id": "respiratory-neurodynamics",
+  "order": 2,
+  "imageMedia": "content/media/science-nts-gfap.json",
+  "relatedDois": [
+    "10.1096/fasebj.2020.34.s1.05130",
+    "10.1111/apha.13864"
+  ],
+  "translations": {
+    "es": {
+      "number": "02",
+      "title": "Cómo la respiración sincroniza redes cerebrales",
+      "summary": "Investigamos cómo las oscilaciones respiratorias sincronizan circuitos corticales e hipocampales.",
+      "body": "La respiración no solo mantiene la homeostasis: también organiza la actividad cerebral. Investigamos cómo las oscilaciones respiratorias sincronizan circuitos corticales e hipocampales, y cómo esta sincronización se relaciona con procesos cognitivos, sueño y aprendizaje. En nuestros modelos de hipoxia intermitente crónica y accidente cerebrovascular isquémico, estudiamos cómo la disfunción de los núcleos respiratorios del tronco encefálico, mediada por astrocitos, repercute en la conectividad de estos circuitos.",
+      "imageAlt": "Imagen científica de fluorescencia producida por el laboratorio sobre fondo oscuro.",
+      "figureCaption": "Imagen de fluorescencia producida por el laboratorio. Se conserva el aspecto multicanal de la adquisición; la interpretación depende de la preparación y los marcadores de cada experimento.",
+      "question": "¿Cómo se acoplan las oscilaciones respiratorias con la actividad cortical e hipocampal?",
+      "hypothesis": "La dinámica respiratoria aporta una referencia temporal para redes cerebrales vinculadas con sueño, aprendizaje y cognición.",
+      "systems": [
+        "Tronco encefálico",
+        "Corteza",
+        "Hipocampo"
+      ],
+      "measurements": [
+        "LFP multicanal",
+        "Señales respiratorias",
+        "Análisis temporal"
+      ],
+      "status": "Línea en desarrollo"
+    },
+    "en": {
+      "number": "02",
+      "title": "How breathing synchronizes brain networks",
+      "summary": "We investigate how respiratory oscillations synchronize cortical and hippocampal circuits.",
+      "body": "Breathing does more than maintain homeostasis: it also organizes brain activity. We investigate how respiratory oscillations synchronize cortical and hippocampal circuits, and how this synchronization relates to cognition, sleep, and learning. In our models of chronic intermittent hypoxia and ischemic stroke, we seek to understand how astrocyte-mediated dysfunction in brainstem respiratory nuclei reshapes connectivity across these circuits.",
+      "imageAlt": "Fluorescence image produced by the lab, with scientific signals displayed against a dark background.",
+      "figureCaption": "Fluorescence image produced by the lab. The multichannel acquisition is preserved; interpretation depends on the preparation and markers used in each experiment.",
+      "question": "How do respiratory oscillations couple with cortical and hippocampal activity?",
+      "hypothesis": "Respiratory dynamics provide a temporal reference for brain networks involved in sleep, learning, and cognition.",
+      "systems": [
+        "Brainstem",
+        "Cortex",
+        "Hippocampus"
+      ],
+      "measurements": [
+        "Multichannel LFP",
+        "Respiratory signals",
+        "Temporal analysis"
+      ],
+      "status": "Developing research line"
+    }
+  }
+}

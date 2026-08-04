@@ -1,0 +1,11 @@
+---
+// Production-only replacement selected by astro.config.mjs. Keeping this as a
+// real Astro component lets BaseLayout share one import without bundling any
+// local-editor code into the public site.
+interface Props {
+  locale: 'es' | 'en';
+  page: string;
+}
+
+Astro.props satisfies Props;
+---

@@ -1,0 +1,143 @@
+{
+  "_template": "outreach",
+  "pageKey": "outreach",
+  "schemaVersion": 1,
+  "state": "published",
+  "routesLocked": true,
+  "route": {
+    "es": "/divulgacion/",
+    "en": "/en/outreach/"
+  },
+  "seo": {
+    "es": {
+      "title": "Divulgación | Díaz-Jara Lab",
+      "description": "Cápsulas de divulgación sobre respiración, cerebro y neurociencia para públicos no especializados."
+    },
+    "en": {
+      "title": "Outreach | Díaz-Jara Lab",
+      "description": "Accessible stories about breathing, the brain, and neuroscience for non-specialist audiences."
+    }
+  },
+  "blocks": [
+    {
+      "id": "outreach-hero",
+      "type": "hero",
+      "enabled": true,
+      "locked": true,
+      "order": 1,
+      "variant": "editorial"
+    },
+    {
+      "id": "outreach-feed",
+      "type": "outreachFeed",
+      "enabled": true,
+      "locked": false,
+      "order": 2,
+      "variant": "list"
+    },
+    {
+      "id": "outreach-status",
+      "type": "status",
+      "enabled": true,
+      "locked": false,
+      "order": 3,
+      "variant": "quiet"
+    }
+  ],
+  "content": {
+    "es": {
+      "eyebrow": "Divulgación",
+      "title": "Respiración y cerebro, explicados con claridad",
+      "introduction": "Esta sección reunirá cápsulas breves sobre respiración, cerebro y neurociencia para público no especializado.",
+      "status": "forthcoming",
+      "statusTitle": "Contenidos en preparación",
+      "statusText": "Mientras preparamos y revisamos los primeros contenidos, puedes conocer nuestras líneas de investigación o enviarnos una consulta.",
+      "archive": {
+        "eyebrow": "Archivo público",
+        "title": "Ciencia para leer y conversar",
+        "introduction": "Artículos, recursos y actividades preparados por el laboratorio para comprender las preguntas que orientan su investigación.",
+        "publishedEntrySingular": "1 entrada publicada",
+        "publishedEntryPlural": "{count} entradas publicadas",
+        "emptyAsideText": "Respiración, cerebro y neurociencia explicados con claridad.",
+        "comingSoonLabel": "Próximamente",
+        "readLabel": "Leer entrada",
+        "articleLabel": "Artículo",
+        "eventLabel": "Actividad",
+        "resourceLabel": "Recurso"
+      },
+      "entry": {
+        "section": "Divulgación científica",
+        "back": "Volver a divulgación",
+        "published": "Publicado",
+        "updated": "Actualizado",
+        "language": "Idioma",
+        "languageValue": "Español",
+        "editorial": "Nota editorial",
+        "editorialText": "Contenido preparado por el laboratorio para acercar su trabajo científico a públicos no especialistas.",
+        "more": "Seguir explorando",
+        "research": "Conocer la investigación",
+        "contact": "Conversar con el laboratorio",
+        "attachmentLabel": "Descargar documento asociado",
+        "pagesLabel": "páginas"
+      },
+      "statusPrimaryAction": {
+        "label": "Explorar la investigación",
+        "page": "research"
+      },
+      "statusSecondaryAction": {
+        "label": "Enviar una consulta",
+        "page": "contact"
+      },
+      "instagramLabel": "Instagram del laboratorio",
+      "instagramHref": null,
+      "instagramStatus": "forthcoming"
+    },
+    "en": {
+      "eyebrow": "Outreach",
+      "title": "Breathing and the brain, explained clearly",
+      "introduction": "This section will bring together short pieces about breathing, the brain, and neuroscience for non-specialist audiences.",
+      "status": "forthcoming",
+      "statusTitle": "Content in preparation",
+      "statusText": "While we prepare and review the first pieces, you can explore our research areas or send us an inquiry.",
+      "archive": {
+        "eyebrow": "Public archive",
+        "title": "Science to read and discuss",
+        "introduction": "Articles, resources, and activities prepared by the laboratory to make the questions guiding its research easier to understand.",
+        "publishedEntrySingular": "1 published entry",
+        "publishedEntryPlural": "{count} published entries",
+        "emptyAsideText": "Breathing, brain, and neuroscience explained with clarity.",
+        "comingSoonLabel": "Coming soon",
+        "readLabel": "Read entry",
+        "articleLabel": "Article",
+        "eventLabel": "Event",
+        "resourceLabel": "Resource"
+      },
+      "entry": {
+        "section": "Scientific outreach",
+        "back": "Back to outreach",
+        "published": "Published",
+        "updated": "Updated",
+        "language": "Language",
+        "languageValue": "English",
+        "editorial": "Editorial note",
+        "editorialText": "Content prepared by the laboratory to make its scientific work accessible to non-specialist audiences.",
+        "more": "Keep exploring",
+        "research": "Explore the research",
+        "contact": "Talk to the laboratory",
+        "attachmentLabel": "Download associated document",
+        "pagesLabel": "pages"
+      },
+      "statusPrimaryAction": {
+        "label": "Explore our research",
+        "page": "research"
+      },
+      "statusSecondaryAction": {
+        "label": "Send an inquiry",
+        "page": "contact"
+      },
+      "instagramLabel": "Laboratory Instagram",
+      "instagramHref": null,
+      "instagramStatus": "forthcoming"
+    }
+  }
+}

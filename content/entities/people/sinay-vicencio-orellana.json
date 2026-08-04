@@ -1,0 +1,32 @@
+{
+  "id": "sinay-vicencio-orellana",
+  "order": 2,
+  "group": "content/entities/team-groups/coordination.json",
+  "portraitMedia": "content/media/team-sinay-vicencio.json",
+  "portrait": "/images/team/sinay-vicencio-orellana.jpg",
+  "state": "published",
+  "translations": {
+    "es": {
+      "name": "Sinay C. Vicencio Orellana",
+      "role": "Lab manager y coordinadora",
+      "credentials": "Bioquímica · Magíster en Ciencias Biológicas · Candidata a Doctora en Ciencias Fisiológicas",
+      "bio": [
+        "Sinay es la mánager del Laboratorio de Neurodinámica Respiratoria, dirigido por el Dr. Esteban Díaz Jara. Su formación abarca neurobiología y modelos preclínicos de patologías de la mielina del sistema nervioso central, fisiología cardiorrespiratoria y medicina traslacional, con especial interés en medicina preventiva del envejecimiento.",
+        "En el laboratorio, su rol combina la organización logística y la planificación experimental con la ejecución de experimentos de biología molecular, fisiología y microscopía. También coordina las prioridades y el calendario experimental de los proyectos."
+      ],
+      "research": "Coordina la operación científica del laboratorio y participa en experimentos de biología molecular, fisiología y microscopía.",
+      "portraitAlt": "Retrato de Sinay C. Vicencio Orellana en el laboratorio."
+    },
+    "en": {
+      "name": "Sinay C. Vicencio Orellana",
+      "role": "Lab manager and coordinator",
+      "credentials": "Biochemist · M.Sc. in Biological Sciences · Ph.D. candidate in Physiological Sciences",
+      "bio": [
+        "Sinay is the lab manager of the Respiratory Neurodynamics Laboratory, led by Dr. Esteban Díaz Jara. Her background spans neurobiology and preclinical models of central nervous system myelin disorders, cardiorespiratory physiology, and translational medicine, with a particular interest in preventive medicine for healthy aging.",
+        "In the lab, she combines logistics and experimental planning with hands-on work in molecular biology, physiology, and microscopy. She also coordinates project priorities and experimental schedules."
+      ],
+      "research": "She coordinates the lab’s scientific operations and contributes to molecular biology, physiology, and microscopy experiments.",
+      "portraitAlt": "Portrait of Sinay C. Vicencio Orellana in the laboratory."
+    }
+  }
+}

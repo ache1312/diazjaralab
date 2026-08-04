@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "science-cih-iba1",
+  "kind": "micrograph",
+  "status": "metadata-pending",
+  "focalPoint": {
+    "x": 50,
+    "y": 50
+  },
+  "source": {
+    "format": "png",
+    "mimeType": "image/png",
+    "byteLength": 1303691,
+    "sha256": "1990909faef51c6d4ffff54c5d5d24d1b3e8cbc6db91d1284c5e2d5b1017214f",
+    "originalStoredLocally": false,
+    "storageKey": null
+  },
+  "master": {
+    "path": "src/assets/images/science/cih-iba1.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "byteLength": 1303691,
+    "width": 1024,
+    "height": 1024,
+    "pages": 1,
+    "hasAlpha": false
+  },
+  "editorial": {
+    "alt": {
+      "es": "Campo experimental con estructuras magenta y núcleos azules sobre fondo negro.",
+      "en": "Experimental field with magenta structures and blue nuclei against a black background."
+    },
+    "caption": {
+      "es": "",
+      "en": ""
+    },
+    "credit": {
+      "es": "Díaz-Jara Lab",
+      "en": "Díaz-Jara Lab"
+    },
+    "technique": {
+      "es": "",
+      "en": ""
+    },
+    "provenance": {
+      "es": "Registro del laboratorio.",
+      "en": "Laboratory record."
+    }
+  },
+  "preservation": {
+    "policy": "legacy-unverified",
+    "sourceIccProfilePreserved": false,
+    "operations": [
+      "legacy-asset-registration"
+    ]
+  },
+  "importedAt": "2026-08-03T12:00:00.000Z",
+  "warnings": [
+    {
+      "code": "ORIGINAL_NOT_ARCHIVED",
+      "message": "Activo legado registrado desde la versión web; el original científico aún no está archivado por el importador."
+    }
+  ]
+}

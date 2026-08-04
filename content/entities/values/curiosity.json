@@ -1,0 +1,16 @@
+{
+  "id": "curiosity",
+  "order": 2,
+  "translations": {
+    "es": {
+      "number": "02",
+      "title": "Curiosidad",
+      "description": "Las preguntas nuevas se convierten en hipótesis explícitas, controles posibles y criterios de interpretación antes del experimento."
+    },
+    "en": {
+      "number": "02",
+      "title": "Curiosity",
+      "description": "New questions become explicit hypotheses, possible controls, and interpretation criteria before the experiment."
+    }
+  }
+}

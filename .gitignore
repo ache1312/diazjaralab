@@ -1,0 +1,24 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+playwright-report/
+test-results/
+.playwright-cli/
+output/
+public/admin/
+.studio/
+media-originals/
+/nul
+
+# Tina generates these modules and its local database on demand.
+tina/__generated__/
+.tina/
+
+# Source delivery retained locally; production assets live in src/assets.
+Pagina web Laboratorio EDJ/
+Pagina web Laboratorio EDJ-20260717T170303Z-1-001.zip

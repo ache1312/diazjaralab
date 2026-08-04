@@ -1,0 +1,32 @@
+{
+  "id": "francisca-silva",
+  "order": 4,
+  "group": "content/entities/team-groups/graduate.json",
+  "portraitMedia": null,
+  "portrait": null,
+  "state": "forthcoming",
+  "translations": {
+    "es": {
+      "name": "Francisca Silva",
+      "role": "Tesista de Magíster en Fisiología y Farmacología",
+      "credentials": "Estudiante de magíster",
+      "institution": "Universidad de Valparaíso",
+      "bio": [
+        "Bio en preparación."
+      ],
+      "portraitAlt": null,
+      "statusLabel": "Bio en preparación"
+    },
+    "en": {
+      "name": "Francisca Silva",
+      "role": "M.Sc. thesis student in Physiology and Pharmacology",
+      "credentials": "Master’s student",
+      "institution": "Universidad de Valparaíso",
+      "bio": [
+        "Biography in preparation."
+      ],
+      "portraitAlt": null,
+      "statusLabel": "Biography in preparation"
+    }
+  }
+}

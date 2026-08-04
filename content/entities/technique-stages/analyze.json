@@ -1,0 +1,69 @@
+{
+  "id": "analyze",
+  "order": 4,
+  "accent": "navy",
+  "translations": {
+    "es": {
+      "number": "04",
+      "verb": "Analizar",
+      "title": "Señales y estructura",
+      "question": "¿Qué patrones conectan la intervención experimental con las señales, imágenes y datos moleculares?",
+      "description": "Transformamos señales, imágenes y datos de expresión génica en métricas reproducibles, conservando la relación entre cada resultado y su registro de origen.",
+      "items": [
+        {
+          "label": "Python",
+          "kind": "Entorno computacional"
+        },
+        {
+          "label": "Análisis de señales",
+          "kind": "Análisis temporal"
+        },
+        {
+          "label": "Procesamiento de datos",
+          "kind": "Flujo reproducible"
+        },
+        {
+          "label": "Aprendizaje automático",
+          "kind": "Modelado"
+        },
+        {
+          "label": "Análisis transcriptómico",
+          "kind": "Análisis molecular"
+        }
+      ],
+      "scope": "Señales electrofisiológicas, imágenes y datos de expresión génica.",
+      "output": "Métricas reproducibles, relaciones temporales y patrones multivariados interpretables."
+    },
+    "en": {
+      "number": "04",
+      "verb": "Analyze",
+      "title": "Signals and structure",
+      "question": "Which patterns connect an experimental intervention with signals, images, and molecular data?",
+      "description": "We transform signals, images, and gene-expression data into reproducible metrics while preserving the relationship between each result and its source record.",
+      "items": [
+        {
+          "label": "Python",
+          "kind": "Computational environment"
+        },
+        {
+          "label": "Signal analysis",
+          "kind": "Temporal analysis"
+        },
+        {
+          "label": "Data processing",
+          "kind": "Reproducible workflow"
+        },
+        {
+          "label": "Machine learning",
+          "kind": "Modelling"
+        },
+        {
+          "label": "Transcriptomic analysis",
+          "kind": "Molecular analysis"
+        }
+      ],
+      "scope": "Electrophysiological signals, images, and gene-expression data.",
+      "output": "Reproducible metrics, temporal relationships, and interpretable multivariate patterns."
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "responsibility",
+  "order": 4,
+  "translations": {
+    "es": {
+      "number": "04",
+      "title": "Responsabilidad",
+      "description": "Cada integrante documenta su trabajo, anticipa riesgos experimentales y comunica a tiempo cambios en los compromisos."
+    },
+    "en": {
+      "number": "04",
+      "title": "Responsibility",
+      "description": "Each member documents their work, anticipates experimental risks, and communicates changes in commitments early."
+    }
+  }
+}

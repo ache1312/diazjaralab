@@ -1,0 +1,172 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BodyOnlyLayout from '@/layouts/BodyOnlyLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { getContent, type Locale, type SiteContent, type TeamMember } from '@/content-data';
+import { blockAttributes } from '@/lib/cms/layout';
+import { resolveMediaAsset } from '@/lib/media';
+import estebanPortrait from '@/assets/images/team/esteban-diaz-jara.jpg';
+import sinayPortrait from '@/assets/images/team/sinay-vicencio.jpg';
+
+interface Props { locale: Locale; content?: SiteContent; embedded?: boolean }
+const { locale, content: suppliedContent, embedded = false } = Astro.props;
+const content = suppliedContent ?? getContent(locale);
+const Layout = embedded ? BodyOnlyLayout : BaseLayout;
+const copy = content.team;
+const academicProfiles = content.publications.profiles.filter((profile) => profile.state === 'published' && profile.href);
+const heroBlock = blockAttributes(content, 'team', 'hero', 1);
+const directoryBlock = blockAttributes(content, 'team', 'teamDirectory', 2);
+const optimizedPortraits = new Map([
+  ['/images/team/esteban-diaz-jara.jpg', estebanPortrait],
+  ['/images/team/sinay-vicencio-orellana.jpg', sinayPortrait],
+]);
+const resolvePortrait = (reference: unknown) => {
+  const asset = resolveMediaAsset(reference, { locale, allowedKinds: ['photograph'] });
+  if (asset.type !== 'image') throw new Error(`El medio «${asset.id}» no es una imagen.`);
+  return asset;
+};
+const registeredPortraits = new Map<string, ReturnType<typeof resolvePortrait>>([
+  ['esteban-diaz-jara', resolvePortrait(copy.media.estebanDiazJara)],
+  ['sinay-vicencio-orellana', resolvePortrait(copy.media.sinayVicencio)],
+]);
+const safeLocalImage = (source: string) => source.startsWith('/') && !source.startsWith('//') && !source.includes('\\');
+const portraitFor = (member: TeamMember) => {
+  if (member.portraitMedia) {
+    const registered = resolvePortrait(member.portraitMedia);
+    return { source: registered.image, alt: member.portraitAlt || registered.alt, objectPosition: registered.objectPosition };
+  }
+  const registered = registeredPortraits.get(member.id);
+  if (registered) return { source: registered.image, alt: member.portraitAlt || registered.alt, objectPosition: registered.objectPosition };
+  const source = member.portrait?.trim();
+  if (!source || !safeLocalImage(source)) return null;
+  return { source: optimizedPortraits.get(source) ?? source, alt: member.portraitAlt ?? '', objectPosition: '50% 50%' };
+};
+---
+
+<Layout locale={locale} page="team" title={content.seo.team.title} description={content.seo.team.description} content={content}>
+  <PageHero index="03" eyebrow={copy.eyebrow} title={copy.title} introduction={copy.introduction} source={copy} asideLabel={copy.asideLabel} asideText={copy.asideText} block={heroBlock} />
+
+  <section class="content-section" {...directoryBlock}>
+    <div class="shell">
+      {copy.groups.map((group) => {
+        const members = copy.members.filter((member) => member.group === group.id);
+        const featured = members.filter((member) => member.state === 'published');
+        const forthcoming = members.filter((member) => member.state === 'forthcoming');
+        return (
+          <section class="team-group" aria-labelledby={`group-${group.id}`}>
+            <h2 class="team-group-title" id={`group-${group.id}`}>{group.label}</h2>
+            {featured.map((member) => {
+              const portrait = portraitFor(member);
+              return (
+                <article class="team-feature">
+                  {portrait && (
+                    <div class="team-feature-media" data-reveal>
+                      {typeof portrait.source === 'string'
+                        ? <img src={portrait.source} alt={portrait.alt} loading="lazy" decoding="async" style={`object-position: ${portrait.objectPosition}`} />
+                        : <Image src={portrait.source} alt={portrait.alt} widths={[360, 480, 720]} sizes="(max-width: 760px) calc(100vw - 36px), min(34vw, 430px)" quality={82} loading="lazy" decoding="async" style={`object-position: ${portrait.objectPosition}`} />}
+                    </div>
+                  )}
+                  <div class="team-feature-copy" data-reveal data-reveal-delay="1">
+                    <h3>{member.name}</h3>
+                    <p class="member-role">{member.role}</p>
+                    <p class="member-credentials">{member.credentials}{member.institution ? ` · ${member.institution}` : ''}</p>
+                    <div class="member-bio">{member.bio.map((paragraph) => <p>{paragraph}</p>)}</div>
+                    {member.research && (
+                      <section class="member-scientific-focus" aria-label={copy.scientificResponsibilityLabel}>
+                        <h4>{copy.scientificResponsibilityLabel}</h4>
+                        <p>{member.research}</p>
+                      </section>
+                    )}
+                    {member.id === 'esteban-diaz-jara' && academicProfiles.length > 0 && (
+                      <nav class="member-profile-links" aria-label={copy.profileLinksLabel}>
+                        {academicProfiles.map((profile) => (
+                          <a href={profile.href!} target="_blank" rel="noreferrer">{profile.label}<span aria-hidden="true">↗</span></a>
+                        ))}
+                      </nav>
+                    )}
+                  </div>
+                </article>
+              );
+            })}
+            {forthcoming.length > 0 && (
+              <div class="team-grid">
+                {forthcoming.map((member) => (
+                  <article class="member-card" data-reveal>
+                    <span class="member-context">{member.statusLabel ?? member.institution ?? group.label}</span>
+                    <h3>{member.name}</h3>
+                    <p class="member-role">{member.role}</p>
+                    <p class="member-credentials">{member.credentials}</p>
+                  </article>
+                ))}
+              </div>
+            )}
+          </section>
+        );
+      })}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .member-context {
+    display: block;
+    margin-bottom: clamp(42px, 6vw, 72px);
+    color: var(--teal-dark);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 650;
+    letter-spacing: 0.075em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  .member-card .member-role {
+    margin-bottom: 3px;
+  }
+
+  .member-card .member-credentials {
+    margin-bottom: 0;
+  }
+
+  .member-scientific-focus {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+    padding-block: 21px;
+    border-block: 1px solid var(--line-strong);
+  }
+
+  .member-scientific-focus h4 {
+    margin: 2px 0 0;
+    color: var(--teal-dark);
+    font-size: .8rem;
+    font-weight: 700;
+  }
+
+  .member-scientific-focus p {
+    margin: 0;
+    color: var(--ink-2);
+    font-size: 1rem;
+  }
+
+  .member-profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin-top: 22px;
+  }
+
+  .member-profile-links a {
+    display: inline-flex;
+    gap: 8px;
+    color: var(--teal-dark);
+    font-size: .9rem;
+    font-weight: 680;
+  }
+
+  @media (max-width: 760px) {
+    .member-scientific-focus { grid-template-columns: 1fr; gap: 7px; }
+  }
+</style>

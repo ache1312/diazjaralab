@@ -1,0 +1,12 @@
+{
+  "id": "coordination",
+  "order": 2,
+  "translations": {
+    "es": {
+      "label": "Coordinación"
+    },
+    "en": {
+      "label": "Coordination"
+    }
+  }
+}

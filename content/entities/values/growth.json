@@ -1,0 +1,16 @@
+{
+  "id": "growth",
+  "order": 6,
+  "translations": {
+    "es": {
+      "number": "06",
+      "title": "Rigor y desarrollo progresivo",
+      "description": "La autonomía aumenta con la experiencia demostrada; la supervisión y la revisión se ajustan a cada etapa de formación."
+    },
+    "en": {
+      "number": "06",
+      "title": "Rigor and progressive development",
+      "description": "Autonomy increases with demonstrated experience; supervision and review are adjusted to each training stage."
+    }
+  }
+}

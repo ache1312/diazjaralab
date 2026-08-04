@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="og-title og-description">
+  <title id="og-title">Díaz-Jara Lab</title>
+  <desc id="og-description">Laboratorio de Neurodinámica Respiratoria.</desc>
+  <defs>
+    <linearGradient id="og-panel" x1="742" y1="62" x2="1154" y2="568" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102b43"/>
+      <stop offset="1" stop-color="#071522"/>
+    </linearGradient>
+    <linearGradient id="og-accent" x1="29" y1="110" x2="227" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6fd3bd"/>
+      <stop offset="1" stop-color="#1fa98c"/>
+    </linearGradient>
+    <pattern id="og-grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0v34" fill="none" stroke="#1d3f5c" stroke-width="1" opacity=".1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#f6f4ee"/>
+  <rect width="1200" height="630" fill="url(#og-grid)"/>
+  <rect x="746" y="44" width="410" height="542" rx="4" fill="url(#og-panel)"/>
+  <path d="M0 0h12v630H0z" fill="#1fa98c"/>
+
+  <text x="74" y="90" fill="#1fa98c" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="17" font-weight="650" letter-spacing="3.4">DÍAZ–JARA LAB  /  NEUROSCIENCE</text>
+  <text x="72" y="188" fill="#0a1c2e" font-family="Fraunces, Georgia, serif" font-size="69" font-weight="650" letter-spacing="-1.8">Laboratorio de</text>
+  <text x="72" y="270" fill="#0a1c2e" font-family="Fraunces, Georgia, serif" font-size="69" font-weight="650" letter-spacing="-1.8">Neurodinámica</text>
+  <text x="72" y="352" fill="#0a1c2e" font-family="Fraunces, Georgia, serif" font-size="69" font-weight="650" letter-spacing="-1.8">Respiratoria</text>
+  <path d="M74 405h550" stroke="#1fa98c" stroke-width="3"/>
+  <text x="74" y="455" fill="#1d3f5c" font-family="'Source Sans 3', 'Helvetica Neue', Arial, sans-serif" font-size="25" font-weight="560">Circuitos · dinámica · fisiología · enfermedad</text>
+  <text x="74" y="530" fill="#0a1c2e" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="16" font-weight="600" letter-spacing="2">DIAZJARALAB.COM</text>
+
+  <g transform="translate(760 108) scale(1.64)">
+    <path d="M47 23c9-15 17 15 26 0s17-15 26 0 17 15 26 0 17-15 26 0 17 15 26 0 17-15 26 0" fill="none" stroke="url(#og-accent)" stroke-width="3.5" stroke-linecap="round" opacity=".8"/>
+    <g fill="none" stroke="url(#og-accent)" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M49 111c-12-9-14-25-6-36-3-16 10-31 26-32 7-14 27-17 40-7 14-14 38-9 46 6 18-8 39 3 41 20 16 6 21 24 12 37 6 13-3 28-17 31-8 13-27 15-39 5-11 9-24 12-35 3-11 10-29 12-40 2-16 2-28-8-26-21-4-2-5-5-2-8Z" stroke-width="4.6"/>
+      <path d="M117 138c2 13 12 25 11 43M105 143c3 13 7 26 5 39" stroke-width="4.6"/>
+      <path d="M155 133c-1-14 13-23 28-19 15 4 18 21 7 31-14 11-33 4-35-12Z" stroke-width="4.1"/>
+      <path d="M162 128c8-7 18-7 27-2M162 134c8 7 18 8 27 2M167 121c5 12 12 18 21 18" stroke-width="2.4" opacity=".88"/>
+    </g>
+    <g fill="none" stroke="url(#og-accent)" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round" opacity=".82">
+      <path d="m65 72 34-19 34 9 37-8M65 72l17 34 17-53 22 44 12-35 32 38 5-46M82 106l39-9 44 3M82 106l51-44M99 53l66 47"/>
+    </g>
+    <g fill="#6fd3bd" stroke="#0a1c2e" stroke-width="1.8">
+      <circle cx="65" cy="72" r="5.7"/>
+      <circle cx="99" cy="53" r="5.7"/>
+      <circle cx="133" cy="62" r="5.7"/>
+      <circle cx="170" cy="54" r="5.7"/>
+      <circle cx="82" cy="106" r="5.7"/>
+      <circle cx="121" cy="97" r="5.7"/>
+      <circle cx="165" cy="100" r="5.7"/>
+    </g>
+    <path d="M29 199c13-19 26-19 39 0s26 19 39 0 26-19 39 0 26 19 39 0 26-19 42-2" fill="none" stroke="url(#og-accent)" stroke-width="4.4" stroke-linecap="round"/>
+  </g>
+</svg>

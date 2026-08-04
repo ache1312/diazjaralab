@@ -1,0 +1,32 @@
+{
+  "id": "fernanda-castillo",
+  "order": 6,
+  "group": "content/entities/team-groups/undergraduate.json",
+  "portraitMedia": null,
+  "portrait": null,
+  "state": "forthcoming",
+  "translations": {
+    "es": {
+      "name": "Fernanda Castillo",
+      "role": "Tesista de pregrado en Química y Farmacia",
+      "credentials": "Estudiante de pregrado",
+      "institution": "Universidad Autónoma de Chile",
+      "bio": [
+        "Bio en preparación."
+      ],
+      "portraitAlt": null,
+      "statusLabel": "Bio en preparación"
+    },
+    "en": {
+      "name": "Fernanda Castillo",
+      "role": "Undergraduate thesis student in Chemistry and Pharmacy",
+      "credentials": "Undergraduate student",
+      "institution": "Universidad Autónoma de Chile",
+      "bio": [
+        "Biography in preparation."
+      ],
+      "portraitAlt": null,
+      "statusLabel": "Biography in preparation"
+    }
+  }
+}

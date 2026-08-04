@@ -1,0 +1,30 @@
+{
+  "id": "anid-installation-85250074",
+  "order": 1,
+  "state": "published",
+  "endDateIso": "2028-10-01",
+  "translations": {
+    "es": {
+      "agency": "ANID · Proyecto Instalación Académica",
+      "number": "N.º 85250074",
+      "title": "Instalación académica del Dr. Esteban Díaz Jara… control neural cardiorrespiratorio en enfermedades cardiometabólicas y genéticas",
+      "officialTitle": "Instalación académica del Dr. Esteban Díaz Jara... control neural cardiorrespiratoria en enfermedades cardio-metabólicas y genéticas",
+      "officialLang": "es",
+      "principalInvestigatorLabel": "Investigador principal",
+      "principalInvestigator": "Dr. Esteban Díaz Jara",
+      "endDateLabel": "Término",
+      "endDate": "1 de octubre de 2028"
+    },
+    "en": {
+      "agency": "ANID · Academic Installation Project",
+      "number": "No. 85250074",
+      "title": "Academic installation of Dr. Esteban Díaz Jara… neural cardiorespiratory control in cardiometabolic and genetic diseases",
+      "officialTitle": "Instalación académica del Dr. Esteban Díaz Jara... control neural cardiorrespiratoria en enfermedades cardio-metabólicas y genéticas",
+      "officialLang": "es",
+      "principalInvestigatorLabel": "Principal investigator",
+      "principalInvestigator": "Dr. Esteban Díaz Jara",
+      "endDateLabel": "End date",
+      "endDate": "October 1, 2028"
+    }
+  }
+}

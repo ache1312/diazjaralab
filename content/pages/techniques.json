@@ -1,0 +1,115 @@
+{
+  "_template": "techniques",
+  "pageKey": "techniques",
+  "schemaVersion": 1,
+  "state": "published",
+  "routesLocked": true,
+  "route": {
+    "es": "/tecnicas/",
+    "en": "/en/techniques/"
+  },
+  "seo": {
+    "es": {
+      "title": "Técnicas | Díaz-Jara Lab",
+      "description": "Métodos del Díaz-Jara Lab para estudiar neurofisiología respiratoria: modelos preclínicos, registros in vivo, microscopía, electrofisiología y análisis reproducible."
+    },
+    "en": {
+      "title": "Techniques | Díaz-Jara Lab",
+      "description": "Díaz-Jara Lab methods for respiratory neurophysiology: preclinical models, in vivo recordings, microscopy, electrophysiology, and reproducible analysis."
+    }
+  },
+  "blocks": [
+    {
+      "id": "techniques-hero",
+      "type": "hero",
+      "enabled": true,
+      "locked": true,
+      "order": 1,
+      "variant": "editorial"
+    },
+    {
+      "id": "techniques-pipeline",
+      "type": "techniqueStages",
+      "enabled": true,
+      "locked": true,
+      "order": 2,
+      "variant": "pipeline"
+    },
+    {
+      "id": "techniques-closing",
+      "type": "closing",
+      "enabled": true,
+      "locked": false,
+      "order": 3,
+      "variant": "quiet"
+    }
+  ],
+  "content": {
+    "es": {
+      "eyebrow": "Cómo investigamos",
+      "title": "De la perturbación a la evidencia",
+      "introduction": "Una técnica aislada rara vez responde una pregunta biológica. Diseñamos una cadena experimental que conecta modelos y perturbaciones con señales fisiológicas, imágenes y análisis reproducibles.",
+      "media": {
+        "evidencePrimary": "content/media/science-rtn-overview.json",
+        "evidenceSecondary": "content/media/science-rtn-detail.json"
+      },
+      "railLabel": "Flujo experimental",
+      "asideText": "Elegimos cada método por la pregunta, la escala espacial o temporal, el tipo de muestra y la inferencia que permite sostener.",
+      "questionLabel": "Pregunta que guía la etapa",
+      "scopeLabel": "Contexto experimental",
+      "outputLabel": "Dato producido",
+      "methodsLabel": "Capacidades utilizadas",
+      "evidenceEyebrow": "Registro experimental",
+      "evidenceTitle": "Una imagen sólo es útil cuando conserva su contexto",
+      "evidenceIntroduction": "Las adquisiciones se interpretan junto con la preparación, las condiciones experimentales, los canales y el análisis. Por eso distinguimos lo observado de aquello que todavía requiere verificación.",
+      "evidencePrimaryCaption": "DJL-MET-01 · Vista general de una adquisición del laboratorio.",
+      "evidenceSecondaryCaption": "DJL-MET-02 · Detalle de una adquisición del laboratorio.",
+      "evidenceNote": "La región anatómica, los marcadores y la escala no se atribuyen aquí hasta validar el registro experimental asociado.",
+      "closingEyebrow": "Integración",
+      "closingTitle": "Una cadena, no cuatro técnicas aisladas",
+      "closingText": "La interpretación se fortalece cuando una perturbación definida puede seguirse desde el registro fisiológico y la imagen hasta una métrica trazable.",
+      "integrationLabel": "Cadena de evidencia",
+      "integrationSteps": [
+        "Modelo o perturbación",
+        "Registro fisiológico",
+        "Imagen y tejido",
+        "Análisis",
+        "Interpretación"
+      ],
+      "closingActionLabel": "Conversar sobre un diseño experimental"
+    },
+    "en": {
+      "eyebrow": "How we investigate",
+      "title": "From perturbation to evidence",
+      "introduction": "An isolated technique rarely answers a biological question. We design an experimental chain that connects models and perturbations with physiological signals, images, and reproducible analysis.",
+      "media": {
+        "evidencePrimary": "content/media/science-rtn-overview.json",
+        "evidenceSecondary": "content/media/science-rtn-detail.json"
+      },
+      "railLabel": "Experimental workflow",
+      "asideText": "We select each method according to the question, spatial or temporal scale, sample type, and the inference it can support.",
+      "questionLabel": "Question guiding this stage",
+      "scopeLabel": "Experimental context",
+      "outputLabel": "Data produced",
+      "methodsLabel": "Capabilities used",
+      "evidenceEyebrow": "Experimental record",
+      "evidenceTitle": "An image is useful only when its context is preserved",
+      "evidenceIntroduction": "Acquisitions are interpreted together with preparation, experimental conditions, channels, and analysis. We therefore distinguish what was observed from what still requires verification.",
+      "evidencePrimaryCaption": "DJL-MET-01 · Overview of an acquisition produced by the laboratory.",
+      "evidenceSecondaryCaption": "DJL-MET-02 · Detail of an acquisition produced by the laboratory.",
+      "evidenceNote": "Anatomical region, markers, and scale are not assigned here until the associated experimental record has been validated.",
+      "closingEyebrow": "Integration",
+      "closingTitle": "One chain, not four isolated techniques",
+      "closingText": "Interpretation becomes stronger when a defined perturbation can be followed from physiological recording and imaging to a traceable metric.",
+      "integrationLabel": "Evidence chain",
+      "integrationSteps": [
+        "Model or perturbation",
+        "Physiological recording",
+        "Imaging and tissue",
+        "Analysis",
+        "Interpretation"
+      ],
+      "closingActionLabel": "Discuss an experimental design"
+    }
+  }
+}

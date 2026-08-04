@@ -1,0 +1,32 @@
+{
+  "id": "pablo-burgos",
+  "order": 3,
+  "group": "content/entities/team-groups/graduate.json",
+  "portraitMedia": null,
+  "portrait": null,
+  "state": "forthcoming",
+  "translations": {
+    "es": {
+      "name": "Pablo Burgos",
+      "role": "Estudiante de posgrado",
+      "credentials": "Físico · Magíster en Neurociencia",
+      "institution": "Universidad Autónoma de Chile",
+      "bio": [
+        "Bio en preparación."
+      ],
+      "portraitAlt": null,
+      "statusLabel": "Bio en preparación"
+    },
+    "en": {
+      "name": "Pablo Burgos",
+      "role": "Graduate student",
+      "credentials": "Physicist · M.Sc. in Neuroscience",
+      "institution": "Universidad Autónoma de Chile",
+      "bio": [
+        "Biography in preparation."
+      ],
+      "portraitAlt": null,
+      "statusLabel": "Biography in preparation"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "esteban-diaz-jara",
+  "order": 1,
+  "group": "content/entities/team-groups/principal-investigator.json",
+  "portraitMedia": "content/media/team-esteban-diaz-jara.json",
+  "portrait": "/images/team/esteban-diaz-jara.jpg",
+  "state": "published",
+  "translations": {
+    "es": {
+      "name": "Esteban Díaz Jara",
+      "role": "Investigador principal y profesor asociado",
+      "credentials": "Bioquímico · Doctor en Ciencias Biológicas, mención Fisiología",
+      "institution": "Universidad Autónoma de Chile",
+      "bio": [
+        "Esteban es bioquímico de la Universidad Austral de Chile, en Valdivia. Realizó su tesis de pregrado bajo la tutela de Felipe Barros en el Centro de Estudios Científicos (CECs), donde estudió el metabolismo energético neuronal. Posteriormente se trasladó a Santiago y trabajó con Juan Andrés Orellana en comunicación glía-neurona mediada por conexinas y panexinas.",
+        "En 2019 ingresó al Doctorado en Ciencias Biológicas, mención Fisiología, de la Pontificia Universidad Católica de Chile. Bajo la tutela de Rodrigo Del Río, su tesis doctoral estudió el rol de los transportadores de glutamato de astrocitos del núcleo retrotrapezoide en la potenciación del quimiorreflejo central y el desarrollo de alteraciones respiratorias en un modelo de insuficiencia cardíaca con fracción de eyección preservada.",
+        "A mediados de 2025 se incorporó como investigador y profesor asociado al Instituto de Ciencias Biomédicas de la Universidad Autónoma de Chile, donde, en paralelo, realiza su postdoctorado bajo la tutela del profesor Rodrigo Iturriaga."
+      ],
+      "research": "Su trabajo integra fisiología cardiorrespiratoria, señalización astrocitaria y dinámica de circuitos para estudiar la relación entre respiración y función cerebral en salud y enfermedad.",
+      "portraitAlt": "Retrato de Esteban Díaz Jara."
+    },
+    "en": {
+      "name": "Esteban Díaz Jara",
+      "role": "Principal investigator and associate professor",
+      "credentials": "Biochemist · Ph.D. in Biological Sciences, Physiology",
+      "institution": "Universidad Autónoma de Chile",
+      "bio": [
+        "Esteban trained as a biochemist at Universidad Austral de Chile in Valdivia. He completed his undergraduate thesis under Felipe Barros at the Centro de Estudios Científicos (CECs), where he studied neuronal energy metabolism. He later moved to Santiago and worked with Juan Andrés Orellana on connexin- and pannexin-mediated glia–neuron communication.",
+        "In 2019, he entered the Ph.D. program in Biological Sciences, with a specialization in Physiology, at Pontificia Universidad Católica de Chile. Under Rodrigo Del Río’s supervision, his doctoral research examined how astrocytic glutamate transporters in the retrotrapezoid nucleus contribute to central chemoreflex potentiation and respiratory disturbances in a model of heart failure with preserved ejection fraction.",
+        "In mid-2025, he joined the Institute of Biomedical Sciences at Universidad Autónoma de Chile as an investigator and associate professor. In parallel, he is conducting postdoctoral research under Professor Rodrigo Iturriaga’s supervision."
+      ],
+      "research": "His work integrates cardiorespiratory physiology, astrocyte signaling, and circuit dynamics to understand how breathing interacts with the brain in health and disease.",
+      "portraitAlt": "Portrait of Esteban Díaz Jara."
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 220" role="img" aria-labelledby="mark-title mark-description" fill="none">
+  <title id="mark-title">Isotipo Díaz-Jara Lab</title>
+  <desc id="mark-description">Perfil lineal de un cerebro con una red neuronal dispersa y ondas respiratorias.</desc>
+  <defs>
+    <linearGradient id="mark-gradient" x1="34" y1="110" x2="222" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a1c2e"/>
+      <stop offset="0.46" stop-color="#1d3f5c"/>
+      <stop offset="1" stop-color="#1fa98c"/>
+    </linearGradient>
+    <linearGradient id="mark-wave-gradient" x1="29" y1="199" x2="227" y2="199" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a1c2e"/>
+      <stop offset="1" stop-color="#1fa98c"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M47 23c9-15 17 15 26 0s17-15 26 0 17 15 26 0 17-15 26 0 17 15 26 0 17-15 26 0" stroke="url(#mark-gradient)" stroke-width="3.5" stroke-linecap="round" opacity=".82"/>
+
+  <g stroke="url(#mark-gradient)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M49 111c-12-9-14-25-6-36-3-16 10-31 26-32 7-14 27-17 40-7 14-14 38-9 46 6 18-8 39 3 41 20 16 6 21 24 12 37 6 13-3 28-17 31-8 13-27 15-39 5-11 9-24 12-35 3-11 10-29 12-40 2-16 2-28-8-26-21-4-2-5-5-2-8Z" stroke-width="4.6"/>
+    <path d="M117 138c2 13 12 25 11 43M105 143c3 13 7 26 5 39" stroke-width="4.6"/>
+    <path d="M155 133c-1-14 13-23 28-19 15 4 18 21 7 31-14 11-33 4-35-12Z" stroke-width="4.1"/>
+    <path d="M162 128c8-7 18-7 27-2M162 134c8 7 18 8 27 2M167 121c5 12 12 18 21 18" stroke-width="2.4" opacity=".88"/>
+  </g>
+
+  <g stroke="url(#mark-gradient)" stroke-width="2.15" stroke-linecap="round" stroke-linejoin="round" opacity=".92">
+    <path d="m65 72 34-19 34 9 37-8M65 72l17 34 17-53 22 44 12-35 32 38 5-46M82 106l39-9 44 3M82 106l51-44M99 53l66 47"/>
+  </g>
+  <g stroke="#f6f4ee" stroke-width="1.8">
+    <circle cx="65" cy="72" r="5.7" fill="#0a1c2e"/>
+    <circle cx="99" cy="53" r="5.7" fill="#12324c"/>
+    <circle cx="133" cy="62" r="5.7" fill="#176276"/>
+    <circle cx="170" cy="54" r="5.7" fill="#1fa98c"/>
+    <circle cx="82" cy="106" r="5.7" fill="#173951"/>
+    <circle cx="121" cy="97" r="5.7" fill="#176276"/>
+    <circle cx="165" cy="100" r="5.7" fill="#1b987f"/>
+  </g>
+
+  <path d="M29 199c13-19 26-19 39 0s26 19 39 0 26-19 39 0 26 19 39 0 26-19 42-2" stroke="url(#mark-wave-gradient)" stroke-width="4.4" stroke-linecap="round"/>
+</svg>

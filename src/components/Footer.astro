@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import uaLogo from '@/assets/images/institution/universidad-autonoma.png';
+import { getContent, type SiteContent } from '@/content-data';
+import { tinaField } from '@tinacms/astro/tina-field';
+import { sanitizeImageSrc } from '@tinacms/astro/sanitize';
+import { pathFor, type Locale } from '@/lib/routes';
+
+interface Props { locale: Locale; content?: SiteContent }
+const { locale, content: suppliedContent } = Astro.props;
+const content = suppliedContent ?? getContent(locale);
+const editableField = (source: unknown, field: string) => tinaField(source as Record<string, unknown> | undefined, field) || undefined;
+const settingsSource = content._tina?.settings as Record<string, any> | undefined;
+const localizedField = (source: unknown) => editableField(source, locale);
+const logoSrc = sanitizeImageSrc(content.brand.primaryLogo ?? '/brand/lab-mark-original-optimized.webp') || '/brand/lab-mark-original-optimized.webp';
+---
+
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div class="footer-brand">
+      <img class="original-mark" src={logoSrc} width="384" height="345" alt="" data-tina-field={editableField(settingsSource?.brand, 'primaryLogo')} />
+      <div>
+        <strong data-tina-field={localizedField(settingsSource?.brand?.name)}>{content.brand.name}</strong>
+        <p data-tina-field={localizedField(settingsSource?.footer?.description)}>{content.footer.description}</p>
+      </div>
+    </div>
+    <div class="footer-location">
+      <span class="eyebrow" data-tina-field={localizedField(settingsSource?.footer?.location)}>{content.footer.location}</span>
+      <p><span data-tina-field={editableField(content.contact, 'center')}>{content.contact.center}</span><br /><span data-tina-field={editableField(content.contact, 'institution')}>{content.contact.institution}</span></p>
+    </div>
+    <div class="footer-contact">
+      <span class="eyebrow" data-tina-field={localizedField(settingsSource?.footer?.contactLabel)}>{content.footer.contactLabel}</span>
+      <a href={`mailto:${content.contact.email}`} data-tina-field={editableField(content.contact, 'email')}>{content.contact.email}</a>
+      <a href={pathFor(locale, 'contact')} data-tina-field={editableField(content.contact.join, 'title')}>{content.contact.join.title} <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <div class="shell footer-bottom">
+    <Image src={uaLogo} alt={content.contact.institution} width={219} height={90} loading="lazy" />
+    <p data-tina-field={localizedField(settingsSource?.footer?.copyright)}>{content.footer.copyright} · <span data-tina-field={localizedField(settingsSource?.footer?.affiliation)}>{content.footer.affiliation}</span></p>
+  </div>
+</footer>
+
+<style>
+  .footer-brand .original-mark {
+    width: 64px;
+    height: 57px;
+    flex: 0 0 64px;
+    object-fit: contain;
+    border-radius: 7px;
+    filter: none;
+    opacity: 1;
+  }
+</style>

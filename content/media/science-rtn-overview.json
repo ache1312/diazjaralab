@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "science-rtn-overview",
+  "kind": "micrograph",
+  "status": "metadata-pending",
+  "focalPoint": {
+    "x": 50,
+    "y": 50
+  },
+  "source": {
+    "format": "png",
+    "mimeType": "image/png",
+    "byteLength": 1202096,
+    "sha256": "5adefae8c831d156fae5e9a53667020813ef9f251427477ba389f9295aad33a7",
+    "originalStoredLocally": false,
+    "storageKey": null
+  },
+  "master": {
+    "path": "src/assets/images/science/rtn-overview.png",
+    "format": "png",
+    "mimeType": "image/png",
+    "byteLength": 1202096,
+    "width": 1024,
+    "height": 1024,
+    "pages": 1,
+    "hasAlpha": false
+  },
+  "editorial": {
+    "alt": {
+      "es": "Vista general de una adquisición experimental del laboratorio.",
+      "en": "Overview of an experimental acquisition from the laboratory."
+    },
+    "caption": {
+      "es": "",
+      "en": ""
+    },
+    "credit": {
+      "es": "Díaz-Jara Lab",
+      "en": "Díaz-Jara Lab"
+    },
+    "technique": {
+      "es": "",
+      "en": ""
+    },
+    "provenance": {
+      "es": "Registro del laboratorio.",
+      "en": "Laboratory record."
+    }
+  },
+  "preservation": {
+    "policy": "legacy-unverified",
+    "sourceIccProfilePreserved": false,
+    "operations": [
+      "legacy-asset-registration"
+    ]
+  },
+  "importedAt": "2026-08-03T12:00:00.000Z",
+  "warnings": [
+    {
+      "code": "ORIGINAL_NOT_ARCHIVED",
+      "message": "Activo legado registrado desde la versión web; el original científico aún no está archivado por el importador."
+    }
+  ]
+}

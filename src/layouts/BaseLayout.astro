@@ -1,0 +1,174 @@
+---
+import '@fontsource-variable/source-sans-3/index.css';
+import '@fontsource-variable/jetbrains-mono/index.css';
+import '@/styles/global.css';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import StudioToolbar from '@studio/toolbar';
+import TinaIsland from '@tinacms/astro/TinaIsland.astro';
+import { getContent, type SiteContent } from '@/content-data';
+import { oppositeLocale, pathFor, type Locale, type PageKey } from '@/lib/routes';
+
+interface Props {
+  locale: Locale;
+  page: PageKey;
+  title: string;
+  description: string;
+  structuredData?: Record<string, unknown>;
+  content?: SiteContent;
+  canonicalPath?: string;
+  alternatePath?: string | null;
+  defaultAlternatePath?: string | null;
+  ogType?: 'website' | 'article';
+}
+
+const {
+  locale,
+  page,
+  title,
+  description,
+  structuredData,
+  content: suppliedContent,
+  canonicalPath,
+  alternatePath,
+  defaultAlternatePath,
+  ogType = 'website',
+} = Astro.props;
+const studioMode = process.env.STUDIO_MODE === 'true';
+const visualEditingAvailable = studioMode && canonicalPath === undefined;
+const content = suppliedContent ?? getContent(locale);
+const otherLocale = oppositeLocale(locale);
+const canonical = new URL(canonicalPath ?? pathFor(locale, page), Astro.site);
+const alternate = alternatePath === null
+  ? null
+  : new URL(alternatePath ?? pathFor(otherLocale, page), Astro.site);
+const defaultAlternate = defaultAlternatePath === null
+  ? null
+  : new URL(defaultAlternatePath ?? pathFor('es', page), Astro.site);
+const ogImage = new URL('/brand/og-default.png', Astro.site);
+const studioRevealCss = `
+  /* Tina replaces the island after each edit. Keep the new nodes visible;
+     the public build never emits this editor-only rule. */
+  .has-reveal .studio-page-island [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* Show editability only on interaction inside the CMS preview. */
+  html[data-visual-editing] [data-tina-field] {
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 2px;
+    transition: background-color 160ms ease-out;
+  }
+
+  html[data-visual-editing] [data-tina-field]:hover,
+  html[data-visual-editing] [data-tina-field]:focus-within {
+    background-color: rgba(31, 169, 140, .075);
+  }
+`;
+const studioPreviewScript = `
+  if (window.self !== window.top) {
+    document.documentElement.dataset.visualEditing = 'true';
+  }
+`;
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ResearchOrganization',
+  name: content.brand.name,
+  alternateName: content.brand.scientificName,
+  url: Astro.site?.toString(),
+  email: content.contact.email,
+  parentOrganization: {
+    '@type': 'CollegeOrUniversity',
+    name: content.contact.institution,
+  },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: content.contact.streetAddress,
+    addressLocality: 'Huechuraba',
+    addressRegion: 'Santiago',
+    addressCountry: 'CL',
+  },
+};
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f4ee" />
+    <meta name="color-scheme" content="light dark" />
+    <script is:inline>
+      (() => {
+        const storageKey = 'diaz-jara-theme';
+        let savedTheme = null;
+        try {
+          const value = localStorage.getItem(storageKey);
+          if (value === 'light' || value === 'dark') savedTheme = value;
+        } catch {
+          // System preference remains available when storage is blocked.
+        }
+        const theme = savedTheme ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#081820' : '#f6f4ee');
+      })();
+    </script>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang={locale} href={canonical} />
+    {alternate && <link rel="alternate" hreflang={otherLocale} href={alternate} />}
+    {defaultAlternate && <link rel="alternate" hreflang="x-default" href={defaultAlternate} />}
+    <link rel="icon" href="/brand/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={content.brand.name} />
+    <meta property="og:locale" content={locale === 'es' ? 'es_CL' : 'en_US'} />
+    <meta property="og:locale:alternate" content={locale === 'es' ? 'en_US' : 'es_CL'} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={content.brand.logoAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={content.brand.logoAlt} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    {structuredData && <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
+    {visualEditingAvailable && <script is:inline set:html={studioPreviewScript} />}
+    {visualEditingAvailable && <style is:inline set:html={studioRevealCss} />}
+  </head>
+  <body data-page={page}>
+    <a class="skip-link" href="#main-content">{content.common.skipToContent}</a>
+    <Header {locale} {page} {content} />
+    <main id="main-content">
+      {visualEditingAvailable ? (
+        <TinaIsland name="page/" wrapper={{ tag: 'div', className: 'studio-page-island' }} params={{ locale, page }} primary>
+          <slot />
+        </TinaIsland>
+      ) : <slot />}
+    </main>
+    <Footer {locale} {content} />
+    {visualEditingAvailable && <StudioToolbar {locale} {page} />}
+    <script>
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduceMotion && 'IntersectionObserver' in window) {
+        document.documentElement.classList.add('has-reveal');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        document.querySelectorAll('[data-reveal]').forEach((element) => observer.observe(element));
+      }
+    </script>
+  </body>
+</html>

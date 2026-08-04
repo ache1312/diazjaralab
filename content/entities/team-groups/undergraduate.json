@@ -1,0 +1,12 @@
+{
+  "id": "undergraduate",
+  "order": 4,
+  "translations": {
+    "es": {
+      "label": "Estudiantes de pregrado"
+    },
+    "en": {
+      "label": "Undergraduate students"
+    }
+  }
+}

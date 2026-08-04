@@ -1,0 +1,175 @@
+{
+  "_template": "contact",
+  "pageKey": "contact",
+  "schemaVersion": 1,
+  "state": "published",
+  "routesLocked": true,
+  "route": {
+    "es": "/contacto/",
+    "en": "/en/contact/"
+  },
+  "seo": {
+    "es": {
+      "title": "Contacto | Díaz-Jara Lab",
+      "description": "Escríbenos o visita el Laboratorio de Neurodinámica Respiratoria en Huechuraba, Santiago de Chile."
+    },
+    "en": {
+      "title": "Contact | Díaz-Jara Lab",
+      "description": "Contact or visit the Respiratory Neurodynamics Laboratory in Huechuraba, Santiago, Chile."
+    }
+  },
+  "blocks": [
+    {
+      "id": "contact-hero",
+      "type": "hero",
+      "enabled": true,
+      "locked": true,
+      "order": 1,
+      "variant": "editorial"
+    },
+    {
+      "id": "contact-details",
+      "type": "contactDetails",
+      "enabled": true,
+      "locked": true,
+      "order": 2,
+      "variant": "split"
+    },
+    {
+      "id": "contact-form",
+      "type": "contactForm",
+      "enabled": true,
+      "locked": true,
+      "order": 3,
+      "variant": "form"
+    },
+    {
+      "id": "contact-map",
+      "type": "map",
+      "enabled": true,
+      "locked": false,
+      "order": 4,
+      "variant": "map"
+    },
+    {
+      "id": "contact-join",
+      "type": "callToAction",
+      "enabled": true,
+      "locked": false,
+      "order": 5,
+      "variant": "quiet"
+    }
+  ],
+  "content": {
+    "es": {
+      "eyebrow": "Contacto",
+      "title": "Hablemos de investigación y formación",
+      "introduction": "Escríbenos para conversar sobre colaboración científica, oportunidades de formación o consultas relacionadas con el laboratorio. Estamos en el Centro de Investigación e Innovación de la Universidad Autónoma de Chile, en Huechuraba.",
+      "asideLabel": "Respuesta directa",
+      "locationTitle": "Dónde estamos",
+      "institution": "Universidad Autónoma de Chile",
+      "center": "Centro de Investigación e Innovación",
+      "faculty": "Facultad de Ciencias de la Salud",
+      "laboratory": "Laboratorio de Fisiología · 3.er piso",
+      "streetAddress": "Av. del Valle 534, Huechuraba, Santiago, Chile",
+      "mapEyebrow": "Huechuraba · Santiago",
+      "mapTitle": "Ubicación del laboratorio",
+      "mapIframeTitle": "Mapa de ubicación de Díaz-Jara Lab",
+      "mapLoadLabel": "Cargar mapa interactivo",
+      "mapExternalLabel": "Abrir en Google Maps",
+      "mapQuery": "Universidad Autónoma de Chile Centro de Investigación e Innovación Av. del Valle 534 Huechuraba Santiago Chile",
+      "directEmailLabel": "Correo directo",
+      "email": "esteban.diaz@uautonoma.cl",
+      "form": {
+        "title": "Cuéntanos el motivo de tu consulta",
+        "introduction": "Incluye tu institución o etapa de formación, tus intereses y el tipo de colaboración u oportunidad que buscas.",
+        "nameLabel": "Nombre",
+        "namePlaceholder": "Tu nombre",
+        "emailLabel": "Correo electrónico",
+        "emailPlaceholder": "tu@correo.cl",
+        "messageLabel": "Mensaje",
+        "messagePlaceholder": "Ej. colaboración científica, interés en tesis o consulta general",
+        "submitLabel": "Enviar mensaje",
+        "submittingLabel": "Enviando…",
+        "successTitle": "Mensaje enviado",
+        "successMessage": "Gracias por escribirnos. Te responderemos pronto.",
+        "errorTitle": "No pudimos enviar el mensaje",
+        "errorMessage": "Inténtalo nuevamente o escríbenos directamente por correo electrónico.",
+        "requiredMessage": "Este campo es obligatorio.",
+        "invalidEmailMessage": "Ingresa un correo electrónico válido.",
+        "unavailableMessage": "El formulario aún no está habilitado. Puedes contactarnos mediante el correo directo.",
+        "fallbackHint": "Al enviar se abrirá tu aplicación de correo.",
+        "fallbackSubject": "Contacto desde diazjaralab.com",
+        "fallbackNameLabel": "Nombre",
+        "fallbackEmailLabel": "Email",
+        "honeypotLabel": "No completar este campo"
+      },
+      "join": {
+        "eyebrow": "Formación e investigación",
+        "title": "Oportunidades para estudiantes e investigadores postdoctorales",
+        "paragraphs": [
+          "Recibimos consultas de estudiantes de pregrado, magíster y doctorado, y de investigadores postdoctorales interesados en neurofisiología respiratoria.",
+          "Al escribir, indica tu etapa de formación, experiencia relevante e intereses científicos. Las postulaciones pueden provenir de distintas áreas.",
+          "La disponibilidad de posiciones y proyectos se confirma por correo electrónico."
+        ],
+        "actionLabel": "Consultar disponibilidad",
+        "emailSubject": "Interés en unirme al Díaz-Jara Lab"
+      }
+    },
+    "en": {
+      "eyebrow": "Contact",
+      "title": "Let’s talk about research and training",
+      "introduction": "Write to us about scientific collaboration, training opportunities, or questions related to the laboratory. We are based at the Research and Innovation Center of Universidad Autónoma de Chile in Huechuraba.",
+      "asideLabel": "Direct response",
+      "locationTitle": "Where to find us",
+      "institution": "Universidad Autónoma de Chile",
+      "center": "Research and Innovation Center",
+      "faculty": "Faculty of Health Sciences",
+      "laboratory": "Physiology Laboratory · 3rd floor",
+      "streetAddress": "Av. del Valle 534, Huechuraba, Santiago, Chile",
+      "mapEyebrow": "Huechuraba · Santiago",
+      "mapTitle": "Laboratory location",
+      "mapIframeTitle": "Díaz-Jara Lab location map",
+      "mapLoadLabel": "Load interactive map",
+      "mapExternalLabel": "Open in Google Maps",
+      "mapQuery": "Universidad Autónoma de Chile Centro de Investigación e Innovación Av. del Valle 534 Huechuraba Santiago Chile",
+      "directEmailLabel": "Direct email",
+      "email": "esteban.diaz@uautonoma.cl",
+      "form": {
+        "title": "Tell us what you would like to discuss",
+        "introduction": "Include your institution or training stage, your interests, and the kind of collaboration or opportunity you are looking for.",
+        "nameLabel": "Name",
+        "namePlaceholder": "Your name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "you@example.com",
+        "messageLabel": "Message",
+        "messagePlaceholder": "E.g. scientific collaboration, thesis interest, or general inquiry",
+        "submitLabel": "Send message",
+        "submittingLabel": "Sending…",
+        "successTitle": "Message sent",
+        "successMessage": "Thank you for writing to us. We will reply soon.",
+        "errorTitle": "We could not send your message",
+        "errorMessage": "Please try again or contact us directly by email.",
+        "requiredMessage": "This field is required.",
+        "invalidEmailMessage": "Enter a valid email address.",
+        "unavailableMessage": "The form is not enabled yet. You can contact us using the direct email link.",
+        "fallbackHint": "Submitting will open your email application.",
+        "fallbackSubject": "Message from diazjaralab.com",
+        "fallbackNameLabel": "Name",
+        "fallbackEmailLabel": "Email",
+        "honeypotLabel": "Do not fill out this field"
+      },
+      "join": {
+        "eyebrow": "Training and research",
+        "title": "Opportunities for students and postdoctoral researchers",
+        "paragraphs": [
+          "We welcome inquiries from undergraduate, master’s, and doctoral students, as well as postdoctoral researchers interested in respiratory neurophysiology.",
+          "When writing, indicate your training stage, relevant experience, and scientific interests. Applicants may come from different academic backgrounds.",
+          "Availability of positions and projects is confirmed by email."
+        ],
+        "actionLabel": "Ask about availability",
+        "emailSubject": "Interest in joining the Díaz-Jara Lab"
+      }
+    }
+  }
+}

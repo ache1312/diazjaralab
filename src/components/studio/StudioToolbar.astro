@@ -1,0 +1,783 @@
+---
+import type { Locale, PageId } from '@/content-data';
+
+interface Props {
+  locale: Locale;
+  page: PageId;
+}
+
+const { locale, page } = Astro.props;
+const pageDocument = `content/pages/${page}.json`;
+---
+
+<div
+  class="studio-ui"
+  data-studio-ui
+  data-locale={locale}
+  data-page={page}
+  data-document={pageDocument}
+  data-api="http://127.0.0.1:4322"
+>
+  <nav class="studio-dock" aria-label="Herramientas de edición local">
+    <button class="studio-identity" type="button" data-studio-view="status" aria-label="Abrir estado editorial">
+      <span class="studio-signal" data-studio-signal aria-hidden="true"></span>
+      <span><strong>Editor local</strong><small data-studio-summary>Conectando</small></span>
+    </button>
+    <div class="studio-actions">
+      <details class="studio-tools">
+        <summary>Herramientas</summary>
+        <div class="studio-tools-menu">
+          <button type="button" data-studio-view="history">Historial</button>
+          <button type="button" data-studio-view="validate">Validar sitio</button>
+          <button type="button" data-studio-view="media">Importar medios</button>
+          <button type="button" data-studio-view="papers">Actualizar papers</button>
+        </div>
+      </details>
+      <button class="studio-publish" type="button" data-studio-view="publish">Publicar</button>
+    </div>
+  </nav>
+
+  <aside class="studio-panel" data-studio-panel aria-label="Panel del editor" aria-hidden="true" inert>
+    <header>
+      <div>
+        <span class="studio-kicker">Díaz-Jara Lab</span>
+        <h2 data-studio-title>Estado editorial</h2>
+      </div>
+      <button class="studio-close" type="button" data-studio-close aria-label="Cerrar panel">×</button>
+    </header>
+    <div class="studio-panel-body">
+      <section data-studio-section="status">
+        <p class="studio-lead">El contenido se guarda en archivos locales. El sitio público cambia únicamente al publicar.</p>
+        <dl class="studio-facts" data-studio-facts></dl>
+        <div class="studio-notice" data-studio-status-message role="status"></div>
+        <form class="studio-setup" data-studio-setup hidden>
+          <h3>Conectar o reintentar GitHub</h3>
+          <label>URL del repositorio<input name="remoteUrl" type="url" placeholder="https://github.com/usuario/repositorio.git" required /></label>
+          <div class="studio-form-grid">
+            <label>Rama<input name="branch" value="main" required /></label>
+            <label>Nombre del autor<input name="authorName" value="Esteban Díaz Jara" required /></label>
+          </div>
+          <label>Correo del autor<input name="authorEmail" type="email" value="esteban.diaz@uautonoma.cl" required /></label>
+          <label class="studio-check"><input name="replaceRemote" type="checkbox" /> Reemplazar la conexión existente si la URL cambió</label>
+          <button class="studio-primary" type="submit">Revisar configuración</button>
+        </form>
+      </section>
+
+      <section data-studio-section="history" hidden>
+        <p class="studio-lead">Se conservan hasta 100 versiones locales por documento. Restaurar nunca borra el historial publicado.</p>
+        <label>Documento
+          <select data-history-path>
+            <option value={pageDocument}>Página actual</option>
+            <option value="content/settings/site.json">Navegación, marca y pie</option>
+            <option value="content/publications/curation.json">Curaduría de papers</option>
+          </select>
+        </label>
+        <button type="button" data-history-load>Actualizar historial</button>
+        <ol class="studio-history" data-history-list></ol>
+      </section>
+
+      <section data-studio-section="validate" hidden>
+        <p class="studio-lead">Comprueba contenido, traducciones, enlaces y build antes de crear un commit.</p>
+        <button class="studio-primary" type="button" data-validate>Ejecutar validación</button>
+        <div class="studio-results" data-validation-results aria-live="polite"></div>
+      </section>
+
+      <section data-studio-section="media" hidden>
+        <p class="studio-lead">Importa imágenes y documentos sin alterar sus píxeles científicos. El original se archiva fuera de Git y el sitio conserva una copia web trazable.</p>
+        <form class="studio-media-form" data-media-form>
+          <label>Archivo
+            <input name="file" type="file" accept=".jpg,.jpeg,.png,.webp,.avif,.gif,.tif,.tiff,.pdf,image/jpeg,image/png,image/webp,image/avif,image/gif,image/tiff,application/pdf" required />
+          </label>
+          <div class="studio-form-grid">
+            <label>Tipo
+              <select name="kind" required>
+                <option value="micrograph">Micrografía</option>
+                <option value="photograph">Fotografía</option>
+                <option value="figure">Figura</option>
+                <option value="logo">Logo</option>
+                <option value="document">Documento</option>
+              </select>
+            </label>
+            <label>ID estable (opcional)<input name="id" pattern="[a-z0-9]+(?:-[a-z0-9]+)*" placeholder="ej. nts-gfap-2026" /></label>
+          </div>
+          <label class="studio-media-page" hidden>Página del TIFF<input name="page" type="number" min="1" step="1" placeholder="1" /></label>
+          <fieldset>
+            <legend>Texto alternativo obligatorio</legend>
+            <label>Español<textarea name="altEs" rows="2" required></textarea></label>
+            <label>Inglés<textarea name="altEn" rows="2" required></textarea></label>
+          </fieldset>
+          <fieldset>
+            <legend>Registro científico</legend>
+            <label>Leyenda ES<textarea name="captionEs" rows="2" required></textarea></label>
+            <label>Caption EN<textarea name="captionEn" rows="2" required></textarea></label>
+            <div class="studio-form-grid">
+              <label>Crédito ES<input name="creditEs" required /></label>
+              <label>Credit EN<input name="creditEn" required /></label>
+            </div>
+            <div class="studio-form-grid">
+              <label>Técnica ES<input name="techniqueEs" required /></label>
+              <label>Technique EN<input name="techniqueEn" required /></label>
+            </div>
+            <label>Procedencia ES<textarea name="provenanceEs" rows="2" required></textarea></label>
+            <label>Provenance EN<textarea name="provenanceEn" rows="2" required></textarea></label>
+          </fieldset>
+          <label class="studio-check"><input name="replace" type="checkbox" /> Reemplazar el medio con este ID después de revisar sus metadatos</label>
+          <button class="studio-primary" type="submit">Importar medio</button>
+        </form>
+        <div class="studio-results" data-media-results aria-live="polite"></div>
+      </section>
+
+      <section data-studio-section="papers" hidden>
+        <p class="studio-lead">Busca cambios bibliográficos en una copia temporal. Nada se reemplaza sin una segunda confirmación.</p>
+        <button class="studio-primary" type="button" data-papers-prepare>Buscar actualizaciones</button>
+        <div class="studio-results" data-papers-results aria-live="polite"></div>
+      </section>
+
+      <section data-studio-section="publish" hidden>
+        <p class="studio-lead">Guarda primero el formulario de Tina. Solo se incluyen contenido y medios permitidos; los cambios de código quedan fuera.</p>
+        <label>Descripción de la publicación
+          <input data-publish-message maxlength="120" value="Actualizar contenido del laboratorio" />
+        </label>
+        <button class="studio-primary" type="button" data-publish-prepare>Validar y revisar cambios</button>
+        <div class="studio-results" data-publish-results aria-live="polite"></div>
+      </section>
+    </div>
+    <footer><span>Historial automático activo</span><span data-studio-document>{pageDocument}</span></footer>
+  </aside>
+  <div class="studio-announcer sr-only" aria-live="polite" data-studio-announcer></div>
+</div>
+
+<style>
+  :global(body) { padding-bottom: 82px; }
+
+  .studio-ui {
+    --studio-ink: oklch(20% 0.025 215);
+    --studio-paper: oklch(97% 0.008 83);
+    --studio-muted: oklch(52% 0.018 215);
+    --studio-line: oklch(82% 0.015 205);
+    --studio-accent: oklch(52% 0.105 193);
+    --studio-good: oklch(58% 0.12 158);
+    position: relative;
+    z-index: 1000;
+    color: var(--studio-ink);
+    font-family: var(--font-body);
+  }
+
+  .studio-dock {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: min(520px, calc(100vw - 36px));
+    z-index: 1002;
+    display: flex;
+    min-height: 58px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 8px 10px 8px 16px;
+    border: 1px solid oklch(78% 0.018 205);
+    border-radius: 10px;
+    background: var(--studio-paper);
+    box-shadow: 0 18px 52px oklch(17% 0.03 215 / 22%);
+  }
+
+  .studio-identity,
+  .studio-identity > span:last-child {
+    display: flex;
+    align-items: center;
+  }
+
+  .studio-ui .studio-identity { min-width: 0; gap: 10px; padding: 0 8px 0 2px; white-space: nowrap; }
+  .studio-identity > span:last-child { align-items: flex-start; flex-direction: column; line-height: 1.15; }
+  .studio-identity strong { font-size: .82rem; font-weight: 720; }
+  .studio-identity small { margin-top: 3px; color: var(--studio-muted); font-size: .69rem; }
+
+  .studio-signal {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: oklch(68% 0.12 72);
+    box-shadow: 0 0 0 4px oklch(68% 0.12 72 / 14%);
+  }
+  .studio-signal.is-ready { background: var(--studio-good); box-shadow: 0 0 0 4px oklch(58% 0.12 158 / 14%); }
+  .studio-signal.is-error { background: oklch(58% 0.17 28); box-shadow: 0 0 0 4px oklch(58% 0.17 28 / 14%); }
+
+  .studio-actions { display: flex; align-items: center; gap: 4px; }
+  .studio-tools { position: relative; }
+  .studio-tools summary {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 7px;
+    padding: 0 12px;
+    border-radius: 7px;
+    font-size: .78rem;
+    font-weight: 680;
+    cursor: pointer;
+    list-style: none;
+  }
+  .studio-tools summary::-webkit-details-marker { display: none; }
+  .studio-tools summary::after { content: "⌄"; color: var(--studio-muted); font-size: .82rem; }
+  .studio-tools summary:hover,
+  .studio-tools[open] summary { background: oklch(92% 0.012 190); }
+  .studio-tools-menu {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 12px);
+    display: grid;
+    width: 210px;
+    padding: 6px;
+    border: 1px solid var(--studio-line);
+    border-radius: 9px;
+    background: var(--studio-paper);
+    box-shadow: 0 18px 48px oklch(17% 0.03 215 / 20%);
+  }
+  .studio-ui .studio-tools-menu button { width: 100%; justify-content: flex-start; text-align: left; }
+  .studio-ui button,
+  .studio-ui input,
+  .studio-ui textarea,
+  .studio-ui select { font: inherit; }
+  .studio-ui button {
+    min-height: 44px;
+    padding: 0 13px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    color: var(--studio-ink);
+    background: transparent;
+    font-size: .78rem;
+    font-weight: 680;
+    cursor: pointer;
+  }
+  .studio-ui button:hover { background: oklch(92% 0.012 190); }
+  .studio-ui button:focus-visible,
+  .studio-ui input:focus-visible,
+  .studio-ui textarea:focus-visible,
+  .studio-ui select:focus-visible { outline: 3px solid oklch(67% 0.11 193 / 45%); outline-offset: 2px; }
+  .studio-ui button:disabled { cursor: wait; opacity: .55; }
+  .studio-ui .studio-publish,
+  .studio-ui .studio-primary { color: oklch(98% 0.006 190); background: var(--studio-ink); }
+  .studio-ui .studio-publish:hover,
+  .studio-ui .studio-primary:hover { background: oklch(28% 0.035 215); }
+
+  .studio-panel {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    bottom: 88px;
+    z-index: 1001;
+    display: grid;
+    width: min(430px, calc(100vw - 28px));
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+    border: 1px solid var(--studio-line);
+    border-radius: 12px;
+    background: var(--studio-paper);
+    box-shadow: 0 24px 70px oklch(17% 0.03 215 / 24%);
+    opacity: 0;
+    transform: translate3d(calc(100% + 28px), 0, 0);
+    transition: transform 220ms cubic-bezier(.22, 1, .36, 1), opacity 160ms ease-out;
+    pointer-events: none;
+  }
+  .studio-panel.is-open { opacity: 1; transform: translate3d(0, 0, 0); pointer-events: auto; }
+  .studio-panel > header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding: 22px 22px 17px; border-bottom: 1px solid var(--studio-line); }
+  .studio-kicker { color: var(--studio-accent); font-family: var(--font-mono); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; }
+  .studio-panel h2 { margin: 5px 0 0; font-size: 1.35rem; letter-spacing: -.025em; }
+  .studio-panel h3 { margin: 0 0 12px; font-size: .96rem; }
+  .studio-ui .studio-close { min-width: 44px; padding: 0; font-size: 1.45rem; font-weight: 400; }
+  .studio-panel-body { overflow-y: auto; padding: 22px; }
+  .studio-panel-body section { display: grid; gap: 16px; }
+  .studio-panel-body section[hidden] { display: none; }
+  .studio-lead { max-width: 55ch; margin: 0; color: var(--studio-muted); font-size: .89rem; line-height: 1.55; }
+  .studio-panel footer { display: flex; justify-content: space-between; gap: 16px; padding: 12px 22px; border-top: 1px solid var(--studio-line); color: var(--studio-muted); font-family: var(--font-mono); font-size: .62rem; }
+  .studio-panel footer span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  .studio-facts { display: grid; margin: 0; border-top: 1px solid var(--studio-line); }
+  .studio-facts div { display: grid; grid-template-columns: 110px 1fr; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--studio-line); }
+  .studio-facts dt { color: var(--studio-muted); font-size: .75rem; }
+  .studio-facts dd { margin: 0; overflow-wrap: anywhere; font-size: .8rem; font-weight: 650; }
+
+  .studio-ui label { display: grid; gap: 7px; color: var(--studio-muted); font-size: .74rem; font-weight: 650; }
+  .studio-ui input,
+  .studio-ui textarea,
+  .studio-ui select { width: 100%; min-height: 44px; padding: 9px 11px; border: 1px solid var(--studio-line); border-radius: 6px; color: var(--studio-ink); background: oklch(99% 0.004 83); font-size: .82rem; }
+  .studio-ui textarea { min-height: 62px; resize: vertical; line-height: 1.45; }
+  .studio-setup { display: grid; gap: 13px; padding-top: 4px; }
+  .studio-media-form { display: grid; gap: 14px; }
+  .studio-media-form fieldset { display: grid; gap: 11px; margin: 0; padding: 14px; border: 1px solid var(--studio-line); border-radius: 7px; }
+  .studio-media-form legend { padding: 0 6px; color: var(--studio-ink); font-size: .76rem; font-weight: 720; }
+  .studio-media-form input[type="file"] { padding: 7px; }
+  .studio-ui .studio-check { display: flex; align-items: flex-start; gap: 9px; color: var(--studio-ink); line-height: 1.4; }
+  .studio-ui .studio-check input { width: 17px; min-height: 17px; margin-top: 1px; padding: 0; }
+  .studio-form-grid { display: grid; grid-template-columns: .65fr 1.35fr; gap: 10px; }
+  .studio-notice,
+  .studio-results { font-size: .8rem; line-height: 1.5; }
+  .studio-notice:not(:empty),
+  .studio-results:not(:empty) { padding: 12px; border: 1px solid var(--studio-line); border-radius: 7px; background: oklch(94% 0.012 190); }
+  .studio-results.is-error { border-color: oklch(72% 0.09 28); background: oklch(95% 0.025 28); color: oklch(36% 0.11 28); }
+  .studio-results ul { margin: 8px 0 0; padding-left: 18px; }
+  .studio-results details,
+  .studio-notice details { margin-top: 10px; }
+  .studio-results summary,
+  .studio-notice summary { cursor: pointer; font-weight: 700; }
+  .studio-results pre,
+  .studio-notice pre { max-height: 260px; overflow: auto; padding: 10px; border-radius: 5px; background: oklch(98% 0.004 83); font-size: .68rem; white-space: pre-wrap; }
+  .studio-confirm { display: grid; gap: 10px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--studio-line); }
+  .studio-history { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--studio-line); }
+  .studio-history li { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--studio-line); }
+  .studio-history strong { display: block; font-size: .75rem; }
+  .studio-history small { color: var(--studio-muted); font-size: .66rem; }
+
+  @media (max-width: 720px) {
+    .studio-dock { right: 8px; bottom: 8px; width: calc(100vw - 16px); min-height: 54px; padding-left: 8px; }
+    .studio-identity small { display: none; }
+    .studio-actions { flex: 0 0 auto; }
+    .studio-ui button { padding-inline: 10px; }
+    .studio-tools summary { padding-inline: 9px; }
+    .studio-panel { top: 8px; right: 8px; bottom: 70px; width: calc(100vw - 16px); }
+    .studio-form-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .studio-panel { transition: none; }
+  }
+</style>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-studio-ui]');
+  if (root) {
+    const apiBase = root.dataset.api ?? 'http://127.0.0.1:4322';
+    const currentDocument = root.dataset.document ?? '';
+    const panel = root.querySelector<HTMLElement>('[data-studio-panel]');
+    const title = root.querySelector<HTMLElement>('[data-studio-title]');
+    const summary = root.querySelector<HTMLElement>('[data-studio-summary]');
+    const signal = root.querySelector<HTMLElement>('[data-studio-signal]');
+    const announcer = root.querySelector<HTMLElement>('[data-studio-announcer]');
+    let token = '';
+    let currentStatus: Record<string, any> | null = null;
+    let panelTrigger: HTMLButtonElement | null = null;
+    let historyDocumentsLoaded = false;
+
+    const labels: Record<string, string> = {
+      status: 'Estado editorial',
+      history: 'Historial de la página',
+      validate: 'Validación del sitio',
+      media: 'Importar imágenes y documentos',
+      papers: 'Actualizar publicaciones',
+      publish: 'Publicar en GitHub',
+    };
+
+    const announce = (message: string) => {
+      if (announcer) announcer.textContent = message;
+    };
+
+    const escapeHtml = (value: unknown) => String(value ?? '')
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;');
+
+    class StudioRequestError extends Error {
+      code: string;
+      details: any;
+      constructor(message: string, code = 'UNKNOWN', details: any = null) {
+        super(message);
+        this.name = 'StudioRequestError';
+        this.code = code;
+        this.details = details;
+      }
+    }
+
+    const request = async (path: string, options: { method?: string; body?: unknown } = {}) => {
+      const response = await fetch(`${apiBase}${path}`, {
+        method: options.method ?? 'GET',
+        headers: {
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+          ...(options.body !== undefined ? { 'Content-Type': 'application/json' } : {}),
+        },
+        ...(options.body !== undefined ? { body: JSON.stringify(options.body) } : {}),
+      });
+      const data = await response.json().catch(() => ({ error: { message: 'Respuesta local no válida.' } }));
+      if (!response.ok || data.ok === false) {
+        throw new StudioRequestError(
+          data.error?.message ?? data.message ?? 'La operación no pudo completarse.',
+          data.error?.code,
+          data.error?.details,
+        );
+      }
+      return data;
+    };
+
+    const tinaHasUnsavedChanges = () => {
+      try {
+        if (window.parent === window) return false;
+        const buttons = [...window.parent.document.querySelectorAll<HTMLButtonElement>('button')];
+        const saveButton = buttons.find((button) => /^(save|guardar)$/iu.test(button.textContent?.trim() ?? ''));
+        const visuallyDisabled = saveButton?.classList.contains('pointer-events-none')
+          || saveButton?.classList.contains('cursor-not-allowed');
+        return Boolean(
+          saveButton
+          && !saveButton.disabled
+          && saveButton.getAttribute('aria-disabled') !== 'true'
+          && !visuallyDisabled,
+        );
+      } catch {
+        return false;
+      }
+    };
+
+    const requireSavedTinaForm = () => {
+      if (tinaHasUnsavedChanges()) {
+        throw new Error('Hay cambios visibles aún no guardados. Pulsa “Guardar” y vuelve a intentarlo.');
+      }
+    };
+
+    const setBusy = (button: HTMLButtonElement | null, busy: boolean, label?: string) => {
+      if (!button) return;
+      if (busy) {
+        button.dataset.previousLabel = button.textContent ?? '';
+        button.textContent = label ?? 'Procesando…';
+      } else if (button.dataset.previousLabel) {
+        button.textContent = button.dataset.previousLabel;
+      }
+      button.disabled = busy;
+    };
+
+    const showError = (container: HTMLElement | null, error: unknown) => {
+      if (!container) return;
+      container.classList.add('is-error');
+      const message = error instanceof Error ? error.message : 'Ocurrió un error local.';
+      const requestError = error instanceof StudioRequestError ? error : null;
+      const checks = Array.isArray(requestError?.details?.checks)
+        ? requestError.details.checks.filter((check: any) => check.ok === false)
+        : [];
+      const technical = checks.map((check: any) => `${check.label}: ${check.output || 'sin detalle'}`)
+        .concat(requestError?.details?.stderr || requestError?.details?.reason || [])
+        .filter(Boolean)
+        .join('\n\n')
+        .slice(-12_000);
+      container.innerHTML = `<strong>${escapeHtml(message)}</strong>${requestError?.code ? `<p>Código: ${escapeHtml(requestError.code)}</p>` : ''}${technical ? `<details><summary>Cómo diagnosticarlo</summary><pre>${escapeHtml(technical)}</pre></details>` : ''}`;
+      announce(message);
+    };
+
+    const loadHistoryDocuments = async () => {
+      if (historyDocumentsLoaded) return;
+      const select = root.querySelector<HTMLSelectElement>('[data-history-path]');
+      if (!select) return;
+      try {
+        const data = await request('/api/documents');
+        const selected = select.value;
+        select.innerHTML = (data.paths ?? []).map((path: string) => {
+          const label = path === currentDocument
+            ? `Página actual · ${path}`
+            : path.replace(/^content\//, '').replaceAll('/', ' · ');
+          return `<option value="${escapeHtml(path)}">${escapeHtml(label)}</option>`;
+        }).join('');
+        if ([...select.options].some((option) => option.value === selected)) select.value = selected;
+        historyDocumentsLoaded = true;
+      } catch (error) {
+        announce(error instanceof Error ? error.message : 'No se pudo cargar la lista de documentos.');
+      }
+    };
+
+    const openPanel = (view: string, trigger?: HTMLButtonElement) => {
+      panelTrigger = trigger ?? panelTrigger;
+      trigger?.closest('details')?.removeAttribute('open');
+      root.querySelectorAll<HTMLElement>('[data-studio-section]').forEach((section) => {
+        section.hidden = section.dataset.studioSection !== view;
+      });
+      if (title) title.textContent = labels[view] ?? 'Editor local';
+      panel?.removeAttribute('inert');
+      panel?.classList.add('is-open');
+      panel?.setAttribute('aria-hidden', 'false');
+      root.querySelector<HTMLButtonElement>('[data-studio-close]')?.focus();
+      if (view === 'status') refreshStatus();
+      if (view === 'history') loadHistoryDocuments().then(loadHistory);
+    };
+
+    const closePanel = () => {
+      panel?.classList.remove('is-open');
+      panel?.setAttribute('aria-hidden', 'true');
+      panel?.setAttribute('inert', '');
+      panelTrigger?.focus();
+      panelTrigger = null;
+    };
+
+    const refreshStatus = async () => {
+      try {
+        const status = await request('/api/status');
+        currentStatus = status;
+        const repositoryReady = Boolean(status.remote && status.initialized && status.synchronization);
+        signal?.classList.add('is-ready');
+        signal?.classList.remove('is-error');
+        if (summary) summary.textContent = repositoryReady ? `${status.changes.length} cambio(s) pendiente(s)` : 'GitHub requiere conexión';
+        const facts = root.querySelector<HTMLElement>('[data-studio-facts]');
+        if (facts) facts.innerHTML = [
+          ['Rama', status.branch ?? 'main'],
+          ['GitHub', status.remote ?? 'Sin configurar'],
+          ['Versión', status.head ? String(status.head).slice(0, 8) : 'Sin versión inicial'],
+          ['Cambios editoriales', status.changes.filter((item: any) => item.editorial).length],
+        ].map(([term, value]) => `<div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('');
+        const setup = root.querySelector<HTMLFormElement>('[data-studio-setup]');
+        if (setup) {
+          setup.hidden = repositoryReady;
+          const remoteInput = setup.elements.namedItem('remoteUrl') as HTMLInputElement | null;
+          if (remoteInput && status.remote && !remoteInput.value) remoteInput.value = status.remote;
+        }
+        const message = root.querySelector<HTMLElement>('[data-studio-status-message]');
+        if (message) message.textContent = repositoryReady
+          ? 'Repositorio conectado. El historial local continúa aunque no publiques.'
+          : status.remote
+            ? 'La conexión existe, pero la rama aún no está confirmada en GitHub. Reintenta la configuración.'
+            : 'Publicar permanecerá deshabilitado hasta completar la conexión inicial.';
+      } catch (error) {
+        signal?.classList.add('is-error');
+        if (summary) summary.textContent = 'Servicio no disponible';
+        showError(root.querySelector('[data-studio-status-message]'), error);
+      }
+    };
+
+    const loadHistory = async () => {
+      const list = root.querySelector<HTMLOListElement>('[data-history-list]');
+      const select = root.querySelector<HTMLSelectElement>('[data-history-path]');
+      if (!list || !select) return;
+      list.innerHTML = '<li><span><strong>Cargando historial</strong><small>Espera un momento</small></span></li>';
+      try {
+        const data = await request(`/api/history?path=${encodeURIComponent(select.value)}&limit=100`);
+        const snapshots = data.entries ?? data.snapshots ?? data.versions ?? [];
+        list.innerHTML = snapshots.length ? snapshots.map((snapshot: any) => {
+          const date = new Date(snapshot.at ?? snapshot.createdAt ?? snapshot.timestamp).toLocaleString(root.dataset.locale === 'en' ? 'en-US' : 'es-CL');
+          const bytes = snapshot.bytes ?? snapshot.size ?? 0;
+          return `<li><span><strong>${escapeHtml(date)}</strong><small>${escapeHtml(bytes)} bytes</small></span><button type="button" data-restore="${escapeHtml(snapshot.id ?? snapshot.snapshotId)}">Restaurar</button></li>`;
+        }).join('') : '<li><span><strong>Aún no hay versiones</strong><small>Se crearán al guardar cambios.</small></span></li>';
+        list.querySelectorAll<HTMLButtonElement>('[data-restore]').forEach((button) => button.addEventListener('click', async () => {
+          const snapshotId = button.dataset.restore;
+          if (!snapshotId) return;
+          setBusy(button, true, 'Restaurando…');
+          try {
+            requireSavedTinaForm();
+            if (!window.confirm('¿Restaurar esta versión? Se creará una copia del estado actual antes de reemplazarlo.')) {
+              setBusy(button, false);
+              return;
+            }
+            await request('/api/history/restore', { method: 'POST', body: { path: select.value, snapshotId } });
+            announce('Versión restaurada. Revisa la vista previa antes de publicar.');
+            await loadHistory();
+            if (window.parent !== window) window.parent.location.reload();
+            else window.location.reload();
+          } catch (error) {
+            announce(error instanceof Error ? error.message : 'No se pudo restaurar.');
+            setBusy(button, false);
+          }
+        }));
+      } catch (error) {
+        list.innerHTML = `<li><span><strong>No se pudo cargar</strong><small>${escapeHtml(error instanceof Error ? error.message : error)}</small></span></li>`;
+      }
+    };
+
+    root.querySelectorAll<HTMLButtonElement>('[data-studio-view]').forEach((button) => {
+      button.addEventListener('click', () => openPanel(button.dataset.studioView ?? 'status', button));
+    });
+    root.querySelector('[data-studio-close]')?.addEventListener('click', closePanel);
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closePanel(); });
+    root.querySelector('[data-history-load]')?.addEventListener('click', loadHistory);
+    root.querySelector('[data-history-path]')?.addEventListener('change', loadHistory);
+
+    root.querySelector<HTMLFormElement>('[data-studio-setup]')?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const form = event.currentTarget as HTMLFormElement;
+      const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+      const message = root.querySelector<HTMLElement>('[data-studio-status-message]');
+      setBusy(button, true, 'Validando…');
+      try {
+        requireSavedTinaForm();
+        const formData = new FormData(form);
+        const values = {
+          ...Object.fromEntries(formData),
+          replaceRemote: formData.get('replaceRemote') === 'on',
+        };
+        const prepared = await request('/api/git/setup/prepare', { method: 'POST', body: values });
+        if (message) {
+          message.classList.remove('is-error');
+          const files = Array.isArray(prepared.files) ? prepared.files : [];
+          const fileReview = files.length
+            ? `<details><summary>Revisar ${files.length} archivos de la versión inicial</summary><ul>${files.slice(0, 80).map((file: string) => `<li>${escapeHtml(file)}</li>`).join('')}</ul>${files.length > 80 ? `<p>y ${files.length - 80} archivos más.</p>` : ''}</details>`
+            : '<p>Se reintentará enviar la versión local ya creada.</p>';
+          message.innerHTML = `<strong>Revisión lista</strong>${fileReview}<div class="studio-confirm"><button class="studio-primary" type="button" data-setup-confirm>Confirmar y conectar</button></div>`;
+          message.querySelector<HTMLButtonElement>('[data-setup-confirm]')?.addEventListener('click', async (confirmEvent) => {
+            const confirmButton = confirmEvent.currentTarget as HTMLButtonElement;
+            setBusy(confirmButton, true, 'Conectando…');
+            try {
+              await request('/api/git/setup/confirm', { method: 'POST', body: { confirmationId: prepared.confirmationId } });
+              announce('GitHub quedó conectado.');
+              await refreshStatus();
+            } catch (error) { showError(message, error); }
+          });
+        }
+      } catch (error) { showError(message, error); }
+      finally { setBusy(button, false); }
+    });
+
+    root.querySelector<HTMLButtonElement>('[data-validate]')?.addEventListener('click', async (event) => {
+      const button = event.currentTarget as HTMLButtonElement;
+      const results = root.querySelector<HTMLElement>('[data-validation-results]');
+      setBusy(button, true, 'Validando…');
+      if (results) { results.textContent = 'Ejecutando pruebas del sitio…'; results.classList.remove('is-error'); }
+      try {
+        requireSavedTinaForm();
+        const data = await request('/api/validate', { method: 'POST', body: {} });
+        if (results) results.innerHTML = `<strong>Validación completada</strong><ul>${(data.checks ?? []).map((check: any) => `<li>${escapeHtml(check.label)} · ${Math.round((check.durationMs ?? 0) / 1000)} s</li>`).join('')}</ul>`;
+        announce('El sitio superó la validación.');
+      } catch (error) { showError(results, error); }
+      finally { setBusy(button, false); }
+    });
+
+    const mediaForm = root.querySelector<HTMLFormElement>('[data-media-form]');
+    const mediaFile = mediaForm?.querySelector<HTMLInputElement>('input[name="file"]');
+    const mediaPage = mediaForm?.querySelector<HTMLElement>('.studio-media-page');
+    mediaFile?.addEventListener('change', () => {
+      const extension = mediaFile.files?.[0]?.name.split('.').pop()?.toLocaleLowerCase('en') ?? '';
+      if (mediaPage) mediaPage.hidden = extension !== 'tif' && extension !== 'tiff';
+    });
+
+    mediaForm?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const form = event.currentTarget as HTMLFormElement;
+      const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+      const results = root.querySelector<HTMLElement>('[data-media-results]');
+      const values = new FormData(form);
+      const file = values.get('file');
+      if (!(file instanceof File) || file.size === 0) {
+        showError(results, new Error('Selecciona un archivo válido.'));
+        return;
+      }
+      const value = (name: string) => String(values.get(name) ?? '').trim();
+      const pageValue = Number.parseInt(value('page'), 10);
+      const replace = values.get('replace') === 'on';
+      if (replace && !value('id')) {
+        showError(results, new Error('Para reemplazar un medio debes indicar su ID estable.'));
+        return;
+      }
+      const prepareBody = {
+        filename: file.name,
+        size: file.size,
+        kind: value('kind'),
+        ...(value('id') ? { id: value('id') } : {}),
+        ...(Number.isInteger(pageValue) && pageValue > 0 ? { page: pageValue } : {}),
+        replace,
+        metadata: {
+          alt: { es: value('altEs'), en: value('altEn') },
+          caption: { es: value('captionEs'), en: value('captionEn') },
+          credit: { es: value('creditEs'), en: value('creditEn') },
+          technique: { es: value('techniqueEs'), en: value('techniqueEn') },
+          provenance: { es: value('provenanceEs'), en: value('provenanceEn') },
+        },
+      };
+      setBusy(button, true, 'Preparando…');
+      if (results) {
+        results.classList.remove('is-error');
+        results.textContent = 'Validando nombre, tamaño y metadatos…';
+      }
+      try {
+        const prepared = await request('/api/media/upload/prepare', { method: 'POST', body: prepareBody });
+        setBusy(button, true, 'Importando…');
+        if (results) results.textContent = `Importando ${file.name} sin modificar el registro científico…`;
+        const uploadResponse = await fetch(`${apiBase}${prepared.uploadUrl}`, {
+          method: prepared.method ?? 'PUT',
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': prepared.contentType ?? 'application/octet-stream',
+          },
+          body: file,
+        });
+        const imported = await uploadResponse.json().catch(() => ({ error: { message: 'El importador local no respondió correctamente.' } }));
+        if (!uploadResponse.ok || imported.ok === false) {
+          throw new Error(imported.error?.message ?? 'No se pudo importar el medio.');
+        }
+        const warnings = Array.isArray(imported.warnings) ? imported.warnings : [];
+        if (results) {
+          results.innerHTML = `<strong>Medio importado para revisión</strong><p>${escapeHtml(imported.id)}</p><ul><li>${escapeHtml(imported.masterPath)}</li><li>${escapeHtml(imported.manifestPath)}</li>${warnings.map((warning: any) => `<li>${escapeHtml(warning.message ?? warning)}</li>`).join('')}</ul><p>Abre “Registro de medios”, revisa sus metadatos y cambia el estado a “Listo”. Entonces podrás asignarlo a una página.</p>`;
+        }
+        announce('El medio quedó importado y registrado localmente.');
+        form.reset();
+        if (mediaPage) mediaPage.hidden = true;
+        await refreshStatus();
+      } catch (error) {
+        showError(results, error);
+      } finally {
+        setBusy(button, false);
+      }
+    });
+
+    root.querySelector<HTMLButtonElement>('[data-papers-prepare]')?.addEventListener('click', async (event) => {
+      const button = event.currentTarget as HTMLButtonElement;
+      const results = root.querySelector<HTMLElement>('[data-papers-results]');
+      setBusy(button, true, 'Buscando…');
+      if (results) { results.textContent = 'Consultando y reconstruyendo una copia temporal…'; results.classList.remove('is-error'); }
+      try {
+        requireSavedTinaForm();
+        const prepared = await request('/api/publications/refresh/prepare', { method: 'POST', body: {} });
+        if (results) {
+          const catalogue = prepared.summary?.catalogue;
+          const network = prepared.summary?.network;
+          const changes = prepared.changed ?? {};
+          const summaryHtml = catalogue && network
+            ? `<ul><li>${escapeHtml(catalogue.works)} registros bibliográficos</li><li>${escapeHtml(catalogue.openAlexIndexed)} indexados en OpenAlex · ${escapeHtml(catalogue.scholarOnly)} solo en Scholar</li><li>${escapeHtml(network.papers)} papers · ${escapeHtml(network.topics)} tópicos · ${escapeHtml(network.similarityEdges)} relaciones</li><li>Catálogo: ${changes.catalogue ? 'con cambios' : 'sin cambios'} · Grafo: ${changes.network ? 'con cambios' : 'sin cambios'}</li></ul>`
+            : '<p>La comparación está lista.</p>';
+          results.innerHTML = `<strong>Actualización preparada</strong>${summaryHtml}<div class="studio-confirm"><button class="studio-primary" type="button" data-papers-confirm>Incorporar cambios</button></div>`;
+          results.querySelector<HTMLButtonElement>('[data-papers-confirm]')?.addEventListener('click', async (confirmEvent) => {
+            const confirmButton = confirmEvent.currentTarget as HTMLButtonElement;
+            setBusy(confirmButton, true, 'Aplicando…');
+            try {
+              await request('/api/publications/refresh/confirm', { method: 'POST', body: { confirmationId: prepared.confirmationId } });
+              results.textContent = 'Catálogo y grafo actualizados. Revisa la vista antes de publicar.';
+              announce('Publicaciones actualizadas localmente.');
+            } catch (error) { showError(results, error); }
+          });
+        }
+      } catch (error) { showError(results, error); }
+      finally { setBusy(button, false); }
+    });
+
+    root.querySelector<HTMLButtonElement>('[data-publish-prepare]')?.addEventListener('click', async (event) => {
+      const button = event.currentTarget as HTMLButtonElement;
+      const results = root.querySelector<HTMLElement>('[data-publish-results]');
+      const message = root.querySelector<HTMLInputElement>('[data-publish-message]')?.value.trim();
+      setBusy(button, true, 'Validando…');
+      if (results) { results.textContent = 'Validando el sitio y comparando los cambios…'; results.classList.remove('is-error'); }
+      try {
+        requireSavedTinaForm();
+        if (!currentStatus?.remote || !currentStatus?.synchronization) await refreshStatus();
+        if (!currentStatus?.remote || !currentStatus?.synchronization) {
+          throw new Error('Primero completa o reintenta la conexión desde Estado.');
+        }
+        const prepared = await request('/api/publish/prepare', { method: 'POST', body: { message } });
+        if (results) {
+          const changes = prepared.changes ?? [];
+          results.innerHTML = `<strong>Listo para publicar</strong><p>${changes.length} cambio(s) editorial(es) superaron la validación.</p><ul>${changes.slice(0, 12).map((item: any) => `<li>${escapeHtml(item.path)}</li>`).join('')}</ul><div class="studio-confirm"><span>Esta acción creará un commit y lo enviará a GitHub.</span><button class="studio-primary" type="button" data-publish-confirm>Confirmar publicación</button></div>`;
+          results.querySelector<HTMLButtonElement>('[data-publish-confirm]')?.addEventListener('click', async (confirmEvent) => {
+            const confirmButton = confirmEvent.currentTarget as HTMLButtonElement;
+            setBusy(confirmButton, true, 'Publicando…');
+            try {
+              const published = await request('/api/publish/confirm', { method: 'POST', body: { confirmationId: prepared.confirmationId } });
+              results.innerHTML = `<strong>Contenido enviado a GitHub</strong><p>Commit ${escapeHtml(String(published.commit ?? '').slice(0, 8))}. GitHub Pages iniciará el despliegue.</p>`;
+              announce('La publicación fue enviada a GitHub.');
+              await refreshStatus();
+            } catch (error) { showError(results, error); }
+          });
+        }
+      } catch (error) { showError(results, error); }
+      finally { setBusy(button, false); }
+    });
+
+    (async () => {
+      try {
+        const session = await request('/api/session');
+        token = session.token;
+        await refreshStatus();
+      } catch (error) {
+        signal?.classList.add('is-error');
+        if (summary) summary.textContent = 'Servicio no disponible';
+      }
+    })();
+  }
+</script>

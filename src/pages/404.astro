@@ -1,0 +1,35 @@
+---
+import '@/styles/global.css';
+import '@fontsource-variable/source-sans-3/index.css';
+import '@fontsource-variable/jetbrains-mono/index.css';
+const canonical = new URL('/404.html', Astro.site);
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Página no encontrada | Díaz-Jara Lab</title>
+    <meta name="description" content="La página solicitada no existe." />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="es" href={canonical} />
+    <link rel="alternate" hreflang="en" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={canonical} />
+    <link rel="icon" href="/brand/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <main class="status-stage" style="min-height: 100svh">
+      <div class="status-content">
+        <img src="/brand/lab-mark-original-optimized.webp" width="120" height="108" alt="" style="margin: 0 auto 25px; border-radius: 8px" />
+        <span class="status-badge">Error 404</span>
+        <h1 class="section-title">Esta ruta no respira.</h1>
+        <p>La página que buscas no existe o cambió de ubicación.<br /><span lang="en">The page you are looking for does not exist or has moved.</span></p>
+        <div class="hero-actions" style="justify-content: center">
+          <a class="button" href="/">Volver al inicio</a>
+          <a class="button secondary" href="/en/" lang="en">Back home</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

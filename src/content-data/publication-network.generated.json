@@ -1,0 +1,5786 @@
+{
+  "generatedAt": "2026-07-19T01:14:17.207Z",
+  "methodology": {
+    "paperScope": "journal-article and review records in the verified local catalogue",
+    "runtimeNetworkRequests": false,
+    "similarity": "eight fine-grained topic signals grouped into four visible research axes, OpenAlex bibliographic coupling, co-authorship excluding Esteban Diaz-Jara, title-token overlap, and publication proximity",
+    "layout": "deterministic clustered golden-angle placement"
+  },
+  "stats": {
+    "papers": 25,
+    "themes": 4,
+    "similarityEdges": 69,
+    "themeEdges": 60,
+    "referencesAvailable": 25,
+    "minimumNodeSeparationPx": 62
+  },
+  "nodes": [
+    {
+      "id": "W7117245332",
+      "kind": "paper",
+      "listId": "pub-w7117245332",
+      "title": "Peripheral chemoreceptors sustain central chemoreflex potentiation and cardiorespiratory abnormalities in high-output heart failure",
+      "shortTitle": "Peripheral chemoreceptors sustain central chemoreflex potentiation and cardiorespiratory…",
+      "year": 2026,
+      "journal": "Basic Research in Cardiology",
+      "authors": [
+        "Katherin V. Pereyra",
+        "Karla G. Schwarz",
+        "Esteban Díaz-Jara",
+        "Sinay C. Vicencio",
+        "Fernando C. Ortiz",
+        "Ignacio Bernal-Santander",
+        "Camilo Toledo",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 2,
+      "doi": "10.1007/s00395-025-01154-5",
+      "url": "https://doi.org/10.1007/s00395-025-01154-5",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:mB3voiENLucC",
+      "openAlexId": "https://openalex.org/W7117245332",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "hypoxia-cardiovascular"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "carotid-chemoreflex",
+        "heart-failure"
+      ],
+      "cluster": "carotid",
+      "titleTokens": [
+        "peripheral",
+        "chemoreceptors",
+        "sustain",
+        "central",
+        "chemoreflex",
+        "potentiation",
+        "cardiorespiratory",
+        "abnormalities",
+        "high",
+        "output",
+        "heart",
+        "failure"
+      ],
+      "normalizedAuthors": [
+        "katherin v pereyra",
+        "karla g schwarz",
+        "sinay c vicencio",
+        "fernando c ortiz",
+        "ignacio bernal santander",
+        "camilo toledo",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W172191733",
+        "https://openalex.org/W1539665155",
+        "https://openalex.org/W1560523308",
+        "https://openalex.org/W1966953335",
+        "https://openalex.org/W1973599240",
+        "https://openalex.org/W1979803052",
+        "https://openalex.org/W1980675477",
+        "https://openalex.org/W1985079569",
+        "https://openalex.org/W1986320120",
+        "https://openalex.org/W2018205683",
+        "https://openalex.org/W2028900652",
+        "https://openalex.org/W2032661630",
+        "https://openalex.org/W2059361692",
+        "https://openalex.org/W2067307545",
+        "https://openalex.org/W2093350841",
+        "https://openalex.org/W2109145323",
+        "https://openalex.org/W2111987796",
+        "https://openalex.org/W2116355373",
+        "https://openalex.org/W2123307404",
+        "https://openalex.org/W2125893767",
+        "https://openalex.org/W2136718200",
+        "https://openalex.org/W2155018999",
+        "https://openalex.org/W2161241268",
+        "https://openalex.org/W2162115933",
+        "https://openalex.org/W2163105403",
+        "https://openalex.org/W2301198739",
+        "https://openalex.org/W2322271915",
+        "https://openalex.org/W2339326074",
+        "https://openalex.org/W2543016513",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2607288225",
+        "https://openalex.org/W2742781975",
+        "https://openalex.org/W2769771129",
+        "https://openalex.org/W2804019272",
+        "https://openalex.org/W2910772580",
+        "https://openalex.org/W2968457669",
+        "https://openalex.org/W2981183735",
+        "https://openalex.org/W3012256530",
+        "https://openalex.org/W3014160396",
+        "https://openalex.org/W3020059288",
+        "https://openalex.org/W3112846682",
+        "https://openalex.org/W3124955723",
+        "https://openalex.org/W3127166110",
+        "https://openalex.org/W3163010678",
+        "https://openalex.org/W3193020402",
+        "https://openalex.org/W4206634989",
+        "https://openalex.org/W4207058530",
+        "https://openalex.org/W4210937888",
+        "https://openalex.org/W4229039666",
+        "https://openalex.org/W4229372041",
+        "https://openalex.org/W4291124933",
+        "https://openalex.org/W4377194441",
+        "https://openalex.org/W4405886364",
+        "https://openalex.org/W4411511512"
+      ],
+      "x": 77.607,
+      "y": 44.491,
+      "featured": false
+    },
+    {
+      "id": "W7117067518",
+      "kind": "paper",
+      "listId": "pub-w7117067518",
+      "title": "Neuro-glial mechanisms underlying sex-based resilience to cardiorespiratory dysfunction in heart failure",
+      "shortTitle": "Neuro-glial mechanisms underlying sex-based resilience to cardiorespiratory dysfunction…",
+      "year": 2026,
+      "journal": "Clinical Science",
+      "authors": [
+        "Katherin V. Pereyra",
+        "Karla G. Schwarz",
+        "Esteban Díaz-Jara",
+        "Sinay C. Vicencio",
+        "Liena Bravo",
+        "Fernando C. Ortiz",
+        "Camilo Toledo",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 1,
+      "doi": "10.1042/cs20258455",
+      "url": "https://doi.org/10.1042/cs20258455",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:hFOr9nPyWt4C",
+      "openAlexId": "https://openalex.org/W7117067518",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "neuroglia-signalling",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "neuroglia",
+        "heart-failure",
+        "interventions"
+      ],
+      "cluster": "neuroglia",
+      "titleTokens": [
+        "neuro",
+        "glial",
+        "mechanisms",
+        "based",
+        "resilience",
+        "cardiorespiratory",
+        "dysfunction",
+        "heart",
+        "failure"
+      ],
+      "normalizedAuthors": [
+        "katherin v pereyra",
+        "karla g schwarz",
+        "sinay c vicencio",
+        "liena bravo",
+        "fernando c ortiz",
+        "camilo toledo",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W1975139989",
+        "https://openalex.org/W2012561790",
+        "https://openalex.org/W2013340573",
+        "https://openalex.org/W2028719706",
+        "https://openalex.org/W2035192492",
+        "https://openalex.org/W2086715542",
+        "https://openalex.org/W2094064816",
+        "https://openalex.org/W2097757382",
+        "https://openalex.org/W2135768681",
+        "https://openalex.org/W2157041879",
+        "https://openalex.org/W2157544631",
+        "https://openalex.org/W2161241268",
+        "https://openalex.org/W2297780814",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2889840800",
+        "https://openalex.org/W2910772580",
+        "https://openalex.org/W2914622622",
+        "https://openalex.org/W2916222622",
+        "https://openalex.org/W2981585473",
+        "https://openalex.org/W2993468772",
+        "https://openalex.org/W3009554338",
+        "https://openalex.org/W3022092967",
+        "https://openalex.org/W4200464459",
+        "https://openalex.org/W4210937888",
+        "https://openalex.org/W4229039666",
+        "https://openalex.org/W4229372041",
+        "https://openalex.org/W4310774088",
+        "https://openalex.org/W4311192992",
+        "https://openalex.org/W4312094879",
+        "https://openalex.org/W4324021049",
+        "https://openalex.org/W4389581144",
+        "https://openalex.org/W4399998642",
+        "https://openalex.org/W4400036847",
+        "https://openalex.org/W4405886364",
+        "https://openalex.org/W4406051516",
+        "https://openalex.org/W4406198269",
+        "https://openalex.org/W4408748695",
+        "https://openalex.org/W4409345722"
+      ],
+      "x": 75.593,
+      "y": 72.118,
+      "featured": false
+    },
+    {
+      "id": "W7117712724",
+      "kind": "paper",
+      "listId": "pub-w7117712724",
+      "title": "Chemogenetic inhibition of the carotid bodies blunts hind-limb suspension microgravity-induced muscle alterations in rats",
+      "shortTitle": "Chemogenetic inhibition of the carotid bodies blunts hind-limb…",
+      "year": 2026,
+      "journal": "American Journal of Physiology-Lung Cellular and Molecular Physiology",
+      "authors": [
+        "David C. Andrade",
+        "Camila Salazar-Ardiles",
+        "Camilo Toledo",
+        "José Bueno",
+        "Alejandro P. Cabrera",
+        "Esteban Díaz-Jara",
+        "María Rodriguez-Fernández",
+        "Grégoire P. Millet",
+        "Rodrigo Iturriaga",
+        "Eli F. Kelley"
+      ],
+      "citedByCount": 0,
+      "doi": "10.1152/ajplung.00386.2025",
+      "url": "https://doi.org/10.1152/ajplung.00386.2025",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:HDshCWvjkbEC",
+      "openAlexId": "https://openalex.org/W7117712724",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "carotid-chemoreflex",
+        "hypoxia-sleep",
+        "interventions"
+      ],
+      "cluster": "carotid",
+      "titleTokens": [
+        "chemogenetic",
+        "inhibition",
+        "carotid",
+        "bodies",
+        "blunts",
+        "hind",
+        "limb",
+        "suspension",
+        "microgravity",
+        "induced",
+        "muscle",
+        "alterations",
+        "rats"
+      ],
+      "normalizedAuthors": [
+        "david c andrade",
+        "camila salazar ardiles",
+        "camilo toledo",
+        "jose bueno",
+        "alejandro p cabrera",
+        "maria rodriguez fernandez",
+        "gregoire p millet",
+        "rodrigo iturriaga",
+        "eli f kelley"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W856233817",
+        "https://openalex.org/W1899459921",
+        "https://openalex.org/W1965379222",
+        "https://openalex.org/W1973339201",
+        "https://openalex.org/W1974805573",
+        "https://openalex.org/W1976263444",
+        "https://openalex.org/W1980167920",
+        "https://openalex.org/W1983885111",
+        "https://openalex.org/W1985184115",
+        "https://openalex.org/W1990980794",
+        "https://openalex.org/W2002839358",
+        "https://openalex.org/W2017839550",
+        "https://openalex.org/W2024543466",
+        "https://openalex.org/W2026978542",
+        "https://openalex.org/W2071011552",
+        "https://openalex.org/W2086037710",
+        "https://openalex.org/W2087484885",
+        "https://openalex.org/W2089913302",
+        "https://openalex.org/W2090224335",
+        "https://openalex.org/W2095107139",
+        "https://openalex.org/W2097571233",
+        "https://openalex.org/W2098168783",
+        "https://openalex.org/W2104361200",
+        "https://openalex.org/W2104433225",
+        "https://openalex.org/W2108966129",
+        "https://openalex.org/W2110802982",
+        "https://openalex.org/W2123335115",
+        "https://openalex.org/W2130605767",
+        "https://openalex.org/W2158787215",
+        "https://openalex.org/W2159310780",
+        "https://openalex.org/W2160005411",
+        "https://openalex.org/W2161241268",
+        "https://openalex.org/W2180930726",
+        "https://openalex.org/W2223622600",
+        "https://openalex.org/W2259174967",
+        "https://openalex.org/W2276721807",
+        "https://openalex.org/W2335217079",
+        "https://openalex.org/W2396693700",
+        "https://openalex.org/W2400552324",
+        "https://openalex.org/W2417751602",
+        "https://openalex.org/W2471767199",
+        "https://openalex.org/W2524897358",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2739263627",
+        "https://openalex.org/W2743088679",
+        "https://openalex.org/W2920995270",
+        "https://openalex.org/W2945553261",
+        "https://openalex.org/W2981183735",
+        "https://openalex.org/W2981585473",
+        "https://openalex.org/W3002553762",
+        "https://openalex.org/W3022236653",
+        "https://openalex.org/W3127166110",
+        "https://openalex.org/W3158095911",
+        "https://openalex.org/W3182330858",
+        "https://openalex.org/W3183383349",
+        "https://openalex.org/W3199575160",
+        "https://openalex.org/W3208628777",
+        "https://openalex.org/W4200607990",
+        "https://openalex.org/W4281676380",
+        "https://openalex.org/W4295134850",
+        "https://openalex.org/W4319079328",
+        "https://openalex.org/W4399343770",
+        "https://openalex.org/W4399535132",
+        "https://openalex.org/W4400424240",
+        "https://openalex.org/W4404629627",
+        "https://openalex.org/W4405261449",
+        "https://openalex.org/W4410952114",
+        "https://openalex.org/W4411766158",
+        "https://openalex.org/W4414040453"
+      ],
+      "x": 73.188,
+      "y": 34.076,
+      "featured": false
+    },
+    {
+      "id": "W4406198269",
+      "kind": "paper",
+      "listId": "pub-w4406198269",
+      "title": "Carotid bodies mediate glial cell activation and neuroinflammation in the NTS following long-term intermittent hypoxia: role in cardiorespiratory dysfunction",
+      "shortTitle": "Carotid bodies mediate glial cell activation and neuroinflammation…",
+      "year": 2025,
+      "journal": "American Journal of Physiology-Lung Cellular and Molecular Physiology",
+      "authors": [
+        "Katherin V. Pereyra",
+        "Esteban Díaz‐Jara",
+        "Ignacio Bernal‐Santander",
+        "Sinay Vicencio",
+        "Rodrigo Del Río",
+        "Rodrigo Iturriaga"
+      ],
+      "citedByCount": 13,
+      "doi": "10.1152/ajplung.00280.2024",
+      "url": "https://doi.org/10.1152/ajplung.00280.2024",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:W7OEmFMy1HYC",
+      "openAlexId": "https://openalex.org/W4406198269",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "neuroglia-signalling",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "carotid-chemoreflex",
+        "neuroglia",
+        "heart-failure",
+        "hypoxia-sleep",
+        "cell-stress"
+      ],
+      "cluster": "neuroglia",
+      "titleTokens": [
+        "carotid",
+        "bodies",
+        "mediate",
+        "glial",
+        "cell",
+        "activation",
+        "neuroinflammation",
+        "long",
+        "term",
+        "intermittent",
+        "hypoxia",
+        "cardiorespiratory",
+        "dysfunction"
+      ],
+      "normalizedAuthors": [
+        "katherin v pereyra",
+        "ignacio bernal santander",
+        "sinay vicencio",
+        "rodrigo del rio",
+        "rodrigo iturriaga"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W1179709590",
+        "https://openalex.org/W1503901506",
+        "https://openalex.org/W1522131133",
+        "https://openalex.org/W1540612790",
+        "https://openalex.org/W1789910835",
+        "https://openalex.org/W1893732205",
+        "https://openalex.org/W1897248144",
+        "https://openalex.org/W1965192254",
+        "https://openalex.org/W1969715891",
+        "https://openalex.org/W1970998841",
+        "https://openalex.org/W1972022519",
+        "https://openalex.org/W1994313288",
+        "https://openalex.org/W1999340472",
+        "https://openalex.org/W2008519575",
+        "https://openalex.org/W2013405043",
+        "https://openalex.org/W2015393387",
+        "https://openalex.org/W2018804515",
+        "https://openalex.org/W2039873961",
+        "https://openalex.org/W2042592767",
+        "https://openalex.org/W2048870600",
+        "https://openalex.org/W2058416358",
+        "https://openalex.org/W2067400934",
+        "https://openalex.org/W2067956022",
+        "https://openalex.org/W2073263470",
+        "https://openalex.org/W2076816189",
+        "https://openalex.org/W2090193481",
+        "https://openalex.org/W2104827963",
+        "https://openalex.org/W2109145323",
+        "https://openalex.org/W2128742488",
+        "https://openalex.org/W2146063806",
+        "https://openalex.org/W2149156683",
+        "https://openalex.org/W2150044229",
+        "https://openalex.org/W2159979909",
+        "https://openalex.org/W2168390541",
+        "https://openalex.org/W2168420273",
+        "https://openalex.org/W2168447040",
+        "https://openalex.org/W2193101897",
+        "https://openalex.org/W2257977462",
+        "https://openalex.org/W2282781293",
+        "https://openalex.org/W2311531919",
+        "https://openalex.org/W2415002918",
+        "https://openalex.org/W2471195096",
+        "https://openalex.org/W2471767199",
+        "https://openalex.org/W2487752680",
+        "https://openalex.org/W2529568074",
+        "https://openalex.org/W2577148273",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2749492625",
+        "https://openalex.org/W2810784849",
+        "https://openalex.org/W2888048418",
+        "https://openalex.org/W2899097191",
+        "https://openalex.org/W2903751449",
+        "https://openalex.org/W2914961860",
+        "https://openalex.org/W2959442417",
+        "https://openalex.org/W3017453467",
+        "https://openalex.org/W3043016915",
+        "https://openalex.org/W3084111872",
+        "https://openalex.org/W3127166110",
+        "https://openalex.org/W3127997004",
+        "https://openalex.org/W3174673476",
+        "https://openalex.org/W3196139332",
+        "https://openalex.org/W4200607990",
+        "https://openalex.org/W4211217520",
+        "https://openalex.org/W4229372041",
+        "https://openalex.org/W4283725553",
+        "https://openalex.org/W4319312976",
+        "https://openalex.org/W4319771363",
+        "https://openalex.org/W4362716954",
+        "https://openalex.org/W4367369469",
+        "https://openalex.org/W4388419718",
+        "https://openalex.org/W4389581144",
+        "https://openalex.org/W4396618072"
+      ],
+      "x": 58.438,
+      "y": 69.949,
+      "featured": true
+    },
+    {
+      "id": "W4405886364",
+      "kind": "paper",
+      "listId": "pub-w4405886364",
+      "title": "Brainstem C1 neurons mediate heart failure decompensation and mortality during acute salt loading",
+      "shortTitle": "Brainstem C1 neurons mediate heart failure decompensation and…",
+      "year": 2025,
+      "journal": "Cardiovascular Research",
+      "authors": [
+        "Karla G. Schwarz",
+        "Katherin V. Pereyra",
+        "Esteban Díaz‐Jara",
+        "Sinay Vicencio",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 7,
+      "doi": "10.1093/cvr/cvae261",
+      "url": "https://doi.org/10.1093/cvr/cvae261",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:u5HHmVD_uO8C",
+      "openAlexId": "https://openalex.org/W4405886364",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "hypoxia-cardiovascular"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "heart-failure"
+      ],
+      "cluster": "central",
+      "titleTokens": [
+        "brainstem",
+        "neurons",
+        "mediate",
+        "heart",
+        "failure",
+        "decompensation",
+        "mortality",
+        "acute",
+        "salt",
+        "loading"
+      ],
+      "normalizedAuthors": [
+        "karla g schwarz",
+        "katherin v pereyra",
+        "sinay vicencio",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W139699688",
+        "https://openalex.org/W1826470798",
+        "https://openalex.org/W1912772192",
+        "https://openalex.org/W1984307178",
+        "https://openalex.org/W2012273576",
+        "https://openalex.org/W2013354666",
+        "https://openalex.org/W2028900652",
+        "https://openalex.org/W2033732906",
+        "https://openalex.org/W2053578542",
+        "https://openalex.org/W2083902757",
+        "https://openalex.org/W2090378906",
+        "https://openalex.org/W2100762371",
+        "https://openalex.org/W2116355373",
+        "https://openalex.org/W2119061468",
+        "https://openalex.org/W2155018999",
+        "https://openalex.org/W2160164131",
+        "https://openalex.org/W2170698109",
+        "https://openalex.org/W2256871273",
+        "https://openalex.org/W2259244508",
+        "https://openalex.org/W2558470786",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2602254749",
+        "https://openalex.org/W2769309750",
+        "https://openalex.org/W2790238126",
+        "https://openalex.org/W2801594496",
+        "https://openalex.org/W2808427014",
+        "https://openalex.org/W2884120920",
+        "https://openalex.org/W2888961480",
+        "https://openalex.org/W2903258063",
+        "https://openalex.org/W2910772580",
+        "https://openalex.org/W2945334580",
+        "https://openalex.org/W2946900487",
+        "https://openalex.org/W2979383490",
+        "https://openalex.org/W2981585473",
+        "https://openalex.org/W2992798341",
+        "https://openalex.org/W3015011041",
+        "https://openalex.org/W3022092967",
+        "https://openalex.org/W3039655726",
+        "https://openalex.org/W3096033968",
+        "https://openalex.org/W3113868203",
+        "https://openalex.org/W3118924134",
+        "https://openalex.org/W3123817716",
+        "https://openalex.org/W3127654565",
+        "https://openalex.org/W3128062012",
+        "https://openalex.org/W3129054508",
+        "https://openalex.org/W3133225244",
+        "https://openalex.org/W3186065885",
+        "https://openalex.org/W3215226284",
+        "https://openalex.org/W4200285528",
+        "https://openalex.org/W4205535134",
+        "https://openalex.org/W4226176786",
+        "https://openalex.org/W4229039666",
+        "https://openalex.org/W4291124933",
+        "https://openalex.org/W4296524223",
+        "https://openalex.org/W4311022707",
+        "https://openalex.org/W4366822079",
+        "https://openalex.org/W4386271317",
+        "https://openalex.org/W4386726049",
+        "https://openalex.org/W4387949169",
+        "https://openalex.org/W4389477455",
+        "https://openalex.org/W6725494401",
+        "https://openalex.org/W6851872012"
+      ],
+      "x": 57.462,
+      "y": 38.821,
+      "featured": false
+    },
+    {
+      "id": "W4414040453",
+      "kind": "paper",
+      "listId": "pub-w4414040453",
+      "title": "The carotid body mediates peak oxygen uptake during maximal physical exertion in rats",
+      "shortTitle": "The carotid body mediates peak oxygen uptake during…",
+      "year": 2025,
+      "journal": "The Journal of Physiology",
+      "authors": [
+        "David C. Andrade",
+        "Camila Salazar‐Ardiles",
+        "Camilo Toledo",
+        "Cristián Álvarez",
+        "Esteban Díaz‐Jara",
+        "María Rodriguez-Fernández",
+        "Grégoire P. Millet",
+        "Rodrigo Iturriaga"
+      ],
+      "citedByCount": 5,
+      "doi": "10.1113/jp288633",
+      "url": "https://doi.org/10.1113/jp288633",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:IWHjjKOFINEC",
+      "openAlexId": "https://openalex.org/W4414040453",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "carotid-chemoreflex",
+        "interventions"
+      ],
+      "cluster": "carotid",
+      "titleTokens": [
+        "carotid",
+        "body",
+        "mediates",
+        "peak",
+        "oxygen",
+        "uptake",
+        "maximal",
+        "physical",
+        "exertion",
+        "rats"
+      ],
+      "normalizedAuthors": [
+        "david c andrade",
+        "camila salazar ardiles",
+        "camilo toledo",
+        "cristian alvarez",
+        "maria rodriguez fernandez",
+        "gregoire p millet",
+        "rodrigo iturriaga"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W1582411417",
+        "https://openalex.org/W1849470447",
+        "https://openalex.org/W1965379222",
+        "https://openalex.org/W1970445061",
+        "https://openalex.org/W1979764155",
+        "https://openalex.org/W1990980794",
+        "https://openalex.org/W2012751992",
+        "https://openalex.org/W2019709000",
+        "https://openalex.org/W2067548955",
+        "https://openalex.org/W2081800949",
+        "https://openalex.org/W2089913302",
+        "https://openalex.org/W2094617645",
+        "https://openalex.org/W2095166423",
+        "https://openalex.org/W2104433225",
+        "https://openalex.org/W2111044082",
+        "https://openalex.org/W2115890937",
+        "https://openalex.org/W2120888944",
+        "https://openalex.org/W2123335115",
+        "https://openalex.org/W2123349121",
+        "https://openalex.org/W2145139856",
+        "https://openalex.org/W2161241268",
+        "https://openalex.org/W2223622600",
+        "https://openalex.org/W2325491218",
+        "https://openalex.org/W2328724723",
+        "https://openalex.org/W2335217079",
+        "https://openalex.org/W2396693700",
+        "https://openalex.org/W2417096947",
+        "https://openalex.org/W2471767199",
+        "https://openalex.org/W2516502922",
+        "https://openalex.org/W2524897358",
+        "https://openalex.org/W2531606371",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2617439360",
+        "https://openalex.org/W2626549169",
+        "https://openalex.org/W2739263627",
+        "https://openalex.org/W2745223669",
+        "https://openalex.org/W2802318478",
+        "https://openalex.org/W2892410013",
+        "https://openalex.org/W2898369501",
+        "https://openalex.org/W2945275553",
+        "https://openalex.org/W2981183735",
+        "https://openalex.org/W2981585473",
+        "https://openalex.org/W3013227421",
+        "https://openalex.org/W3022236653",
+        "https://openalex.org/W3108838680",
+        "https://openalex.org/W3127166110",
+        "https://openalex.org/W3159000727",
+        "https://openalex.org/W3159315587",
+        "https://openalex.org/W3181737660",
+        "https://openalex.org/W3182330858",
+        "https://openalex.org/W4377290405",
+        "https://openalex.org/W4383212974",
+        "https://openalex.org/W4384930356",
+        "https://openalex.org/W4392107977",
+        "https://openalex.org/W4393305660",
+        "https://openalex.org/W4402534593",
+        "https://openalex.org/W4404629627",
+        "https://openalex.org/W4405261449",
+        "https://openalex.org/W4406957293",
+        "https://openalex.org/W4409063857",
+        "https://openalex.org/W4410952114"
+      ],
+      "x": 90.752,
+      "y": 37.378,
+      "featured": false
+    },
+    {
+      "id": "W4389581144",
+      "kind": "paper",
+      "listId": "pub-w4389581144",
+      "title": "Superoxide dismutase 2 deficiency is associated with enhanced central chemoreception in mice: Implications for breathing regulation",
+      "shortTitle": "Superoxide dismutase 2 deficiency is associated with enhanced…",
+      "year": 2024,
+      "journal": "Redox Biology",
+      "authors": [
+        "Esteban Díaz‐Jara",
+        "Katherine Pereyra",
+        "Sinay Vicencio",
+        "Margrethe A. Olesen",
+        "Karla G. Schwarz",
+        "Camilo Toledo",
+        "Hugo S. Díaz",
+        "Rodrigo A. Quintanilla",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 6,
+      "doi": "10.1016/j.redox.2023.102992",
+      "url": "https://doi.org/10.1016/j.redox.2023.102992",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:8k81kl-MbHgC",
+      "openAlexId": "https://openalex.org/W4389581144",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "cell-stress",
+        "interventions"
+      ],
+      "cluster": "central",
+      "titleTokens": [
+        "superoxide",
+        "dismutase",
+        "deficiency",
+        "enhanced",
+        "central",
+        "chemoreception",
+        "mice",
+        "implications",
+        "breathing",
+        "regulation"
+      ],
+      "normalizedAuthors": [
+        "katherine pereyra",
+        "sinay vicencio",
+        "margrethe a olesen",
+        "karla g schwarz",
+        "camilo toledo",
+        "hugo s diaz",
+        "rodrigo a quintanilla",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W1497584043",
+        "https://openalex.org/W1517975958",
+        "https://openalex.org/W1584248932",
+        "https://openalex.org/W1588374125",
+        "https://openalex.org/W1940376800",
+        "https://openalex.org/W1962642077",
+        "https://openalex.org/W1974560134",
+        "https://openalex.org/W1988502279",
+        "https://openalex.org/W2003827347",
+        "https://openalex.org/W2007762852",
+        "https://openalex.org/W2018205683",
+        "https://openalex.org/W2032154466",
+        "https://openalex.org/W2044123171",
+        "https://openalex.org/W2052083646",
+        "https://openalex.org/W2056335561",
+        "https://openalex.org/W2058906042",
+        "https://openalex.org/W2068135201",
+        "https://openalex.org/W2080046990",
+        "https://openalex.org/W2097757382",
+        "https://openalex.org/W2111903934",
+        "https://openalex.org/W2113582525",
+        "https://openalex.org/W2147653980",
+        "https://openalex.org/W2153683677",
+        "https://openalex.org/W2166673444",
+        "https://openalex.org/W2169784137",
+        "https://openalex.org/W2216984490",
+        "https://openalex.org/W2228370504",
+        "https://openalex.org/W2405429656",
+        "https://openalex.org/W2550864782",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2626549169",
+        "https://openalex.org/W2730762223",
+        "https://openalex.org/W2765794440",
+        "https://openalex.org/W2766218520",
+        "https://openalex.org/W2810491578",
+        "https://openalex.org/W2981183735",
+        "https://openalex.org/W3086189693",
+        "https://openalex.org/W3160891991",
+        "https://openalex.org/W3177414393",
+        "https://openalex.org/W3191192424",
+        "https://openalex.org/W4205114283",
+        "https://openalex.org/W4229372041",
+        "https://openalex.org/W4283702045",
+        "https://openalex.org/W4319598041"
+      ],
+      "x": 40.946,
+      "y": 42.403,
+      "featured": false
+    },
+    {
+      "id": "W4388419718",
+      "kind": "paper",
+      "listId": "pub-w4388419718",
+      "title": "Chemogenetic inhibition of NTS astrocytes normalizes cardiac autonomic control and ameliorate hypertension during chronic intermittent hypoxia",
+      "shortTitle": "Chemogenetic inhibition of NTS astrocytes normalizes cardiac autonomic…",
+      "year": 2023,
+      "journal": "Biological Research",
+      "authors": [
+        "Katherin V. Pereyra",
+        "Alexandra Las Heras",
+        "Camilo Toledo",
+        "Esteban Díaz‐Jara",
+        "Rodrigo Iturriaga",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 11,
+      "doi": "10.1186/s40659-023-00463-0",
+      "url": "https://doi.org/10.1186/s40659-023-00463-0",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:9ZlFYXVOiuMC",
+      "openAlexId": "https://openalex.org/W4388419718",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "neuroglia-signalling",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "neuroglia",
+        "heart-failure",
+        "hypoxia-sleep",
+        "interventions"
+      ],
+      "cluster": "neuroglia",
+      "titleTokens": [
+        "chemogenetic",
+        "inhibition",
+        "astrocytes",
+        "normalizes",
+        "cardiac",
+        "autonomic",
+        "control",
+        "ameliorate",
+        "hypertension",
+        "chronic",
+        "intermittent",
+        "hypoxia"
+      ],
+      "normalizedAuthors": [
+        "katherin v pereyra",
+        "alexandra las heras",
+        "camilo toledo",
+        "rodrigo iturriaga",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W82112906",
+        "https://openalex.org/W1522131133",
+        "https://openalex.org/W1714259827",
+        "https://openalex.org/W2003533532",
+        "https://openalex.org/W2009896907",
+        "https://openalex.org/W2039873961",
+        "https://openalex.org/W2042517296",
+        "https://openalex.org/W2042592767",
+        "https://openalex.org/W2058416358",
+        "https://openalex.org/W2067956022",
+        "https://openalex.org/W2109150493",
+        "https://openalex.org/W2112575630",
+        "https://openalex.org/W2116033894",
+        "https://openalex.org/W2117834225",
+        "https://openalex.org/W2130644128",
+        "https://openalex.org/W2148345618",
+        "https://openalex.org/W2161444884",
+        "https://openalex.org/W2168390541",
+        "https://openalex.org/W2288071963",
+        "https://openalex.org/W2519269934",
+        "https://openalex.org/W2546647298",
+        "https://openalex.org/W2810784849",
+        "https://openalex.org/W2898244889",
+        "https://openalex.org/W2923225354",
+        "https://openalex.org/W2951937380",
+        "https://openalex.org/W2970440612",
+        "https://openalex.org/W2996373709",
+        "https://openalex.org/W3005292279",
+        "https://openalex.org/W3007060293",
+        "https://openalex.org/W3049431618",
+        "https://openalex.org/W3120306172",
+        "https://openalex.org/W3122380944",
+        "https://openalex.org/W3127166110",
+        "https://openalex.org/W3137516843",
+        "https://openalex.org/W3174072953",
+        "https://openalex.org/W3216112125",
+        "https://openalex.org/W4224308950",
+        "https://openalex.org/W4365455210"
+      ],
+      "x": 78.296,
+      "y": 61.483,
+      "featured": true
+    },
+    {
+      "id": "W4317651590",
+      "kind": "paper",
+      "listId": "pub-w4317651590",
+      "title": "Activation of Intra-nodose Ganglion P2X7 Receptors Elicit Increases in Neuronal Activity",
+      "shortTitle": "Activation of Intra-nodose Ganglion P2X7 Receptors Elicit Increases…",
+      "year": 2023,
+      "journal": "Cellular and Molecular Neurobiology",
+      "authors": [
+        "Julio Alcayaga",
+        "Jorge Vera",
+        "Mauricio Reyna‐Jeldes",
+        "Alejandra A. Covarrubias",
+        "Claudio Coddou",
+        "Esteban Díaz‐Jara",
+        "Rodrigo Del Río",
+        "Mauricio A. Retamal"
+      ],
+      "citedByCount": 2,
+      "doi": "10.1007/s10571-023-01318-8",
+      "url": "https://doi.org/10.1007/s10571-023-01318-8",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:ufrVoPGSRksC",
+      "openAlexId": "https://openalex.org/W4317651590",
+      "topicIds": [
+        "neuroglia-signalling"
+      ],
+      "fineTopicIds": [
+        "connexin-purinergic"
+      ],
+      "cluster": "cellular",
+      "titleTokens": [
+        "activation",
+        "intra",
+        "nodose",
+        "ganglion",
+        "p2x7",
+        "receptors",
+        "elicit",
+        "increases",
+        "neuronal",
+        "activity"
+      ],
+      "normalizedAuthors": [
+        "julio alcayaga",
+        "jorge vera",
+        "mauricio reyna jeldes",
+        "alejandra a covarrubias",
+        "claudio coddou",
+        "rodrigo del rio",
+        "mauricio a retamal"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W40008208",
+        "https://openalex.org/W298541535",
+        "https://openalex.org/W1003328916",
+        "https://openalex.org/W1521398062",
+        "https://openalex.org/W1545302536",
+        "https://openalex.org/W1620679902",
+        "https://openalex.org/W1963739404",
+        "https://openalex.org/W1969274258",
+        "https://openalex.org/W1970959286",
+        "https://openalex.org/W1974360350",
+        "https://openalex.org/W1974879876",
+        "https://openalex.org/W1981253321",
+        "https://openalex.org/W1982205433",
+        "https://openalex.org/W1991902612",
+        "https://openalex.org/W1993236971",
+        "https://openalex.org/W2009786043",
+        "https://openalex.org/W2015456909",
+        "https://openalex.org/W2027077773",
+        "https://openalex.org/W2030843120",
+        "https://openalex.org/W2035201936",
+        "https://openalex.org/W2044651518",
+        "https://openalex.org/W2045374311",
+        "https://openalex.org/W2046930275",
+        "https://openalex.org/W2047277503",
+        "https://openalex.org/W2048201868",
+        "https://openalex.org/W2053380089",
+        "https://openalex.org/W2055692928",
+        "https://openalex.org/W2057772434",
+        "https://openalex.org/W2063605858",
+        "https://openalex.org/W2067477139",
+        "https://openalex.org/W2068960408",
+        "https://openalex.org/W2069369658",
+        "https://openalex.org/W2071890374",
+        "https://openalex.org/W2075044655",
+        "https://openalex.org/W2081033302",
+        "https://openalex.org/W2081874031",
+        "https://openalex.org/W2093547160",
+        "https://openalex.org/W2095311208",
+        "https://openalex.org/W2102694854",
+        "https://openalex.org/W2102889015",
+        "https://openalex.org/W2106643106",
+        "https://openalex.org/W2106706180",
+        "https://openalex.org/W2106912151",
+        "https://openalex.org/W2124502026",
+        "https://openalex.org/W2124731391",
+        "https://openalex.org/W2131942512",
+        "https://openalex.org/W2133951476",
+        "https://openalex.org/W2139506271",
+        "https://openalex.org/W2141978419",
+        "https://openalex.org/W2142609868",
+        "https://openalex.org/W2150203045",
+        "https://openalex.org/W2154473687",
+        "https://openalex.org/W2172231319",
+        "https://openalex.org/W2175794014",
+        "https://openalex.org/W2248498095",
+        "https://openalex.org/W2557288140",
+        "https://openalex.org/W2749804873",
+        "https://openalex.org/W2756038227",
+        "https://openalex.org/W2757606762",
+        "https://openalex.org/W2769884655",
+        "https://openalex.org/W2780278237",
+        "https://openalex.org/W2794911665",
+        "https://openalex.org/W2945959380",
+        "https://openalex.org/W2949289016",
+        "https://openalex.org/W2949528798"
+      ],
+      "x": 23.436,
+      "y": 42.64,
+      "featured": false
+    },
+    {
+      "id": "W4291124933",
+      "kind": "paper",
+      "listId": "pub-w4291124933",
+      "title": "Cardiorespiratory alterations following intermittent photostimulation of RVLM C1 neurons: Implications for long‐term blood pressure, breathing and sleep regulation in freely moving rats",
+      "shortTitle": "Cardiorespiratory alterations following intermittent photostimulation of RVLM C1…",
+      "year": 2022,
+      "journal": "Acta Physiologica",
+      "authors": [
+        "Camilo Toledo",
+        "David C. Andrade",
+        "Esteban Díaz‐Jara",
+        "Domiziana Ortolani",
+        "Ignacio Bernal‐Santander",
+        "Karla G. Schwarz",
+        "Fernando C. Ortíz",
+        "Noah J. Marcus",
+        "Luíz M. Oliveira",
+        "Ana C. Takakura",
+        "Thiago S. Moreira",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 18,
+      "doi": "10.1111/apha.13864",
+      "url": "https://doi.org/10.1111/apha.13864",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:2osOgNQ5qMEC",
+      "openAlexId": "https://openalex.org/W4291124933",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "heart-failure",
+        "hypoxia-sleep",
+        "interventions"
+      ],
+      "cluster": "central",
+      "titleTokens": [
+        "cardiorespiratory",
+        "alterations",
+        "intermittent",
+        "photostimulation",
+        "rvlm",
+        "neurons",
+        "implications",
+        "long",
+        "term",
+        "blood",
+        "pressure",
+        "breathing",
+        "sleep",
+        "regulation",
+        "freely",
+        "moving",
+        "rats"
+      ],
+      "normalizedAuthors": [
+        "camilo toledo",
+        "david c andrade",
+        "domiziana ortolani",
+        "ignacio bernal santander",
+        "karla g schwarz",
+        "fernando c ortiz",
+        "noah j marcus",
+        "luiz m oliveira",
+        "ana c takakura",
+        "thiago s moreira",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W1539665155",
+        "https://openalex.org/W1562584139",
+        "https://openalex.org/W1590452781",
+        "https://openalex.org/W1888762249",
+        "https://openalex.org/W1955053357",
+        "https://openalex.org/W1988057350",
+        "https://openalex.org/W1998478120",
+        "https://openalex.org/W2013354666",
+        "https://openalex.org/W2017059783",
+        "https://openalex.org/W2033732906",
+        "https://openalex.org/W2035475307",
+        "https://openalex.org/W2063838515",
+        "https://openalex.org/W2076952248",
+        "https://openalex.org/W2084797167",
+        "https://openalex.org/W2089158128",
+        "https://openalex.org/W2100762371",
+        "https://openalex.org/W2101776442",
+        "https://openalex.org/W2104435385",
+        "https://openalex.org/W2111678533",
+        "https://openalex.org/W2136570676",
+        "https://openalex.org/W2157170162",
+        "https://openalex.org/W2157851792",
+        "https://openalex.org/W2159474374",
+        "https://openalex.org/W2161241268",
+        "https://openalex.org/W2163440110",
+        "https://openalex.org/W2170698109",
+        "https://openalex.org/W2338638760",
+        "https://openalex.org/W2339326074",
+        "https://openalex.org/W2471767199",
+        "https://openalex.org/W2505292440",
+        "https://openalex.org/W2583280561",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2587962034",
+        "https://openalex.org/W2602254749",
+        "https://openalex.org/W2626549169",
+        "https://openalex.org/W2742781975",
+        "https://openalex.org/W2742864635",
+        "https://openalex.org/W2743088679",
+        "https://openalex.org/W2765776499",
+        "https://openalex.org/W2886226614",
+        "https://openalex.org/W2902839107",
+        "https://openalex.org/W2910772580",
+        "https://openalex.org/W2981585473",
+        "https://openalex.org/W3001428179",
+        "https://openalex.org/W3034185915",
+        "https://openalex.org/W3082250642",
+        "https://openalex.org/W3088827127",
+        "https://openalex.org/W6608350388",
+        "https://openalex.org/W6639634491",
+        "https://openalex.org/W6675291946",
+        "https://openalex.org/W6725141574",
+        "https://openalex.org/W6726366854"
+      ],
+      "x": 64.094,
+      "y": 24.876,
+      "featured": true
+    },
+    {
+      "id": "W4297464444",
+      "kind": "paper",
+      "listId": "pub-w4297464444",
+      "title": "Lipid-Encapsuled Grape Tannins Prevent Oxidative-Stress-Induced Neuronal Cell Death, Intracellular ROS Accumulation and Inflammation",
+      "shortTitle": "Lipid-Encapsuled Grape Tannins Prevent Oxidative-Stress-Induced Neuronal Cell Death,…",
+      "year": 2022,
+      "journal": "Antioxidants",
+      "authors": [
+        "Hugo S. Díaz",
+        "Angélica Ríos-Gallardo",
+        "Domiziana Ortolani",
+        "Esteban Díaz‐Jara",
+        "María José Flores",
+        "Ignacio Vera",
+        "Angela Monasterio",
+        "Fernando C. Ortíz",
+        "Natalia Brossard",
+        "Fernando Osorio",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 16,
+      "doi": "10.3390/antiox11101928",
+      "url": "https://doi.org/10.3390/antiox11101928",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:Zph67rFs4hoC",
+      "openAlexId": "https://openalex.org/W4297464444",
+      "topicIds": [
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "cell-stress",
+        "interventions"
+      ],
+      "cluster": "cellular",
+      "titleTokens": [
+        "lipid",
+        "encapsuled",
+        "grape",
+        "tannins",
+        "prevent",
+        "oxidative",
+        "stress",
+        "induced",
+        "neuronal",
+        "cell",
+        "death",
+        "intracellular",
+        "accumulation",
+        "inflammation"
+      ],
+      "normalizedAuthors": [
+        "hugo s diaz",
+        "angelica rios gallardo",
+        "domiziana ortolani",
+        "maria jose flores",
+        "ignacio vera",
+        "angela monasterio",
+        "fernando c ortiz",
+        "natalia brossard",
+        "fernando osorio",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W625172625",
+        "https://openalex.org/W1840687024",
+        "https://openalex.org/W1924764088",
+        "https://openalex.org/W1964166589",
+        "https://openalex.org/W1964913218",
+        "https://openalex.org/W1966160892",
+        "https://openalex.org/W1976087136",
+        "https://openalex.org/W1980616284",
+        "https://openalex.org/W2006556974",
+        "https://openalex.org/W2009119278",
+        "https://openalex.org/W2016562224",
+        "https://openalex.org/W2023536393",
+        "https://openalex.org/W2032927626",
+        "https://openalex.org/W2044911918",
+        "https://openalex.org/W2059313710",
+        "https://openalex.org/W2068359668",
+        "https://openalex.org/W2080238811",
+        "https://openalex.org/W2085128107",
+        "https://openalex.org/W2108089395",
+        "https://openalex.org/W2108791332",
+        "https://openalex.org/W2109342780",
+        "https://openalex.org/W2111682630",
+        "https://openalex.org/W2126548244",
+        "https://openalex.org/W2289432139",
+        "https://openalex.org/W2396998791",
+        "https://openalex.org/W2413609199",
+        "https://openalex.org/W2468879160",
+        "https://openalex.org/W2521574223",
+        "https://openalex.org/W2523303572",
+        "https://openalex.org/W2544585578",
+        "https://openalex.org/W2568510753",
+        "https://openalex.org/W2593911670",
+        "https://openalex.org/W2739224825",
+        "https://openalex.org/W2888459204",
+        "https://openalex.org/W2896836926",
+        "https://openalex.org/W2904385377",
+        "https://openalex.org/W2950630966",
+        "https://openalex.org/W2954248757",
+        "https://openalex.org/W2972284379",
+        "https://openalex.org/W2980725265",
+        "https://openalex.org/W2983217782",
+        "https://openalex.org/W2997884205",
+        "https://openalex.org/W3011439989",
+        "https://openalex.org/W3092503934",
+        "https://openalex.org/W3112846682",
+        "https://openalex.org/W3143454653",
+        "https://openalex.org/W3156100888",
+        "https://openalex.org/W3177414393",
+        "https://openalex.org/W4212939010",
+        "https://openalex.org/W4221080581",
+        "https://openalex.org/W4225417704",
+        "https://openalex.org/W4281766808",
+        "https://openalex.org/W4283786883",
+        "https://openalex.org/W6658797511",
+        "https://openalex.org/W6712433621"
+      ],
+      "x": 6.2,
+      "y": 29.966,
+      "featured": false
+    },
+    {
+      "id": "W4229372041",
+      "kind": "paper",
+      "listId": "pub-w4229372041",
+      "title": "Medullary astrocytes mediate irregular breathing patterns generation in chronic heart failure through purinergic P2X7 receptor signalling",
+      "shortTitle": "Medullary astrocytes mediate irregular breathing patterns generation in…",
+      "year": 2022,
+      "journal": "EBioMedicine",
+      "authors": [
+        "Camilo Toledo",
+        "Esteban Díaz‐Jara",
+        "Hugo S. Díaz",
+        "Karla G. Schwarz",
+        "Katherin V. Pereyra",
+        "Alexandra Las Heras",
+        "Angélica Ríos-Gallardo",
+        "David C. Andrade",
+        "Thiago S. Moreira",
+        "Ana C. Takakura",
+        "Noah J. Marcus",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 10,
+      "doi": "10.1016/j.ebiom.2022.104044",
+      "url": "https://doi.org/10.1016/j.ebiom.2022.104044",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:_kc_bZDykSQC",
+      "openAlexId": "https://openalex.org/W4229372041",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "neuroglia-signalling",
+        "hypoxia-cardiovascular"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "neuroglia",
+        "heart-failure",
+        "connexin-purinergic"
+      ],
+      "cluster": "cellular",
+      "titleTokens": [
+        "medullary",
+        "astrocytes",
+        "mediate",
+        "irregular",
+        "breathing",
+        "patterns",
+        "generation",
+        "chronic",
+        "heart",
+        "failure",
+        "purinergic",
+        "p2x7",
+        "receptor",
+        "signalling"
+      ],
+      "normalizedAuthors": [
+        "camilo toledo",
+        "hugo s diaz",
+        "karla g schwarz",
+        "katherin v pereyra",
+        "alexandra las heras",
+        "angelica rios gallardo",
+        "david c andrade",
+        "thiago s moreira",
+        "ana c takakura",
+        "noah j marcus",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W575977921",
+        "https://openalex.org/W1497584043",
+        "https://openalex.org/W1512828689",
+        "https://openalex.org/W1539460880",
+        "https://openalex.org/W1940376800",
+        "https://openalex.org/W1970534800",
+        "https://openalex.org/W1997228142",
+        "https://openalex.org/W2018205683",
+        "https://openalex.org/W2021727710",
+        "https://openalex.org/W2032154466",
+        "https://openalex.org/W2035475307",
+        "https://openalex.org/W2068517470",
+        "https://openalex.org/W2076783115",
+        "https://openalex.org/W2077993168",
+        "https://openalex.org/W2086715542",
+        "https://openalex.org/W2093251622",
+        "https://openalex.org/W2097057411",
+        "https://openalex.org/W2115306154",
+        "https://openalex.org/W2116355373",
+        "https://openalex.org/W2117572051",
+        "https://openalex.org/W2120749319",
+        "https://openalex.org/W2123028443",
+        "https://openalex.org/W2145849499",
+        "https://openalex.org/W2146168235",
+        "https://openalex.org/W2146245660",
+        "https://openalex.org/W2153231621",
+        "https://openalex.org/W2167858064",
+        "https://openalex.org/W2168104366",
+        "https://openalex.org/W2191591101",
+        "https://openalex.org/W2228370504",
+        "https://openalex.org/W2255372544",
+        "https://openalex.org/W2342085519",
+        "https://openalex.org/W2356537477",
+        "https://openalex.org/W2405429656",
+        "https://openalex.org/W2533146972",
+        "https://openalex.org/W2534809581",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2602254749",
+        "https://openalex.org/W2727173530",
+        "https://openalex.org/W2730762223",
+        "https://openalex.org/W2742781975",
+        "https://openalex.org/W2766218520",
+        "https://openalex.org/W2800321059",
+        "https://openalex.org/W2802994942",
+        "https://openalex.org/W2883434290",
+        "https://openalex.org/W2887456738",
+        "https://openalex.org/W2910772580",
+        "https://openalex.org/W2936704864",
+        "https://openalex.org/W2960793673",
+        "https://openalex.org/W2970980466",
+        "https://openalex.org/W2981089455",
+        "https://openalex.org/W2981183735",
+        "https://openalex.org/W2981585473",
+        "https://openalex.org/W2981993576",
+        "https://openalex.org/W3108539411",
+        "https://openalex.org/W3112846682",
+        "https://openalex.org/W3163909033",
+        "https://openalex.org/W4210738956",
+        "https://openalex.org/W4211230056"
+      ],
+      "x": 31.856,
+      "y": 33.201,
+      "featured": true
+    },
+    {
+      "id": "W3112846682",
+      "kind": "paper",
+      "listId": "pub-w3112846682",
+      "title": "Inhibition of Brainstem Endoplasmic Reticulum Stress Rescues Cardiorespiratory Dysfunction in High Output Heart Failure",
+      "shortTitle": "Inhibition of Brainstem Endoplasmic Reticulum Stress Rescues Cardiorespiratory…",
+      "year": 2021,
+      "journal": "Hypertension",
+      "authors": [
+        "Hugo S. Díaz",
+        "David C. Andrade",
+        "Camilo Toledo",
+        "Karla G. Schwarz",
+        "Katherin V. Pereyra",
+        "Esteban Díaz‐Jara",
+        "Noah J. Marcus",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 21,
+      "doi": "10.1161/hypertensionaha.120.16056",
+      "url": "https://doi.org/10.1161/hypertensionaha.120.16056",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:IjCSPb-OGe4C",
+      "openAlexId": "https://openalex.org/W3112846682",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "heart-failure",
+        "cell-stress",
+        "interventions"
+      ],
+      "cluster": "cellular",
+      "titleTokens": [
+        "inhibition",
+        "brainstem",
+        "endoplasmic",
+        "reticulum",
+        "stress",
+        "rescues",
+        "cardiorespiratory",
+        "dysfunction",
+        "high",
+        "output",
+        "heart",
+        "failure"
+      ],
+      "normalizedAuthors": [
+        "hugo s diaz",
+        "david c andrade",
+        "camilo toledo",
+        "karla g schwarz",
+        "katherin v pereyra",
+        "noah j marcus",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W219506686",
+        "https://openalex.org/W1608536970",
+        "https://openalex.org/W1922733151",
+        "https://openalex.org/W1944839968",
+        "https://openalex.org/W1964911308",
+        "https://openalex.org/W1971021463",
+        "https://openalex.org/W1975139989",
+        "https://openalex.org/W2008683682",
+        "https://openalex.org/W2019353944",
+        "https://openalex.org/W2037149316",
+        "https://openalex.org/W2037495834",
+        "https://openalex.org/W2049129690",
+        "https://openalex.org/W2077993168",
+        "https://openalex.org/W2088068912",
+        "https://openalex.org/W2093040971",
+        "https://openalex.org/W2124306044",
+        "https://openalex.org/W2126617656",
+        "https://openalex.org/W2131014774",
+        "https://openalex.org/W2136964355",
+        "https://openalex.org/W2138369266",
+        "https://openalex.org/W2143961764",
+        "https://openalex.org/W2173743237",
+        "https://openalex.org/W2215266060",
+        "https://openalex.org/W2323420610",
+        "https://openalex.org/W2405429656",
+        "https://openalex.org/W2499428713",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2610602137",
+        "https://openalex.org/W2626549169",
+        "https://openalex.org/W2743088679",
+        "https://openalex.org/W2752778464",
+        "https://openalex.org/W2910772580",
+        "https://openalex.org/W2968457669",
+        "https://openalex.org/W2981183735",
+        "https://openalex.org/W2981585473",
+        "https://openalex.org/W2983217782",
+        "https://openalex.org/W3001428179"
+      ],
+      "x": 6.2,
+      "y": 40.73,
+      "featured": false
+    },
+    {
+      "id": "W3177414393",
+      "kind": "paper",
+      "listId": "pub-w3177414393",
+      "title": "Exercise training reduces brainstem oxidative stress and restores normal breathing function in heart failure",
+      "shortTitle": "Exercise training reduces brainstem oxidative stress and restores…",
+      "year": 2021,
+      "journal": "Free Radical Biology and Medicine",
+      "authors": [
+        "Esteban Díaz‐Jara",
+        "Hugo S. Díaz",
+        "Angélica Ríos-Gallardo",
+        "Domiziana Ortolani",
+        "David C. Andrade",
+        "Camilo Toledo",
+        "Katherin V. Pereyra",
+        "Karla G. Schwarz",
+        "Gigliola Ramírez",
+        "Fernando C. Ortíz",
+        "Marcelo E. Andía",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 12,
+      "doi": "10.1016/j.freeradbiomed.2021.06.032",
+      "url": "https://doi.org/10.1016/j.freeradbiomed.2021.06.032",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:5nxA0vEk-isC",
+      "openAlexId": "https://openalex.org/W3177414393",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "heart-failure",
+        "cell-stress",
+        "interventions"
+      ],
+      "cluster": "central",
+      "titleTokens": [
+        "exercise",
+        "training",
+        "reduces",
+        "brainstem",
+        "oxidative",
+        "stress",
+        "restores",
+        "normal",
+        "breathing",
+        "function",
+        "heart",
+        "failure"
+      ],
+      "normalizedAuthors": [
+        "hugo s diaz",
+        "angelica rios gallardo",
+        "domiziana ortolani",
+        "david c andrade",
+        "camilo toledo",
+        "katherin v pereyra",
+        "karla g schwarz",
+        "gigliola ramirez",
+        "fernando c ortiz",
+        "marcelo e andia",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W1497584043",
+        "https://openalex.org/W1539665155",
+        "https://openalex.org/W1860619935",
+        "https://openalex.org/W1940376800",
+        "https://openalex.org/W1997801680",
+        "https://openalex.org/W2003827347",
+        "https://openalex.org/W2018205683",
+        "https://openalex.org/W2028719706",
+        "https://openalex.org/W2037495834",
+        "https://openalex.org/W2038737634",
+        "https://openalex.org/W2045019896",
+        "https://openalex.org/W2046805493",
+        "https://openalex.org/W2054185160",
+        "https://openalex.org/W2068135201",
+        "https://openalex.org/W2082012789",
+        "https://openalex.org/W2082549199",
+        "https://openalex.org/W2094669694",
+        "https://openalex.org/W2097757382",
+        "https://openalex.org/W2121479953",
+        "https://openalex.org/W2126332123",
+        "https://openalex.org/W2126617656",
+        "https://openalex.org/W2138369266",
+        "https://openalex.org/W2147653980",
+        "https://openalex.org/W2152865365",
+        "https://openalex.org/W2153683677",
+        "https://openalex.org/W2216984490",
+        "https://openalex.org/W2228370504",
+        "https://openalex.org/W2295124130",
+        "https://openalex.org/W2405429656",
+        "https://openalex.org/W2419506820",
+        "https://openalex.org/W2515045151",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2590659272",
+        "https://openalex.org/W2626549169",
+        "https://openalex.org/W2727980964",
+        "https://openalex.org/W2743088679",
+        "https://openalex.org/W2766218520",
+        "https://openalex.org/W2910772580",
+        "https://openalex.org/W2945334580",
+        "https://openalex.org/W2975780269",
+        "https://openalex.org/W2981183735",
+        "https://openalex.org/W2981585473",
+        "https://openalex.org/W3000530016",
+        "https://openalex.org/W3127166110",
+        "https://openalex.org/W6697018724"
+      ],
+      "x": 49.859,
+      "y": 51.669,
+      "featured": false
+    },
+    {
+      "id": "W3124955723",
+      "kind": "paper",
+      "listId": "pub-w3124955723",
+      "title": "Paraquat herbicide diminishes chemoreflex sensitivity, induces cardiac autonomic imbalance and impair cardiac function in rats",
+      "shortTitle": "Paraquat herbicide diminishes chemoreflex sensitivity, induces cardiac autonomic…",
+      "year": 2021,
+      "journal": "American Journal of Physiology-Heart and Circulatory Physiology",
+      "authors": [
+        "Katherin V. Pereyra",
+        "Karla G. Schwarz",
+        "David C. Andrade",
+        "Camilo Toledo",
+        "Angélica Ríos-Gallardo",
+        "Esteban Díaz‐Jara",
+        "Sussy Bastías‐Candia",
+        "Fernando C. Ortíz",
+        "Domiziana Ortolani",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 11,
+      "doi": "10.1152/ajpheart.00710.2020",
+      "url": "https://doi.org/10.1152/ajpheart.00710.2020",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:MXK_kJrjxJIC",
+      "openAlexId": "https://openalex.org/W3124955723",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "carotid-chemoreflex",
+        "heart-failure",
+        "cell-stress"
+      ],
+      "cluster": "cellular",
+      "titleTokens": [
+        "paraquat",
+        "herbicide",
+        "diminishes",
+        "chemoreflex",
+        "sensitivity",
+        "induces",
+        "cardiac",
+        "autonomic",
+        "imbalance",
+        "impair",
+        "cardiac",
+        "function",
+        "rats"
+      ],
+      "normalizedAuthors": [
+        "katherin v pereyra",
+        "karla g schwarz",
+        "david c andrade",
+        "camilo toledo",
+        "angelica rios gallardo",
+        "sussy bastias candia",
+        "fernando c ortiz",
+        "domiziana ortolani",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W123695080",
+        "https://openalex.org/W1679081466",
+        "https://openalex.org/W1765661487",
+        "https://openalex.org/W1852951596",
+        "https://openalex.org/W1965388850",
+        "https://openalex.org/W1981682680",
+        "https://openalex.org/W1985079569",
+        "https://openalex.org/W1986091051",
+        "https://openalex.org/W1987204479",
+        "https://openalex.org/W1989649595",
+        "https://openalex.org/W1999877293",
+        "https://openalex.org/W2000510440",
+        "https://openalex.org/W2005736754",
+        "https://openalex.org/W2006642289",
+        "https://openalex.org/W2009083104",
+        "https://openalex.org/W2011154463",
+        "https://openalex.org/W2012698286",
+        "https://openalex.org/W2017839550",
+        "https://openalex.org/W2023163027",
+        "https://openalex.org/W2034964131",
+        "https://openalex.org/W2035192492",
+        "https://openalex.org/W2044156447",
+        "https://openalex.org/W2050431084",
+        "https://openalex.org/W2061616701",
+        "https://openalex.org/W2062618262",
+        "https://openalex.org/W2065665245",
+        "https://openalex.org/W2068182698",
+        "https://openalex.org/W2068549722",
+        "https://openalex.org/W2079536916",
+        "https://openalex.org/W2084064095",
+        "https://openalex.org/W2087743415",
+        "https://openalex.org/W2090676450",
+        "https://openalex.org/W2107836188",
+        "https://openalex.org/W2107993105",
+        "https://openalex.org/W2114292518",
+        "https://openalex.org/W2118020787",
+        "https://openalex.org/W2122864900",
+        "https://openalex.org/W2153023878",
+        "https://openalex.org/W2410450565",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2769771129",
+        "https://openalex.org/W2784612915",
+        "https://openalex.org/W2794058006",
+        "https://openalex.org/W2896871049",
+        "https://openalex.org/W2910772580",
+        "https://openalex.org/W2954665433",
+        "https://openalex.org/W2981183735",
+        "https://openalex.org/W2981585473",
+        "https://openalex.org/W2983217782",
+        "https://openalex.org/W3020059288",
+        "https://openalex.org/W3046611464"
+      ],
+      "x": 22.109,
+      "y": 13.827,
+      "featured": false
+    },
+    {
+      "id": "W3127997004",
+      "kind": "paper",
+      "listId": "pub-w3127997004",
+      "title": "Carbamylated form of human erythropoietin normalizes cardiorespiratory disorders triggered by intermittent hypoxia mimicking sleep apnea syndrome",
+      "shortTitle": "Carbamylated form of human erythropoietin normalizes cardiorespiratory disorders…",
+      "year": 2021,
+      "journal": "Journal of Hypertension",
+      "authors": [
+        "David C. Andrade",
+        "Camilo Toledo",
+        "Hugo S. Díaz",
+        "Katherin V. Pereyra",
+        "Karla G. Schwarz",
+        "Esteban Díaz‐Jara",
+        "Claudia Melipillán",
+        "Angélica Ríos-Gallardo",
+        "Atenea Uribe-Ojeda",
+        "Julio Alcayaga",
+        "Rodrigo A. Quintanilla",
+        "Rodrigo Iturriaga",
+        "Jean‐Paul Richalet",
+        "Nicolas Voituron",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 6,
+      "doi": "10.1097/hjh.0000000000002756",
+      "url": "https://doi.org/10.1097/hjh.0000000000002756",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:4DMP91E08xMC",
+      "openAlexId": "https://openalex.org/W3127997004",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "heart-failure",
+        "hypoxia-sleep",
+        "cell-stress"
+      ],
+      "cluster": "heart",
+      "titleTokens": [
+        "carbamylated",
+        "form",
+        "human",
+        "erythropoietin",
+        "normalizes",
+        "cardiorespiratory",
+        "disorders",
+        "triggered",
+        "intermittent",
+        "hypoxia",
+        "mimicking",
+        "sleep",
+        "apnea",
+        "syndrome"
+      ],
+      "normalizedAuthors": [
+        "david c andrade",
+        "camilo toledo",
+        "hugo s diaz",
+        "katherin v pereyra",
+        "karla g schwarz",
+        "claudia melipillan",
+        "angelica rios gallardo",
+        "atenea uribe ojeda",
+        "julio alcayaga",
+        "rodrigo a quintanilla",
+        "rodrigo iturriaga",
+        "jean paul richalet",
+        "nicolas voituron",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W1516182718",
+        "https://openalex.org/W1963812200",
+        "https://openalex.org/W1968052550",
+        "https://openalex.org/W1970998841",
+        "https://openalex.org/W1976167347",
+        "https://openalex.org/W1976263444",
+        "https://openalex.org/W1977169482",
+        "https://openalex.org/W1993847258",
+        "https://openalex.org/W2002189627",
+        "https://openalex.org/W2025095985",
+        "https://openalex.org/W2026849735",
+        "https://openalex.org/W2042592767",
+        "https://openalex.org/W2043912659",
+        "https://openalex.org/W2048870600",
+        "https://openalex.org/W2056617608",
+        "https://openalex.org/W2069253560",
+        "https://openalex.org/W2071328905",
+        "https://openalex.org/W2107194336",
+        "https://openalex.org/W2108089603",
+        "https://openalex.org/W2109723592",
+        "https://openalex.org/W2116216629",
+        "https://openalex.org/W2118707684",
+        "https://openalex.org/W2136703696",
+        "https://openalex.org/W2140058549",
+        "https://openalex.org/W2146063806",
+        "https://openalex.org/W2147921015",
+        "https://openalex.org/W2167042262",
+        "https://openalex.org/W2168390541",
+        "https://openalex.org/W2271044598",
+        "https://openalex.org/W2273154387",
+        "https://openalex.org/W2281760930",
+        "https://openalex.org/W2333343699",
+        "https://openalex.org/W2471195096",
+        "https://openalex.org/W2471767199",
+        "https://openalex.org/W2508492660",
+        "https://openalex.org/W2732223081",
+        "https://openalex.org/W2742781975",
+        "https://openalex.org/W2767875305",
+        "https://openalex.org/W2801906676",
+        "https://openalex.org/W2810784849",
+        "https://openalex.org/W2898369501",
+        "https://openalex.org/W2981183735",
+        "https://openalex.org/W3007101462",
+        "https://openalex.org/W6661075225",
+        "https://openalex.org/W6677581387",
+        "https://openalex.org/W6693843966",
+        "https://openalex.org/W6720105432",
+        "https://openalex.org/W6981142964",
+        "https://openalex.org/W7037014599"
+      ],
+      "x": 38.03,
+      "y": 79.267,
+      "featured": false
+    },
+    {
+      "id": "W4200464459",
+      "kind": "paper",
+      "listId": "pub-w4200464459",
+      "title": "Effects of enriched-potassium diet on cardiorespiratory outcomes in experimental non-ischemic chronic heart failure",
+      "shortTitle": "Effects of enriched-potassium diet on cardiorespiratory outcomes in…",
+      "year": 2021,
+      "journal": "Biological Research",
+      "authors": [
+        "Karla G. Schwarz",
+        "Katherin V. Pereyra",
+        "Camilo Toledo",
+        "David C. Andrade",
+        "Hugo S. Díaz",
+        "Esteban Díaz‐Jara",
+        "Domiziana Ortolani",
+        "Angélica Ríos-Gallardo",
+        "Paulina Arias",
+        "Alexandra Las Heras",
+        "Ignacio Vera",
+        "Fernando C. Ortíz",
+        "Nibaldo C. Inestrosa",
+        "Carlos P. Vío",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 6,
+      "doi": "10.1186/s40659-021-00365-z",
+      "url": "https://doi.org/10.1186/s40659-021-00365-z",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:hqOjcs7Dif8C",
+      "openAlexId": "https://openalex.org/W4200464459",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "heart-failure",
+        "interventions"
+      ],
+      "cluster": "heart",
+      "titleTokens": [
+        "effects",
+        "enriched",
+        "potassium",
+        "diet",
+        "cardiorespiratory",
+        "outcomes",
+        "experimental",
+        "ischemic",
+        "chronic",
+        "heart",
+        "failure"
+      ],
+      "normalizedAuthors": [
+        "karla g schwarz",
+        "katherin v pereyra",
+        "camilo toledo",
+        "david c andrade",
+        "hugo s diaz",
+        "domiziana ortolani",
+        "angelica rios gallardo",
+        "paulina arias",
+        "alexandra las heras",
+        "ignacio vera",
+        "fernando c ortiz",
+        "nibaldo c inestrosa",
+        "carlos p vio",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W30340085",
+        "https://openalex.org/W1944839968",
+        "https://openalex.org/W1964860798",
+        "https://openalex.org/W1975139989",
+        "https://openalex.org/W1986320120",
+        "https://openalex.org/W1996847352",
+        "https://openalex.org/W1997179766",
+        "https://openalex.org/W2006894342",
+        "https://openalex.org/W2008519575",
+        "https://openalex.org/W2021460176",
+        "https://openalex.org/W2028900652",
+        "https://openalex.org/W2029363774",
+        "https://openalex.org/W2034154367",
+        "https://openalex.org/W2035192492",
+        "https://openalex.org/W2059361692",
+        "https://openalex.org/W2081221151",
+        "https://openalex.org/W2086177111",
+        "https://openalex.org/W2094350545",
+        "https://openalex.org/W2096800845",
+        "https://openalex.org/W2096996905",
+        "https://openalex.org/W2097730758",
+        "https://openalex.org/W2097757382",
+        "https://openalex.org/W2098200638",
+        "https://openalex.org/W2104435385",
+        "https://openalex.org/W2106742300",
+        "https://openalex.org/W2110091118",
+        "https://openalex.org/W2110182057",
+        "https://openalex.org/W2112612224",
+        "https://openalex.org/W2116355373",
+        "https://openalex.org/W2117992633",
+        "https://openalex.org/W2118413686",
+        "https://openalex.org/W2119340816",
+        "https://openalex.org/W2120671501",
+        "https://openalex.org/W2123107022",
+        "https://openalex.org/W2132148323",
+        "https://openalex.org/W2133040751",
+        "https://openalex.org/W2137777799",
+        "https://openalex.org/W2142538245",
+        "https://openalex.org/W2146382544",
+        "https://openalex.org/W2161484789",
+        "https://openalex.org/W2169664464",
+        "https://openalex.org/W2178348782",
+        "https://openalex.org/W2206138422",
+        "https://openalex.org/W2346681063",
+        "https://openalex.org/W2511841492",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2586668047",
+        "https://openalex.org/W2599115995",
+        "https://openalex.org/W2604665870",
+        "https://openalex.org/W2626549169",
+        "https://openalex.org/W2770837559",
+        "https://openalex.org/W2910772580",
+        "https://openalex.org/W2980599401",
+        "https://openalex.org/W2981183735",
+        "https://openalex.org/W2981585473",
+        "https://openalex.org/W2983217782",
+        "https://openalex.org/W2995688126",
+        "https://openalex.org/W3013417988",
+        "https://openalex.org/W3035920829",
+        "https://openalex.org/W3173710465",
+        "https://openalex.org/W4239096779",
+        "https://openalex.org/W6677967838",
+        "https://openalex.org/W6685163941"
+      ],
+      "x": 29.186,
+      "y": 65.224,
+      "featured": false
+    },
+    {
+      "id": "W3182330858",
+      "kind": "paper",
+      "listId": "pub-w3182330858",
+      "title": "Exercise intolerance in volume overload heart failure is associated with low carotid body mediated chemoreflex drive",
+      "shortTitle": "Exercise intolerance in volume overload heart failure is…",
+      "year": 2021,
+      "journal": "Scientific Reports",
+      "authors": [
+        "David C. Andrade",
+        "Esteban Díaz‐Jara",
+        "Camilo Toledo",
+        "Karla G. Schwarz",
+        "Katherin V. Pereyra",
+        "Hugo S. Díaz",
+        "Noah J. Marcus",
+        "Fernando C. Ortíz",
+        "Angélica Ríos-Gallardo",
+        "Domiziana Ortolani",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 6,
+      "doi": "10.1038/s41598-021-93791-8",
+      "url": "https://doi.org/10.1038/s41598-021-93791-8",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:mVmsd5A6BfQC",
+      "openAlexId": "https://openalex.org/W3182330858",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "carotid-chemoreflex",
+        "heart-failure",
+        "interventions"
+      ],
+      "cluster": "carotid",
+      "titleTokens": [
+        "exercise",
+        "intolerance",
+        "volume",
+        "overload",
+        "heart",
+        "failure",
+        "carotid",
+        "body",
+        "mediated",
+        "chemoreflex",
+        "drive"
+      ],
+      "normalizedAuthors": [
+        "david c andrade",
+        "camilo toledo",
+        "karla g schwarz",
+        "katherin v pereyra",
+        "hugo s diaz",
+        "noah j marcus",
+        "fernando c ortiz",
+        "angelica rios gallardo",
+        "domiziana ortolani",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W1539665155",
+        "https://openalex.org/W1787183867",
+        "https://openalex.org/W1860619935",
+        "https://openalex.org/W1893377637",
+        "https://openalex.org/W1965314086",
+        "https://openalex.org/W1967137534",
+        "https://openalex.org/W1967966894",
+        "https://openalex.org/W1974440288",
+        "https://openalex.org/W2032176195",
+        "https://openalex.org/W2034679367",
+        "https://openalex.org/W2035192492",
+        "https://openalex.org/W2042021759",
+        "https://openalex.org/W2046805493",
+        "https://openalex.org/W2061298220",
+        "https://openalex.org/W2061423223",
+        "https://openalex.org/W2066798103",
+        "https://openalex.org/W2082258689",
+        "https://openalex.org/W2082549199",
+        "https://openalex.org/W2086291738",
+        "https://openalex.org/W2096866242",
+        "https://openalex.org/W2118301588",
+        "https://openalex.org/W2124420695",
+        "https://openalex.org/W2136377350",
+        "https://openalex.org/W2136756954",
+        "https://openalex.org/W2137784332",
+        "https://openalex.org/W2141015199",
+        "https://openalex.org/W2142538245",
+        "https://openalex.org/W2147147756",
+        "https://openalex.org/W2152502546",
+        "https://openalex.org/W2157561142",
+        "https://openalex.org/W2161241268",
+        "https://openalex.org/W2163105403",
+        "https://openalex.org/W2163624457",
+        "https://openalex.org/W2167493345",
+        "https://openalex.org/W2196753354",
+        "https://openalex.org/W2318892216",
+        "https://openalex.org/W2326273864",
+        "https://openalex.org/W2396693700",
+        "https://openalex.org/W2405429656",
+        "https://openalex.org/W2419506820",
+        "https://openalex.org/W2485135212",
+        "https://openalex.org/W2515045151",
+        "https://openalex.org/W2524897358",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2626549169",
+        "https://openalex.org/W2727980964",
+        "https://openalex.org/W2743088679",
+        "https://openalex.org/W2770480508",
+        "https://openalex.org/W2896050414",
+        "https://openalex.org/W2910772580",
+        "https://openalex.org/W2917178176",
+        "https://openalex.org/W2945334580",
+        "https://openalex.org/W2970980466",
+        "https://openalex.org/W2990123797",
+        "https://openalex.org/W3010644283",
+        "https://openalex.org/W3143707879"
+      ],
+      "x": 67.206,
+      "y": 53.152,
+      "featured": false
+    },
+    {
+      "id": "W3020059288",
+      "kind": "paper",
+      "listId": "pub-w3020059288",
+      "title": "Cardiac remodeling and arrhythmogenesis are ameliorated by administration of Cx43 mimetic peptide Gap27 in heart failure rats",
+      "shortTitle": "Cardiac remodeling and arrhythmogenesis are ameliorated by administration…",
+      "year": 2020,
+      "journal": "Scientific Reports",
+      "authors": [
+        "Claudia Lucero",
+        "David C. Andrade",
+        "Camilo Toledo",
+        "Hugo S. Díaz",
+        "Katherin V. Pereyra",
+        "Esteban Díaz‐Jara",
+        "Karla G. Schwarz",
+        "Noah J. Marcus",
+        "Mauricio A. Retamal",
+        "Rodrigo A. Quintanilla",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 37,
+      "doi": "10.1038/s41598-020-63336-6",
+      "url": "https://doi.org/10.1038/s41598-020-63336-6",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:_FxGoFyzp5QC",
+      "openAlexId": "https://openalex.org/W3020059288",
+      "topicIds": [
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "heart-failure",
+        "interventions"
+      ],
+      "cluster": "heart",
+      "titleTokens": [
+        "cardiac",
+        "remodeling",
+        "arrhythmogenesis",
+        "ameliorated",
+        "administration",
+        "cx43",
+        "mimetic",
+        "peptide",
+        "gap27",
+        "heart",
+        "failure",
+        "rats"
+      ],
+      "normalizedAuthors": [
+        "claudia lucero",
+        "david c andrade",
+        "camilo toledo",
+        "hugo s diaz",
+        "katherin v pereyra",
+        "karla g schwarz",
+        "noah j marcus",
+        "mauricio a retamal",
+        "rodrigo a quintanilla",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W642235081",
+        "https://openalex.org/W1564267574",
+        "https://openalex.org/W1756023647",
+        "https://openalex.org/W1757322900",
+        "https://openalex.org/W1965380680",
+        "https://openalex.org/W1998337984",
+        "https://openalex.org/W1999877293",
+        "https://openalex.org/W2006373726",
+        "https://openalex.org/W2006470883",
+        "https://openalex.org/W2011154463",
+        "https://openalex.org/W2024111345",
+        "https://openalex.org/W2028900652",
+        "https://openalex.org/W2031034134",
+        "https://openalex.org/W2032661630",
+        "https://openalex.org/W2047422067",
+        "https://openalex.org/W2061616701",
+        "https://openalex.org/W2062179663",
+        "https://openalex.org/W2065837488",
+        "https://openalex.org/W2070390686",
+        "https://openalex.org/W2075806602",
+        "https://openalex.org/W2078243875",
+        "https://openalex.org/W2083998972",
+        "https://openalex.org/W2088541033",
+        "https://openalex.org/W2090164672",
+        "https://openalex.org/W2090676450",
+        "https://openalex.org/W2100454833",
+        "https://openalex.org/W2106667620",
+        "https://openalex.org/W2107836188",
+        "https://openalex.org/W2109485370",
+        "https://openalex.org/W2110614144",
+        "https://openalex.org/W2111987796",
+        "https://openalex.org/W2112958214",
+        "https://openalex.org/W2126028448",
+        "https://openalex.org/W2156055934",
+        "https://openalex.org/W2238758462",
+        "https://openalex.org/W2253078378",
+        "https://openalex.org/W2292937196",
+        "https://openalex.org/W2319698696",
+        "https://openalex.org/W2562859545",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2605024653",
+        "https://openalex.org/W2610102411",
+        "https://openalex.org/W2626549169",
+        "https://openalex.org/W2743088679",
+        "https://openalex.org/W2754310746",
+        "https://openalex.org/W2766448145",
+        "https://openalex.org/W2893248496",
+        "https://openalex.org/W2897669383",
+        "https://openalex.org/W2910772580",
+        "https://openalex.org/W2966598499",
+        "https://openalex.org/W2970080198",
+        "https://openalex.org/W4211091257"
+      ],
+      "x": 46.058,
+      "y": 62.335,
+      "featured": false
+    },
+    {
+      "id": "W2981183735",
+      "kind": "paper",
+      "listId": "pub-w2981183735",
+      "title": "Episodic stimulation of central chemoreceptor neurons elicits disordered breathing and autonomic dysfunction in volume overload heart failure",
+      "shortTitle": "Episodic stimulation of central chemoreceptor neurons elicits disordered…",
+      "year": 2020,
+      "journal": "American Journal of Physiology-Lung Cellular and Molecular Physiology",
+      "authors": [
+        "Hugo S. Díaz",
+        "David C. Andrade",
+        "Camilo Toledo",
+        "Katherin V. Pereyra",
+        "Karla G. Schwarz",
+        "Esteban Díaz‐Jara",
+        "Claudia Lucero",
+        "Alexis Arce‐Álvarez",
+        "Harold D. Schultz",
+        "Josiane do Nascimento Silva",
+        "Ana C. Takakura",
+        "Thiago S. Moreira",
+        "Noah J. Marcus",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 26,
+      "doi": "10.1152/ajplung.00007.2019",
+      "url": "https://doi.org/10.1152/ajplung.00007.2019",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:Wp0gIr-vW9MC",
+      "openAlexId": "https://openalex.org/W2981183735",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "hypoxia-cardiovascular"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "carotid-chemoreflex",
+        "heart-failure"
+      ],
+      "cluster": "carotid",
+      "titleTokens": [
+        "episodic",
+        "stimulation",
+        "central",
+        "chemoreceptor",
+        "neurons",
+        "elicits",
+        "disordered",
+        "breathing",
+        "autonomic",
+        "dysfunction",
+        "volume",
+        "overload",
+        "heart",
+        "failure"
+      ],
+      "normalizedAuthors": [
+        "hugo s diaz",
+        "david c andrade",
+        "camilo toledo",
+        "katherin v pereyra",
+        "karla g schwarz",
+        "claudia lucero",
+        "alexis arce alvarez",
+        "harold d schultz",
+        "josiane do nascimento silva",
+        "ana c takakura",
+        "thiago s moreira",
+        "noah j marcus",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W1526272879",
+        "https://openalex.org/W1539665155",
+        "https://openalex.org/W1608536970",
+        "https://openalex.org/W1944839968",
+        "https://openalex.org/W1975139989",
+        "https://openalex.org/W1977461788",
+        "https://openalex.org/W2006410388",
+        "https://openalex.org/W2007208289",
+        "https://openalex.org/W2018205683",
+        "https://openalex.org/W2028900652",
+        "https://openalex.org/W2037495834",
+        "https://openalex.org/W2049465232",
+        "https://openalex.org/W2071011552",
+        "https://openalex.org/W2077993168",
+        "https://openalex.org/W2081155432",
+        "https://openalex.org/W2088076735",
+        "https://openalex.org/W2101805485",
+        "https://openalex.org/W2108957007",
+        "https://openalex.org/W2112725236",
+        "https://openalex.org/W2119340816",
+        "https://openalex.org/W2124624517",
+        "https://openalex.org/W2125193980",
+        "https://openalex.org/W2131014774",
+        "https://openalex.org/W2138369266",
+        "https://openalex.org/W2146168235",
+        "https://openalex.org/W2152865365",
+        "https://openalex.org/W2153683677",
+        "https://openalex.org/W2157170162",
+        "https://openalex.org/W2161241268",
+        "https://openalex.org/W2163440110",
+        "https://openalex.org/W2186948371",
+        "https://openalex.org/W2193454110",
+        "https://openalex.org/W2255372544",
+        "https://openalex.org/W2278223521",
+        "https://openalex.org/W2405429656",
+        "https://openalex.org/W2471767199",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2602254749",
+        "https://openalex.org/W2626549169",
+        "https://openalex.org/W2626981462",
+        "https://openalex.org/W2743088679",
+        "https://openalex.org/W2752332596",
+        "https://openalex.org/W2765403842",
+        "https://openalex.org/W3022984723",
+        "https://openalex.org/W4206159607"
+      ],
+      "x": 85.353,
+      "y": 25.677,
+      "featured": false
+    },
+    {
+      "id": "W2904685632",
+      "kind": "paper",
+      "listId": "pub-w2904685632",
+      "title": "Non-Canonical Control of Neuronal Energy Status by the Na+ Pump",
+      "shortTitle": "Non-Canonical Control of Neuronal Energy Status by the…",
+      "year": 2019,
+      "journal": "Cell Metabolism",
+      "authors": [
+        "Felipe Baeza‐Lehnert",
+        "Aiman S. Saab",
+        "Robin Gutiérrez",
+        "Valeria Larenas",
+        "Esteban F. Díaz",
+        "Melanie Horn",
+        "Miriam Vargas",
+        "Ladina Hösli",
+        "Jillian L. Stobart",
+        "Johannes Hirrlinger",
+        "Bruno Weber",
+        "L. Felipe Barros"
+      ],
+      "citedByCount": 136,
+      "doi": "10.1016/j.cmet.2018.11.005",
+      "url": "https://doi.org/10.1016/j.cmet.2018.11.005",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:ULOm3_A8WrAC",
+      "openAlexId": "https://openalex.org/W2904685632",
+      "topicIds": [
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "cell-stress"
+      ],
+      "cluster": "cellular",
+      "titleTokens": [
+        "canonical",
+        "control",
+        "neuronal",
+        "energy",
+        "status",
+        "pump"
+      ],
+      "normalizedAuthors": [
+        "felipe baeza lehnert",
+        "aiman s saab",
+        "robin gutierrez",
+        "valeria larenas",
+        "melanie horn",
+        "miriam vargas",
+        "ladina hosli",
+        "jillian l stobart",
+        "johannes hirrlinger",
+        "bruno weber",
+        "l felipe barros"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W871571323",
+        "https://openalex.org/W1530855917",
+        "https://openalex.org/W1542197083",
+        "https://openalex.org/W1626886456",
+        "https://openalex.org/W1952806621",
+        "https://openalex.org/W1964063168",
+        "https://openalex.org/W1967133714",
+        "https://openalex.org/W1967646152",
+        "https://openalex.org/W1968989653",
+        "https://openalex.org/W1973533307",
+        "https://openalex.org/W1977850703",
+        "https://openalex.org/W1983240075",
+        "https://openalex.org/W1988714133",
+        "https://openalex.org/W2008404156",
+        "https://openalex.org/W2010307662",
+        "https://openalex.org/W2016752484",
+        "https://openalex.org/W2016855336",
+        "https://openalex.org/W2018541716",
+        "https://openalex.org/W2021337708",
+        "https://openalex.org/W2022594235",
+        "https://openalex.org/W2024434386",
+        "https://openalex.org/W2025494817",
+        "https://openalex.org/W2037140288",
+        "https://openalex.org/W2038112426",
+        "https://openalex.org/W2038468721",
+        "https://openalex.org/W2043836966",
+        "https://openalex.org/W2051953163",
+        "https://openalex.org/W2055493228",
+        "https://openalex.org/W2055755990",
+        "https://openalex.org/W2056633409",
+        "https://openalex.org/W2056727909",
+        "https://openalex.org/W2064005757",
+        "https://openalex.org/W2067755414",
+        "https://openalex.org/W2071145047",
+        "https://openalex.org/W2072240385",
+        "https://openalex.org/W2072857475",
+        "https://openalex.org/W2074485066",
+        "https://openalex.org/W2077284342",
+        "https://openalex.org/W2083035386",
+        "https://openalex.org/W2083252150",
+        "https://openalex.org/W2085087878",
+        "https://openalex.org/W2087134621",
+        "https://openalex.org/W2087885415",
+        "https://openalex.org/W2092635505",
+        "https://openalex.org/W2094217759",
+        "https://openalex.org/W2098402537",
+        "https://openalex.org/W2098685543",
+        "https://openalex.org/W2099863071",
+        "https://openalex.org/W2101269271",
+        "https://openalex.org/W2101840868",
+        "https://openalex.org/W2112870272",
+        "https://openalex.org/W2112994046",
+        "https://openalex.org/W2114958991",
+        "https://openalex.org/W2115853389",
+        "https://openalex.org/W2119255682",
+        "https://openalex.org/W2121071682",
+        "https://openalex.org/W2126455025",
+        "https://openalex.org/W2143505819",
+        "https://openalex.org/W2146184464",
+        "https://openalex.org/W2149009994",
+        "https://openalex.org/W2152068171",
+        "https://openalex.org/W2157484248",
+        "https://openalex.org/W2158115952",
+        "https://openalex.org/W2158158568",
+        "https://openalex.org/W2163308439",
+        "https://openalex.org/W2168385754",
+        "https://openalex.org/W2202641067",
+        "https://openalex.org/W2224116510",
+        "https://openalex.org/W2285828294",
+        "https://openalex.org/W2290327517",
+        "https://openalex.org/W2297906743",
+        "https://openalex.org/W2607504352",
+        "https://openalex.org/W2610960352",
+        "https://openalex.org/W2739924689",
+        "https://openalex.org/W2759735155",
+        "https://openalex.org/W2763539803",
+        "https://openalex.org/W2781977710",
+        "https://openalex.org/W2782200498",
+        "https://openalex.org/W6632472118"
+      ],
+      "x": 48.372,
+      "y": 29.62,
+      "featured": false
+    },
+    {
+      "id": "W2942546498",
+      "kind": "paper",
+      "listId": "pub-w2942546498",
+      "title": "Connexin 43 hemichannels and pannexin‐1 channels contribute to the α‐synuclein‐induced dysfunction and death of astrocytes",
+      "shortTitle": "Connexin 43 hemichannels and pannexin‐1 channels contribute to…",
+      "year": 2019,
+      "journal": "Glia",
+      "authors": [
+        "Esteban F. Díaz",
+        "Valeria C. Labra",
+        "Tanhia F. Alvear",
+        "Luis A. Mellado",
+        "Carla A. Inostroza",
+        "Juan Esteban Oyarzún",
+        "Nicole Salgado",
+        "Rodrigo A. Quintanilla",
+        "Juan Orellana"
+      ],
+      "citedByCount": 71,
+      "doi": "10.1002/glia.23631",
+      "url": "https://doi.org/10.1002/glia.23631",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:UeHWp8X0CEIC",
+      "openAlexId": "https://openalex.org/W2942546498",
+      "topicIds": [
+        "neuroglia-signalling"
+      ],
+      "fineTopicIds": [
+        "neuroglia",
+        "connexin-purinergic"
+      ],
+      "cluster": "cellular",
+      "titleTokens": [
+        "connexin",
+        "hemichannels",
+        "pannexin",
+        "channels",
+        "contribute",
+        "synuclein",
+        "induced",
+        "dysfunction",
+        "death",
+        "astrocytes"
+      ],
+      "normalizedAuthors": [
+        "valeria c labra",
+        "tanhia f alvear",
+        "luis a mellado",
+        "carla a inostroza",
+        "juan esteban oyarzun",
+        "nicole salgado",
+        "rodrigo a quintanilla",
+        "juan orellana"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W17149418",
+        "https://openalex.org/W1527671059",
+        "https://openalex.org/W1582035980",
+        "https://openalex.org/W1853728211",
+        "https://openalex.org/W1919128867",
+        "https://openalex.org/W1932563008",
+        "https://openalex.org/W1964979213",
+        "https://openalex.org/W1965276722",
+        "https://openalex.org/W1968158427",
+        "https://openalex.org/W1969191149",
+        "https://openalex.org/W1971264430",
+        "https://openalex.org/W1971705886",
+        "https://openalex.org/W1972077052",
+        "https://openalex.org/W1974420316",
+        "https://openalex.org/W1982952381",
+        "https://openalex.org/W1982952963",
+        "https://openalex.org/W1983832155",
+        "https://openalex.org/W1984031632",
+        "https://openalex.org/W1985473475",
+        "https://openalex.org/W1989816038",
+        "https://openalex.org/W1999320859",
+        "https://openalex.org/W2006612479",
+        "https://openalex.org/W2009836450",
+        "https://openalex.org/W2009849990",
+        "https://openalex.org/W2013752437",
+        "https://openalex.org/W2017375178",
+        "https://openalex.org/W2019015469",
+        "https://openalex.org/W2019047748",
+        "https://openalex.org/W2019863741",
+        "https://openalex.org/W2023039017",
+        "https://openalex.org/W2026602510",
+        "https://openalex.org/W2027991611",
+        "https://openalex.org/W2035471044",
+        "https://openalex.org/W2036203077",
+        "https://openalex.org/W2050886623",
+        "https://openalex.org/W2051046645",
+        "https://openalex.org/W2055342219",
+        "https://openalex.org/W2061344924",
+        "https://openalex.org/W2063932219",
+        "https://openalex.org/W2073607297",
+        "https://openalex.org/W2076907089",
+        "https://openalex.org/W2078936076",
+        "https://openalex.org/W2082879602",
+        "https://openalex.org/W2083786873",
+        "https://openalex.org/W2085123274",
+        "https://openalex.org/W2085503883",
+        "https://openalex.org/W2086204051",
+        "https://openalex.org/W2087295625",
+        "https://openalex.org/W2087482196",
+        "https://openalex.org/W2099386607",
+        "https://openalex.org/W2102694854",
+        "https://openalex.org/W2108802551",
+        "https://openalex.org/W2114855930",
+        "https://openalex.org/W2115982904",
+        "https://openalex.org/W2117822586",
+        "https://openalex.org/W2120714098",
+        "https://openalex.org/W2128631317",
+        "https://openalex.org/W2134454787",
+        "https://openalex.org/W2138670140",
+        "https://openalex.org/W2138977093",
+        "https://openalex.org/W2141480740",
+        "https://openalex.org/W2145799888",
+        "https://openalex.org/W2147372806",
+        "https://openalex.org/W2149223315",
+        "https://openalex.org/W2150656456",
+        "https://openalex.org/W2154262751",
+        "https://openalex.org/W2158211937",
+        "https://openalex.org/W2161930006",
+        "https://openalex.org/W2173966517",
+        "https://openalex.org/W2191996997",
+        "https://openalex.org/W2234800739",
+        "https://openalex.org/W2237168544",
+        "https://openalex.org/W2342915142",
+        "https://openalex.org/W2461766912",
+        "https://openalex.org/W2484324102",
+        "https://openalex.org/W2517407875",
+        "https://openalex.org/W2534023149",
+        "https://openalex.org/W2594371417",
+        "https://openalex.org/W2606572260",
+        "https://openalex.org/W2608626412",
+        "https://openalex.org/W2609846517",
+        "https://openalex.org/W2744137535",
+        "https://openalex.org/W2745689016",
+        "https://openalex.org/W2754310746",
+        "https://openalex.org/W2768605638",
+        "https://openalex.org/W2769112362",
+        "https://openalex.org/W2799836148",
+        "https://openalex.org/W2887735192",
+        "https://openalex.org/W2890520974",
+        "https://openalex.org/W4236886230",
+        "https://openalex.org/W4294360186",
+        "https://openalex.org/W4297407199"
+      ],
+      "x": 12.618,
+      "y": 61.733,
+      "featured": true
+    },
+    {
+      "id": "W2981585473",
+      "kind": "paper",
+      "listId": "pub-w2981585473",
+      "title": "Rostral ventrolateral medullary catecholaminergic neurones mediate irregular breathing pattern in volume overload heart failure rats",
+      "shortTitle": "Rostral ventrolateral medullary catecholaminergic neurones mediate irregular breathing…",
+      "year": 2019,
+      "journal": "The Journal of Physiology",
+      "authors": [
+        "Camilo Toledo",
+        "David C. Andrade",
+        "Hugo S. Díaz",
+        "Katherin V. Pereyra",
+        "Karla G. Schwarz",
+        "Esteban Díaz‐Jara",
+        "Luíz M. Oliveira",
+        "Ana C. Takakura",
+        "Thiago S. Moreira",
+        "Harold D. Schultz",
+        "Noah J. Marcus",
+        "Rodrigo Del Río"
+      ],
+      "citedByCount": 23,
+      "doi": "10.1113/jp278845",
+      "url": "https://doi.org/10.1113/jp278845",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:7PzlFSSx8tAC",
+      "openAlexId": "https://openalex.org/W2981585473",
+      "topicIds": [
+        "cardiorespiratory-control",
+        "hypoxia-cardiovascular"
+      ],
+      "fineTopicIds": [
+        "central-control",
+        "heart-failure"
+      ],
+      "cluster": "central",
+      "titleTokens": [
+        "rostral",
+        "ventrolateral",
+        "medullary",
+        "catecholaminergic",
+        "neurones",
+        "mediate",
+        "irregular",
+        "breathing",
+        "pattern",
+        "volume",
+        "overload",
+        "heart",
+        "failure",
+        "rats"
+      ],
+      "normalizedAuthors": [
+        "camilo toledo",
+        "david c andrade",
+        "hugo s diaz",
+        "katherin v pereyra",
+        "karla g schwarz",
+        "luiz m oliveira",
+        "ana c takakura",
+        "thiago s moreira",
+        "harold d schultz",
+        "noah j marcus",
+        "rodrigo del rio"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W172191733",
+        "https://openalex.org/W1517975958",
+        "https://openalex.org/W1601280674",
+        "https://openalex.org/W1910820768",
+        "https://openalex.org/W1923435653",
+        "https://openalex.org/W1965314086",
+        "https://openalex.org/W1967137534",
+        "https://openalex.org/W1974440288",
+        "https://openalex.org/W1974815906",
+        "https://openalex.org/W1977461788",
+        "https://openalex.org/W1986320120",
+        "https://openalex.org/W1998478120",
+        "https://openalex.org/W2002037466",
+        "https://openalex.org/W2018205683",
+        "https://openalex.org/W2022785900",
+        "https://openalex.org/W2028373576",
+        "https://openalex.org/W2031034134",
+        "https://openalex.org/W2033732906",
+        "https://openalex.org/W2035192492",
+        "https://openalex.org/W2037495834",
+        "https://openalex.org/W2038994119",
+        "https://openalex.org/W2042517296",
+        "https://openalex.org/W2056875495",
+        "https://openalex.org/W2067167998",
+        "https://openalex.org/W2073069044",
+        "https://openalex.org/W2077042980",
+        "https://openalex.org/W2081534285",
+        "https://openalex.org/W2083902757",
+        "https://openalex.org/W2086177111",
+        "https://openalex.org/W2086291738",
+        "https://openalex.org/W2086531060",
+        "https://openalex.org/W2089158128",
+        "https://openalex.org/W2091558007",
+        "https://openalex.org/W2093718419",
+        "https://openalex.org/W2097757382",
+        "https://openalex.org/W2097796477",
+        "https://openalex.org/W2100762371",
+        "https://openalex.org/W2104435385",
+        "https://openalex.org/W2108908759",
+        "https://openalex.org/W2109586252",
+        "https://openalex.org/W2111678533",
+        "https://openalex.org/W2113568840",
+        "https://openalex.org/W2114626281",
+        "https://openalex.org/W2115643876",
+        "https://openalex.org/W2116355373",
+        "https://openalex.org/W2119340816",
+        "https://openalex.org/W2121479953",
+        "https://openalex.org/W2124624517",
+        "https://openalex.org/W2137784332",
+        "https://openalex.org/W2138369266",
+        "https://openalex.org/W2145242126",
+        "https://openalex.org/W2148827677",
+        "https://openalex.org/W2151429049",
+        "https://openalex.org/W2152865365",
+        "https://openalex.org/W2157170162",
+        "https://openalex.org/W2161241268",
+        "https://openalex.org/W2163440110",
+        "https://openalex.org/W2193454110",
+        "https://openalex.org/W2405429656",
+        "https://openalex.org/W2586480673",
+        "https://openalex.org/W2602254749",
+        "https://openalex.org/W2626549169",
+        "https://openalex.org/W2742781975",
+        "https://openalex.org/W2743088679",
+        "https://openalex.org/W2764139415",
+        "https://openalex.org/W2765776499",
+        "https://openalex.org/W2773245233",
+        "https://openalex.org/W2785563066",
+        "https://openalex.org/W2886226614",
+        "https://openalex.org/W2910772580"
+      ],
+      "x": 37.882,
+      "y": 21,
+      "featured": false
+    },
+    {
+      "id": "W2887735192",
+      "kind": "paper",
+      "listId": "pub-w2887735192",
+      "title": "Connexin 43 Hemichannel Activity Promoted by Pro-Inflammatory Cytokines and High Glucose Alters Endothelial Cell Function",
+      "shortTitle": "Connexin 43 Hemichannel Activity Promoted by Pro-Inflammatory Cytokines…",
+      "year": 2018,
+      "journal": "Frontiers in Immunology",
+      "authors": [
+        "Juan C. Sáez",
+        "Susana Contreras‐Duarte",
+        "Gonzalo I. Gómez",
+        "Valeria C. Labra",
+        "Cristian A. Santibáñez",
+        "Rosario Gajardo‐Gómez",
+        "Beatriz C. Avendaño",
+        "Esteban F. Díaz",
+        "Trinidad Montero",
+        "Victoria Velarde",
+        "Juan Orellana"
+      ],
+      "citedByCount": 72,
+      "doi": "10.3389/fimmu.2018.01899",
+      "url": "https://doi.org/10.3389/fimmu.2018.01899",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:QIV2ME_5wuYC",
+      "openAlexId": "https://openalex.org/W2887735192",
+      "topicIds": [
+        "neuroglia-signalling",
+        "stress-adaptation"
+      ],
+      "fineTopicIds": [
+        "connexin-purinergic",
+        "cell-stress"
+      ],
+      "cluster": "cellular",
+      "titleTokens": [
+        "connexin",
+        "hemichannel",
+        "activity",
+        "promoted",
+        "inflammatory",
+        "cytokines",
+        "high",
+        "glucose",
+        "alters",
+        "endothelial",
+        "cell",
+        "function"
+      ],
+      "normalizedAuthors": [
+        "juan c saez",
+        "susana contreras duarte",
+        "gonzalo i gomez",
+        "valeria c labra",
+        "cristian a santibanez",
+        "rosario gajardo gomez",
+        "beatriz c avendano",
+        "trinidad montero",
+        "victoria velarde",
+        "juan orellana"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W1053624528",
+        "https://openalex.org/W1582035980",
+        "https://openalex.org/W1734276011",
+        "https://openalex.org/W1802094695",
+        "https://openalex.org/W1893910050",
+        "https://openalex.org/W1920257127",
+        "https://openalex.org/W1964251597",
+        "https://openalex.org/W1964979213",
+        "https://openalex.org/W1965737875",
+        "https://openalex.org/W1971264430",
+        "https://openalex.org/W1974363838",
+        "https://openalex.org/W1975586412",
+        "https://openalex.org/W1975628529",
+        "https://openalex.org/W1977954462",
+        "https://openalex.org/W1982952963",
+        "https://openalex.org/W1989149160",
+        "https://openalex.org/W1991454458",
+        "https://openalex.org/W1994848150",
+        "https://openalex.org/W1996293616",
+        "https://openalex.org/W1997023449",
+        "https://openalex.org/W2002392920",
+        "https://openalex.org/W2008792033",
+        "https://openalex.org/W2009836450",
+        "https://openalex.org/W2013538738",
+        "https://openalex.org/W2016575029",
+        "https://openalex.org/W2016833774",
+        "https://openalex.org/W2017666158",
+        "https://openalex.org/W2021960074",
+        "https://openalex.org/W2023039017",
+        "https://openalex.org/W2023323317",
+        "https://openalex.org/W2023377074",
+        "https://openalex.org/W2032471529",
+        "https://openalex.org/W2039407748",
+        "https://openalex.org/W2044990162",
+        "https://openalex.org/W2051367002",
+        "https://openalex.org/W2052608035",
+        "https://openalex.org/W2057299439",
+        "https://openalex.org/W2057525239",
+        "https://openalex.org/W2061344924",
+        "https://openalex.org/W2064633187",
+        "https://openalex.org/W2068708556",
+        "https://openalex.org/W2072805330",
+        "https://openalex.org/W2073607297",
+        "https://openalex.org/W2076186944",
+        "https://openalex.org/W2076907089",
+        "https://openalex.org/W2080649553",
+        "https://openalex.org/W2085123274",
+        "https://openalex.org/W2086204051",
+        "https://openalex.org/W2091317517",
+        "https://openalex.org/W2101942763",
+        "https://openalex.org/W2111015948",
+        "https://openalex.org/W2114855930",
+        "https://openalex.org/W2115274672",
+        "https://openalex.org/W2118450542",
+        "https://openalex.org/W2120742009",
+        "https://openalex.org/W2123560318",
+        "https://openalex.org/W2133385978",
+        "https://openalex.org/W2135471063",
+        "https://openalex.org/W2137549051",
+        "https://openalex.org/W2147696224",
+        "https://openalex.org/W2148674446",
+        "https://openalex.org/W2154262751",
+        "https://openalex.org/W2154278853",
+        "https://openalex.org/W2156666782",
+        "https://openalex.org/W2160563437",
+        "https://openalex.org/W2161930006",
+        "https://openalex.org/W2163344060",
+        "https://openalex.org/W2169430734",
+        "https://openalex.org/W2170652400",
+        "https://openalex.org/W2173966517",
+        "https://openalex.org/W2175927969",
+        "https://openalex.org/W2282424977",
+        "https://openalex.org/W2288552312",
+        "https://openalex.org/W2298852151",
+        "https://openalex.org/W2300272821",
+        "https://openalex.org/W2318898023",
+        "https://openalex.org/W2338246215",
+        "https://openalex.org/W2473193234",
+        "https://openalex.org/W2517407875",
+        "https://openalex.org/W2524827891",
+        "https://openalex.org/W2534023149",
+        "https://openalex.org/W2547918248",
+        "https://openalex.org/W2587915474",
+        "https://openalex.org/W2589279405",
+        "https://openalex.org/W2663091579",
+        "https://openalex.org/W2744137535",
+        "https://openalex.org/W2754310746",
+        "https://openalex.org/W2768605638",
+        "https://openalex.org/W2768623326",
+        "https://openalex.org/W2804130130"
+      ],
+      "x": 21.366,
+      "y": 24.581,
+      "featured": false
+    },
+    {
+      "id": "W2792362299",
+      "kind": "paper",
+      "listId": "pub-w2792362299",
+      "title": "The Neuroglial Dialog Between Cannabinoids and Hemichannels",
+      "shortTitle": "The Neuroglial Dialog Between Cannabinoids and Hemichannels",
+      "year": 2018,
+      "journal": "Frontiers in Molecular Neuroscience",
+      "authors": [
+        "Valeria C. Labra",
+        "Cristian A. Santibáñez",
+        "Rosario Gajardo‐Gómez",
+        "Esteban F. Díaz",
+        "Gonzalo I. Gómez",
+        "Juan Orellana"
+      ],
+      "citedByCount": 15,
+      "doi": "10.3389/fnmol.2018.00079",
+      "url": "https://doi.org/10.3389/fnmol.2018.00079",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=es&user=aREuxgcAAAAJ&pagesize=100&citation_for_view=aREuxgcAAAAJ:0EnyYjriUFMC",
+      "openAlexId": "https://openalex.org/W2792362299",
+      "topicIds": [
+        "neuroglia-signalling"
+      ],
+      "fineTopicIds": [
+        "neuroglia",
+        "connexin-purinergic"
+      ],
+      "cluster": "cellular",
+      "titleTokens": [
+        "neuroglial",
+        "dialog",
+        "cannabinoids",
+        "hemichannels"
+      ],
+      "normalizedAuthors": [
+        "valeria c labra",
+        "cristian a santibanez",
+        "rosario gajardo gomez",
+        "gonzalo i gomez",
+        "juan orellana"
+      ],
+      "referencedWorks": [
+        "https://openalex.org/W9866984",
+        "https://openalex.org/W48386984",
+        "https://openalex.org/W572123480",
+        "https://openalex.org/W829002595",
+        "https://openalex.org/W1487875522",
+        "https://openalex.org/W1488329806",
+        "https://openalex.org/W1582035980",
+        "https://openalex.org/W1600549717",
+        "https://openalex.org/W1654380405",
+        "https://openalex.org/W1721570783",
+        "https://openalex.org/W1759576313",
+        "https://openalex.org/W1844147108",
+        "https://openalex.org/W1865743538",
+        "https://openalex.org/W1886084954",
+        "https://openalex.org/W1893117746",
+        "https://openalex.org/W1904228445",
+        "https://openalex.org/W1919128867",
+        "https://openalex.org/W1928931031",
+        "https://openalex.org/W1954747488",
+        "https://openalex.org/W1963680371",
+        "https://openalex.org/W1964748906",
+        "https://openalex.org/W1964835919",
+        "https://openalex.org/W1967416789",
+        "https://openalex.org/W1968083340",
+        "https://openalex.org/W1968418688",
+        "https://openalex.org/W1969191149",
+        "https://openalex.org/W1969338731",
+        "https://openalex.org/W1969676181",
+        "https://openalex.org/W1970385756",
+        "https://openalex.org/W1971080136",
+        "https://openalex.org/W1973239192",
+        "https://openalex.org/W1973477241",
+        "https://openalex.org/W1974642601",
+        "https://openalex.org/W1975172757",
+        "https://openalex.org/W1976499757",
+        "https://openalex.org/W1978688152",
+        "https://openalex.org/W1979286651",
+        "https://openalex.org/W1980153635",
+        "https://openalex.org/W1980990150",
+        "https://openalex.org/W1982291289",
+        "https://openalex.org/W1982952381",
+        "https://openalex.org/W1983447676",
+        "https://openalex.org/W1987436128",
+        "https://openalex.org/W1988203397",
+        "https://openalex.org/W1989021659",
+        "https://openalex.org/W1989073099",
+        "https://openalex.org/W1989149160",
+        "https://openalex.org/W1989756472",
+        "https://openalex.org/W1991497324",
+        "https://openalex.org/W1993109240",
+        "https://openalex.org/W1993374742",
+        "https://openalex.org/W1995307208",
+        "https://openalex.org/W1996293616",
+        "https://openalex.org/W1997906320",
+        "https://openalex.org/W2002785222",
+        "https://openalex.org/W2005263126",
+        "https://openalex.org/W2006321295",
+        "https://openalex.org/W2007260305",
+        "https://openalex.org/W2007485514",
+        "https://openalex.org/W2008087817",
+        "https://openalex.org/W2008504215",
+        "https://openalex.org/W2010131225",
+        "https://openalex.org/W2010364093",
+        "https://openalex.org/W2011746666",
+        "https://openalex.org/W2014064129",
+        "https://openalex.org/W2014980565",
+        "https://openalex.org/W2016575029",
+        "https://openalex.org/W2017876495",
+        "https://openalex.org/W2019047748",
+        "https://openalex.org/W2020025443",
+        "https://openalex.org/W2022023926",
+        "https://openalex.org/W2026761520",
+        "https://openalex.org/W2028794471",
+        "https://openalex.org/W2029638208",
+        "https://openalex.org/W2032471529",
+        "https://openalex.org/W2033328335",
+        "https://openalex.org/W2034086077",
+        "https://openalex.org/W2034565593",
+        "https://openalex.org/W2035222201",
+        "https://openalex.org/W2035471044",
+        "https://openalex.org/W2038015179",
+        "https://openalex.org/W2038532706",
+        "https://openalex.org/W2041444093",
+        "https://openalex.org/W2041935486",
+        "https://openalex.org/W2042681276",
+        "https://openalex.org/W2043033522",
+        "https://openalex.org/W2043713627",
+        "https://openalex.org/W2044784707",
+        "https://openalex.org/W2045092834",
+        "https://openalex.org/W2045094334",
+        "https://openalex.org/W2049939184",
+        "https://openalex.org/W2054446205",
+        "https://openalex.org/W2055342219",
+        "https://openalex.org/W2055638785",
+        "https://openalex.org/W2056188558",
+        "https://openalex.org/W2057124871",
+        "https://openalex.org/W2057299439",
+        "https://openalex.org/W2057976080",
+        "https://openalex.org/W2059543009",
+        "https://openalex.org/W2062417095",
+        "https://openalex.org/W2067262752",
+        "https://openalex.org/W2067267561",
+        "https://openalex.org/W2068094427",
+        "https://openalex.org/W2071695275",
+        "https://openalex.org/W2073607297",
+        "https://openalex.org/W2073904778",
+        "https://openalex.org/W2074342222",
+        "https://openalex.org/W2075894678",
+        "https://openalex.org/W2076907089",
+        "https://openalex.org/W2077344563",
+        "https://openalex.org/W2079823127",
+        "https://openalex.org/W2079901569",
+        "https://openalex.org/W2080185710",
+        "https://openalex.org/W2080649553",
+        "https://openalex.org/W2081308255",
+        "https://openalex.org/W2082273088",
+        "https://openalex.org/W2082429476",
+        "https://openalex.org/W2083013081",
+        "https://openalex.org/W2085123274",
+        "https://openalex.org/W2085503883",
+        "https://openalex.org/W2085741941",
+        "https://openalex.org/W2089736335",
+        "https://openalex.org/W2089841912",
+        "https://openalex.org/W2091317517",
+        "https://openalex.org/W2092535327",
+        "https://openalex.org/W2092950865",
+        "https://openalex.org/W2093958758",
+        "https://openalex.org/W2094194585",
+        "https://openalex.org/W2094205031",
+        "https://openalex.org/W2095190074",
+        "https://openalex.org/W2095520633",
+        "https://openalex.org/W2096529235",
+        "https://openalex.org/W2100507781",
+        "https://openalex.org/W2102694854",
+        "https://openalex.org/W2103019360",
+        "https://openalex.org/W2103137532",
+        "https://openalex.org/W2105112166",
+        "https://openalex.org/W2105283543",
+        "https://openalex.org/W2107407786",
+        "https://openalex.org/W2107907085",
+        "https://openalex.org/W2108222103",
+        "https://openalex.org/W2109421711",
+        "https://openalex.org/W2109909801",
+        "https://openalex.org/W2113565543",
+        "https://openalex.org/W2114855930",
+        "https://openalex.org/W2115317881",
+        "https://openalex.org/W2115434419",
+        "https://openalex.org/W2118450542",
+        "https://openalex.org/W2118788831",
+        "https://openalex.org/W2120666811",
+        "https://openalex.org/W2120714098",
+        "https://openalex.org/W2122324983",
+        "https://openalex.org/W2122992077",
+        "https://openalex.org/W2123399227",
+        "https://openalex.org/W2124017577",
+        "https://openalex.org/W2130614677",
+        "https://openalex.org/W2134230622",
+        "https://openalex.org/W2136399145",
+        "https://openalex.org/W2138670140",
+        "https://openalex.org/W2141480740",
+        "https://openalex.org/W2143409172",
+        "https://openalex.org/W2145653180",
+        "https://openalex.org/W2145758516",
+        "https://openalex.org/W2146044361",
+        "https://openalex.org/W2146535241",
+        "https://openalex.org/W2146663965",
+        "https://openalex.org/W2149926001",
+        "https://openalex.org/W2150149802",
+        "https://openalex.org/W2156586719",
+        "https://openalex.org/W2157298667",
+        "https://openalex.org/W2158972964",
+        "https://openalex.org/W2159586025",
+        "https://openalex.org/W2161930006",
+        "https://openalex.org/W2163344060",
+        "https://openalex.org/W2163530502",
+        "https://openalex.org/W2164594351",
+        "https://openalex.org/W2167986140",
+        "https://openalex.org/W2172864295",
+        "https://openalex.org/W2173583071",
+        "https://openalex.org/W2178878227",
+        "https://openalex.org/W2181465677",
+        "https://openalex.org/W2184803994",
+        "https://openalex.org/W2191954390",
+        "https://openalex.org/W2198623424",
+        "https://openalex.org/W2213719612",
+        "https://openalex.org/W2218838944",
+        "https://openalex.org/W2266647482",
+        "https://openalex.org/W2292367355",
+        "https://openalex.org/W2293879687",
+        "https://openalex.org/W2298852151",
+        "https://openalex.org/W2324311973",
+        "https://openalex.org/W2341574016",
+        "https://openalex.org/W2342915142",
+        "https://openalex.org/W2396720780",
+        "https://openalex.org/W2397467174",
+        "https://openalex.org/W2407387971",
+        "https://openalex.org/W2410082173",
+        "https://openalex.org/W2461766912",
+        "https://openalex.org/W2461784184",
+        "https://openalex.org/W2484324102",
+        "https://openalex.org/W2524827891",
+        "https://openalex.org/W2531441777",
+        "https://openalex.org/W2534023149",
+        "https://openalex.org/W2560668196",
+        "https://openalex.org/W2562525888",
+        "https://openalex.org/W2565813493",
+        "https://openalex.org/W2568346105",
+        "https://openalex.org/W2604262445",
+        "https://openalex.org/W2608305492",
+        "https://openalex.org/W2615586845",
+        "https://openalex.org/W2622068942",
+        "https://openalex.org/W2736010006",
+        "https://openalex.org/W2744137535",
+        "https://openalex.org/W2745493179",
+        "https://openalex.org/W2747266557",
+        "https://openalex.org/W2750586965",
+        "https://openalex.org/W2751830966",
+        "https://openalex.org/W2752011313",
+        "https://openalex.org/W2753030800",
+        "https://openalex.org/W2759050422",
+        "https://openalex.org/W2761963164",
+        "https://openalex.org/W2765155499",
+        "https://openalex.org/W2769071992",
+        "https://openalex.org/W4210984790",
+        "https://openalex.org/W4237698931",
+        "https://openalex.org/W6601951713",
+        "https://openalex.org/W6683270101",
+        "https://openalex.org/W6712237378"
+      ],
+      "x": 32.349,
+      "y": 51.905,
+      "featured": false
+    },
+    {
+      "id": "theme-cardiorespiratory-control",
+      "kind": "theme",
+      "title": {
+        "es": "Control cardiorrespiratorio y quimiorreflejo",
+        "en": "Cardiorespiratory control and chemoreflex"
+      },
+      "topicId": "cardiorespiratory-control",
+      "x": 50,
+      "y": 12
+    },
+    {
+      "id": "theme-neuroglia-signalling",
+      "kind": "theme",
+      "title": {
+        "es": "Neuroglía y señalización celular",
+        "en": "Neuroglia and cell signalling"
+      },
+      "topicId": "neuroglia-signalling",
+      "x": 91.304,
+      "y": 51.199
+    },
+    {
+      "id": "theme-hypoxia-cardiovascular",
+      "kind": "theme",
+      "title": {
+        "es": "Hipoxia y enfermedad cardiovascular",
+        "en": "Hypoxia and cardiovascular disease"
+      },
+      "topicId": "hypoxia-cardiovascular",
+      "x": 50,
+      "y": 88
+    },
+    {
+      "id": "theme-stress-adaptation",
+      "kind": "theme",
+      "title": {
+        "es": "Estrés celular y adaptación",
+        "en": "Cell stress and adaptation"
+      },
+      "topicId": "stress-adaptation",
+      "x": 11.486,
+      "y": 50.991
+    }
+  ],
+  "edges": [
+    {
+      "source": "W7117245332",
+      "target": "W2981183735",
+      "kind": "paper-similarity",
+      "score": 0.49146,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "carotid-chemoreflex",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "karla g schwarz",
+          "camilo toledo",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "central",
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 5
+      }
+    },
+    {
+      "source": "W7117245332",
+      "target": "W4405886364",
+      "kind": "paper-similarity",
+      "score": 0.39889,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "karla g schwarz",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 7
+      }
+    },
+    {
+      "source": "W7117245332",
+      "target": "W7117067518",
+      "kind": "paper-similarity",
+      "score": 0.37093,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "karla g schwarz",
+          "sinay c vicencio",
+          "fernando c ortiz"
+        ],
+        "sharedTokens": [
+          "cardiorespiratory",
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 7
+      }
+    },
+    {
+      "source": "W7117245332",
+      "target": "W2981585473",
+      "kind": "paper-similarity",
+      "score": 0.35855,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "karla g schwarz",
+          "camilo toledo",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 8
+      }
+    },
+    {
+      "source": "W7117067518",
+      "target": "W4200464459",
+      "kind": "paper-similarity",
+      "score": 0.40474,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "karla g schwarz",
+          "fernando c ortiz",
+          "camilo toledo"
+        ],
+        "sharedTokens": [
+          "cardiorespiratory",
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 6
+      }
+    },
+    {
+      "source": "W7117067518",
+      "target": "W4388419718",
+      "kind": "paper-similarity",
+      "score": 0.393,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "neuroglia",
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "camilo toledo",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W7117067518",
+      "target": "W3112846682",
+      "kind": "paper-similarity",
+      "score": 0.35557,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "karla g schwarz",
+          "camilo toledo",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "cardiorespiratory",
+          "dysfunction",
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 4
+      }
+    },
+    {
+      "source": "W7117712724",
+      "target": "W4414040453",
+      "kind": "paper-similarity",
+      "score": 0.49782,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "carotid-chemoreflex",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "david c andrade",
+          "camila salazar ardiles",
+          "camilo toledo",
+          "maria rodriguez fernandez"
+        ],
+        "sharedTokens": [
+          "carotid",
+          "rats"
+        ],
+        "sharedReferences": 21
+      }
+    },
+    {
+      "source": "W7117712724",
+      "target": "W3182330858",
+      "kind": "paper-similarity",
+      "score": 0.26206,
+      "weight": 6,
+      "reasons": {
+        "sharedTopics": [
+          "carotid-chemoreflex",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "david c andrade",
+          "camilo toledo"
+        ],
+        "sharedTokens": [
+          "carotid"
+        ],
+        "sharedReferences": 5
+      }
+    },
+    {
+      "source": "W7117712724",
+      "target": "W4291124933",
+      "kind": "paper-similarity",
+      "score": 0.22565,
+      "weight": 5,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-sleep",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "david c andrade",
+          "camilo toledo"
+        ],
+        "sharedTokens": [
+          "alterations",
+          "rats"
+        ],
+        "sharedReferences": 5
+      }
+    },
+    {
+      "source": "W7117712724",
+      "target": "W4388419718",
+      "kind": "paper-similarity",
+      "score": 0.19626,
+      "weight": 5,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-sleep",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "camilo toledo",
+          "rodrigo iturriaga"
+        ],
+        "sharedTokens": [
+          "chemogenetic",
+          "inhibition"
+        ],
+        "sharedReferences": 1
+      }
+    },
+    {
+      "source": "W4406198269",
+      "target": "W4388419718",
+      "kind": "paper-similarity",
+      "score": 0.37528,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "neuroglia",
+          "heart-failure",
+          "hypoxia-sleep"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "rodrigo del rio",
+          "rodrigo iturriaga"
+        ],
+        "sharedTokens": [
+          "intermittent",
+          "hypoxia"
+        ],
+        "sharedReferences": 8
+      }
+    },
+    {
+      "source": "W4406198269",
+      "target": "W3127997004",
+      "kind": "paper-similarity",
+      "score": 0.36636,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure",
+          "hypoxia-sleep",
+          "cell-stress"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "rodrigo del rio",
+          "rodrigo iturriaga"
+        ],
+        "sharedTokens": [
+          "intermittent",
+          "hypoxia",
+          "cardiorespiratory"
+        ],
+        "sharedReferences": 8
+      }
+    },
+    {
+      "source": "W7117245332",
+      "target": "W4406198269",
+      "kind": "paper-similarity",
+      "score": 0.31692,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "carotid-chemoreflex",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "ignacio bernal santander",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "cardiorespiratory"
+        ],
+        "sharedReferences": 4
+      }
+    },
+    {
+      "source": "W4406198269",
+      "target": "W4405886364",
+      "kind": "paper-similarity",
+      "score": 0.27013,
+      "weight": 6,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "sinay vicencio",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "mediate"
+        ],
+        "sharedReferences": 1
+      }
+    },
+    {
+      "source": "W4405886364",
+      "target": "W2981585473",
+      "kind": "paper-similarity",
+      "score": 0.49598,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "karla g schwarz",
+          "katherin v pereyra",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "mediate",
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 7
+      }
+    },
+    {
+      "source": "W4405886364",
+      "target": "W4200464459",
+      "kind": "paper-similarity",
+      "score": 0.34541,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "karla g schwarz",
+          "katherin v pereyra",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 5
+      }
+    },
+    {
+      "source": "W4405886364",
+      "target": "W2981183735",
+      "kind": "paper-similarity",
+      "score": 0.33993,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "karla g schwarz",
+          "katherin v pereyra",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "neurons",
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 3
+      }
+    },
+    {
+      "source": "W4414040453",
+      "target": "W3182330858",
+      "kind": "paper-similarity",
+      "score": 0.34557,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "carotid-chemoreflex",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "david c andrade",
+          "camilo toledo"
+        ],
+        "sharedTokens": [
+          "carotid",
+          "body"
+        ],
+        "sharedReferences": 5
+      }
+    },
+    {
+      "source": "W4414040453",
+      "target": "W3020059288",
+      "kind": "paper-similarity",
+      "score": 0.18073,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "david c andrade",
+          "camilo toledo"
+        ],
+        "sharedTokens": [
+          "rats"
+        ],
+        "sharedReferences": 2
+      }
+    },
+    {
+      "source": "W7117245332",
+      "target": "W4414040453",
+      "kind": "paper-similarity",
+      "score": 0.17055,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "carotid-chemoreflex"
+        ],
+        "sharedAuthors": [
+          "camilo toledo"
+        ],
+        "sharedTokens": [],
+        "sharedReferences": 4
+      }
+    },
+    {
+      "source": "W4389581144",
+      "target": "W3177414393",
+      "kind": "paper-similarity",
+      "score": 0.46285,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "cell-stress",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "karla g schwarz",
+          "camilo toledo",
+          "hugo s diaz",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "breathing"
+        ],
+        "sharedReferences": 15
+      }
+    },
+    {
+      "source": "W4389581144",
+      "target": "W3112846682",
+      "kind": "paper-similarity",
+      "score": 0.40593,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "cell-stress",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "karla g schwarz",
+          "camilo toledo",
+          "hugo s diaz",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [],
+        "sharedReferences": 4
+      }
+    },
+    {
+      "source": "W4389581144",
+      "target": "W4297464444",
+      "kind": "paper-similarity",
+      "score": 0.32744,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "cell-stress",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "hugo s diaz",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [],
+        "sharedReferences": 1
+      }
+    },
+    {
+      "source": "W4389581144",
+      "target": "W4200464459",
+      "kind": "paper-similarity",
+      "score": 0.27587,
+      "weight": 7,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "karla g schwarz",
+          "camilo toledo",
+          "hugo s diaz",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [],
+        "sharedReferences": 4
+      }
+    },
+    {
+      "source": "W4388419718",
+      "target": "W4291124933",
+      "kind": "paper-similarity",
+      "score": 0.39152,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure",
+          "hypoxia-sleep",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "camilo toledo",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "intermittent"
+        ],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4388419718",
+      "target": "W4200464459",
+      "kind": "paper-similarity",
+      "score": 0.31836,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "alexandra las heras",
+          "camilo toledo",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "chronic"
+        ],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4317651590",
+      "target": "W2942546498",
+      "kind": "paper-similarity",
+      "score": 0.23201,
+      "weight": 6,
+      "reasons": {
+        "sharedTopics": [
+          "connexin-purinergic"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 1
+      }
+    },
+    {
+      "source": "W4317651590",
+      "target": "W2887735192",
+      "kind": "paper-similarity",
+      "score": 0.22836,
+      "weight": 5,
+      "reasons": {
+        "sharedTopics": [
+          "connexin-purinergic"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [
+          "activity"
+        ],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4317651590",
+      "target": "W2792362299",
+      "kind": "paper-similarity",
+      "score": 0.22663,
+      "weight": 5,
+      "reasons": {
+        "sharedTopics": [
+          "connexin-purinergic"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 1
+      }
+    },
+    {
+      "source": "W4317651590",
+      "target": "W4229372041",
+      "kind": "paper-similarity",
+      "score": 0.15268,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "connexin-purinergic"
+        ],
+        "sharedAuthors": [
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "p2x7"
+        ],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4291124933",
+      "target": "W4200464459",
+      "kind": "paper-similarity",
+      "score": 0.41606,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "camilo toledo",
+          "david c andrade",
+          "domiziana ortolani",
+          "karla g schwarz"
+        ],
+        "sharedTokens": [
+          "cardiorespiratory"
+        ],
+        "sharedReferences": 5
+      }
+    },
+    {
+      "source": "W4291124933",
+      "target": "W2981585473",
+      "kind": "paper-similarity",
+      "score": 0.40441,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "camilo toledo",
+          "david c andrade",
+          "karla g schwarz",
+          "noah j marcus"
+        ],
+        "sharedTokens": [
+          "breathing",
+          "rats"
+        ],
+        "sharedReferences": 17
+      }
+    },
+    {
+      "source": "W4291124933",
+      "target": "W3112846682",
+      "kind": "paper-similarity",
+      "score": 0.37869,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "camilo toledo",
+          "david c andrade",
+          "karla g schwarz",
+          "noah j marcus"
+        ],
+        "sharedTokens": [
+          "cardiorespiratory"
+        ],
+        "sharedReferences": 6
+      }
+    },
+    {
+      "source": "W4297464444",
+      "target": "W3177414393",
+      "kind": "paper-similarity",
+      "score": 0.2944,
+      "weight": 7,
+      "reasons": {
+        "sharedTopics": [
+          "cell-stress",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "hugo s diaz",
+          "angelica rios gallardo",
+          "domiziana ortolani",
+          "fernando c ortiz"
+        ],
+        "sharedTokens": [
+          "oxidative",
+          "stress"
+        ],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4297464444",
+      "target": "W3112846682",
+      "kind": "paper-similarity",
+      "score": 0.27232,
+      "weight": 7,
+      "reasons": {
+        "sharedTopics": [
+          "cell-stress",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "hugo s diaz",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "stress"
+        ],
+        "sharedReferences": 1
+      }
+    },
+    {
+      "source": "W4297464444",
+      "target": "W2904685632",
+      "kind": "paper-similarity",
+      "score": 0.23767,
+      "weight": 6,
+      "reasons": {
+        "sharedTopics": [
+          "cell-stress"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [
+          "neuronal"
+        ],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4229372041",
+      "target": "W2981585473",
+      "kind": "paper-similarity",
+      "score": 0.37856,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "camilo toledo",
+          "hugo s diaz",
+          "karla g schwarz",
+          "katherin v pereyra"
+        ],
+        "sharedTokens": [
+          "medullary",
+          "mediate",
+          "irregular",
+          "breathing"
+        ],
+        "sharedReferences": 7
+      }
+    },
+    {
+      "source": "W7117067518",
+      "target": "W4229372041",
+      "kind": "paper-similarity",
+      "score": 0.32864,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "neuroglia",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "karla g schwarz",
+          "camilo toledo",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 4
+      }
+    },
+    {
+      "source": "W4229372041",
+      "target": "W2981183735",
+      "kind": "paper-similarity",
+      "score": 0.31864,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "camilo toledo",
+          "hugo s diaz",
+          "karla g schwarz",
+          "katherin v pereyra"
+        ],
+        "sharedTokens": [
+          "breathing",
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 7
+      }
+    },
+    {
+      "source": "W4388419718",
+      "target": "W4229372041",
+      "kind": "paper-similarity",
+      "score": 0.3027,
+      "weight": 7,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "neuroglia",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "alexandra las heras",
+          "camilo toledo",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "astrocytes",
+          "chronic"
+        ],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3112846682",
+      "target": "W3177414393",
+      "kind": "paper-similarity",
+      "score": 0.61062,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure",
+          "cell-stress",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "hugo s diaz",
+          "david c andrade",
+          "camilo toledo",
+          "karla g schwarz"
+        ],
+        "sharedTokens": [
+          "brainstem",
+          "stress",
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 10
+      }
+    },
+    {
+      "source": "W3112846682",
+      "target": "W4200464459",
+      "kind": "paper-similarity",
+      "score": 0.46156,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "hugo s diaz",
+          "david c andrade",
+          "camilo toledo",
+          "karla g schwarz"
+        ],
+        "sharedTokens": [
+          "cardiorespiratory",
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 8
+      }
+    },
+    {
+      "source": "W3177414393",
+      "target": "W4200464459",
+      "kind": "paper-similarity",
+      "score": 0.46458,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "hugo s diaz",
+          "angelica rios gallardo",
+          "domiziana ortolani",
+          "david c andrade"
+        ],
+        "sharedTokens": [
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 6
+      }
+    },
+    {
+      "source": "W3177414393",
+      "target": "W3182330858",
+      "kind": "paper-similarity",
+      "score": 0.40062,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "hugo s diaz",
+          "angelica rios gallardo",
+          "domiziana ortolani",
+          "david c andrade"
+        ],
+        "sharedTokens": [
+          "exercise",
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 13
+      }
+    },
+    {
+      "source": "W3124955723",
+      "target": "W3182330858",
+      "kind": "paper-similarity",
+      "score": 0.38304,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "carotid-chemoreflex",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "karla g schwarz",
+          "david c andrade",
+          "camilo toledo"
+        ],
+        "sharedTokens": [
+          "chemoreflex"
+        ],
+        "sharedReferences": 3
+      }
+    },
+    {
+      "source": "W3177414393",
+      "target": "W3124955723",
+      "kind": "paper-similarity",
+      "score": 0.329,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "heart-failure",
+          "cell-stress"
+        ],
+        "sharedAuthors": [
+          "angelica rios gallardo",
+          "domiziana ortolani",
+          "david c andrade",
+          "camilo toledo"
+        ],
+        "sharedTokens": [
+          "function"
+        ],
+        "sharedReferences": 4
+      }
+    },
+    {
+      "source": "W7117245332",
+      "target": "W3124955723",
+      "kind": "paper-similarity",
+      "score": 0.31243,
+      "weight": 7,
+      "reasons": {
+        "sharedTopics": [
+          "carotid-chemoreflex",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "katherin v pereyra",
+          "karla g schwarz",
+          "fernando c ortiz",
+          "camilo toledo"
+        ],
+        "sharedTokens": [
+          "chemoreflex"
+        ],
+        "sharedReferences": 6
+      }
+    },
+    {
+      "source": "W3112846682",
+      "target": "W3124955723",
+      "kind": "paper-similarity",
+      "score": 0.30449,
+      "weight": 7,
+      "reasons": {
+        "sharedTopics": [
+          "heart-failure",
+          "cell-stress"
+        ],
+        "sharedAuthors": [
+          "david c andrade",
+          "camilo toledo",
+          "karla g schwarz",
+          "katherin v pereyra"
+        ],
+        "sharedTokens": [],
+        "sharedReferences": 5
+      }
+    },
+    {
+      "source": "W3112846682",
+      "target": "W3127997004",
+      "kind": "paper-similarity",
+      "score": 0.35121,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure",
+          "cell-stress"
+        ],
+        "sharedAuthors": [
+          "hugo s diaz",
+          "david c andrade",
+          "camilo toledo",
+          "karla g schwarz"
+        ],
+        "sharedTokens": [
+          "cardiorespiratory"
+        ],
+        "sharedReferences": 1
+      }
+    },
+    {
+      "source": "W3177414393",
+      "target": "W3127997004",
+      "kind": "paper-similarity",
+      "score": 0.3475,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure",
+          "cell-stress"
+        ],
+        "sharedAuthors": [
+          "hugo s diaz",
+          "angelica rios gallardo",
+          "david c andrade",
+          "camilo toledo"
+        ],
+        "sharedTokens": [],
+        "sharedReferences": 1
+      }
+    },
+    {
+      "source": "W4291124933",
+      "target": "W3127997004",
+      "kind": "paper-similarity",
+      "score": 0.32774,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure",
+          "hypoxia-sleep"
+        ],
+        "sharedAuthors": [
+          "camilo toledo",
+          "david c andrade",
+          "karla g schwarz",
+          "rodrigo del rio"
+        ],
+        "sharedTokens": [
+          "cardiorespiratory",
+          "intermittent",
+          "sleep"
+        ],
+        "sharedReferences": 2
+      }
+    },
+    {
+      "source": "W3182330858",
+      "target": "W3020059288",
+      "kind": "paper-similarity",
+      "score": 0.41154,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "david c andrade",
+          "camilo toledo",
+          "karla g schwarz",
+          "katherin v pereyra"
+        ],
+        "sharedTokens": [
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 4
+      }
+    },
+    {
+      "source": "W4200464459",
+      "target": "W3182330858",
+      "kind": "paper-similarity",
+      "score": 0.36093,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "karla g schwarz",
+          "katherin v pereyra",
+          "camilo toledo",
+          "david c andrade"
+        ],
+        "sharedTokens": [
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 5
+      }
+    },
+    {
+      "source": "W4200464459",
+      "target": "W3020059288",
+      "kind": "paper-similarity",
+      "score": 0.3764,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "karla g schwarz",
+          "katherin v pereyra",
+          "camilo toledo",
+          "david c andrade"
+        ],
+        "sharedTokens": [
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 4
+      }
+    },
+    {
+      "source": "W3112846682",
+      "target": "W3020059288",
+      "kind": "paper-similarity",
+      "score": 0.36798,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "hugo s diaz",
+          "david c andrade",
+          "camilo toledo",
+          "karla g schwarz"
+        ],
+        "sharedTokens": [
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 4
+      }
+    },
+    {
+      "source": "W3177414393",
+      "target": "W3020059288",
+      "kind": "paper-similarity",
+      "score": 0.31928,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "heart-failure",
+          "interventions"
+        ],
+        "sharedAuthors": [
+          "hugo s diaz",
+          "david c andrade",
+          "camilo toledo",
+          "katherin v pereyra"
+        ],
+        "sharedTokens": [
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 4
+      }
+    },
+    {
+      "source": "W2981183735",
+      "target": "W2981585473",
+      "kind": "paper-similarity",
+      "score": 0.50871,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "hugo s diaz",
+          "david c andrade",
+          "camilo toledo",
+          "katherin v pereyra"
+        ],
+        "sharedTokens": [
+          "breathing",
+          "volume",
+          "overload",
+          "heart"
+        ],
+        "sharedReferences": 16
+      }
+    },
+    {
+      "source": "W3112846682",
+      "target": "W2981183735",
+      "kind": "paper-similarity",
+      "score": 0.35012,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "hugo s diaz",
+          "david c andrade",
+          "camilo toledo",
+          "karla g schwarz"
+        ],
+        "sharedTokens": [
+          "dysfunction",
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 11
+      }
+    },
+    {
+      "source": "W3182330858",
+      "target": "W2981183735",
+      "kind": "paper-similarity",
+      "score": 0.34468,
+      "weight": 8,
+      "reasons": {
+        "sharedTopics": [
+          "carotid-chemoreflex",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "david c andrade",
+          "camilo toledo",
+          "karla g schwarz",
+          "katherin v pereyra"
+        ],
+        "sharedTokens": [
+          "volume",
+          "overload",
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 6
+      }
+    },
+    {
+      "source": "W2904685632",
+      "target": "W2887735192",
+      "kind": "paper-similarity",
+      "score": 0.24894,
+      "weight": 6,
+      "reasons": {
+        "sharedTopics": [
+          "cell-stress"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3124955723",
+      "target": "W2904685632",
+      "kind": "paper-similarity",
+      "score": 0.17033,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cell-stress"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4389581144",
+      "target": "W2904685632",
+      "kind": "paper-similarity",
+      "score": 0.15433,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cell-stress"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W2942546498",
+      "target": "W2792362299",
+      "kind": "paper-similarity",
+      "score": 0.53389,
+      "weight": 10,
+      "reasons": {
+        "sharedTopics": [
+          "neuroglia",
+          "connexin-purinergic"
+        ],
+        "sharedAuthors": [
+          "valeria c labra",
+          "juan orellana"
+        ],
+        "sharedTokens": [
+          "hemichannels"
+        ],
+        "sharedReferences": 22
+      }
+    },
+    {
+      "source": "W2942546498",
+      "target": "W2887735192",
+      "kind": "paper-similarity",
+      "score": 0.26179,
+      "weight": 6,
+      "reasons": {
+        "sharedTopics": [
+          "connexin-purinergic"
+        ],
+        "sharedAuthors": [
+          "valeria c labra",
+          "juan orellana"
+        ],
+        "sharedTokens": [
+          "connexin"
+        ],
+        "sharedReferences": 20
+      }
+    },
+    {
+      "source": "W4229372041",
+      "target": "W2942546498",
+      "kind": "paper-similarity",
+      "score": 0.23728,
+      "weight": 6,
+      "reasons": {
+        "sharedTopics": [
+          "neuroglia",
+          "connexin-purinergic"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [
+          "astrocytes"
+        ],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4200464459",
+      "target": "W2981585473",
+      "kind": "paper-similarity",
+      "score": 0.38824,
+      "weight": 9,
+      "reasons": {
+        "sharedTopics": [
+          "central-control",
+          "heart-failure"
+        ],
+        "sharedAuthors": [
+          "karla g schwarz",
+          "katherin v pereyra",
+          "camilo toledo",
+          "david c andrade"
+        ],
+        "sharedTokens": [
+          "heart",
+          "failure"
+        ],
+        "sharedReferences": 10
+      }
+    },
+    {
+      "source": "W2887735192",
+      "target": "W2792362299",
+      "kind": "paper-similarity",
+      "score": 0.30084,
+      "weight": 7,
+      "reasons": {
+        "sharedTopics": [
+          "connexin-purinergic"
+        ],
+        "sharedAuthors": [
+          "gonzalo i gomez",
+          "valeria c labra",
+          "cristian a santibanez",
+          "rosario gajardo gomez"
+        ],
+        "sharedTokens": [],
+        "sharedReferences": 19
+      }
+    },
+    {
+      "source": "W4229372041",
+      "target": "W2792362299",
+      "kind": "paper-similarity",
+      "score": 0.22839,
+      "weight": 5,
+      "reasons": {
+        "sharedTopics": [
+          "neuroglia",
+          "connexin-purinergic"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W7117245332",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W7117245332",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W7117067518",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W7117067518",
+      "target": "theme-neuroglia-signalling",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "neuroglia-signalling"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W7117067518",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W7117067518",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W7117712724",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W7117712724",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W7117712724",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4406198269",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4406198269",
+      "target": "theme-neuroglia-signalling",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "neuroglia-signalling"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4406198269",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4406198269",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4405886364",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4405886364",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4414040453",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4414040453",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4389581144",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4389581144",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4388419718",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4388419718",
+      "target": "theme-neuroglia-signalling",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "neuroglia-signalling"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4388419718",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4388419718",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4317651590",
+      "target": "theme-neuroglia-signalling",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "neuroglia-signalling"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4291124933",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4291124933",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4291124933",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4297464444",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4229372041",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4229372041",
+      "target": "theme-neuroglia-signalling",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "neuroglia-signalling"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4229372041",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3112846682",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3112846682",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3112846682",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3177414393",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3177414393",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3177414393",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3124955723",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3124955723",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3124955723",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3127997004",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3127997004",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3127997004",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4200464459",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4200464459",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W4200464459",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3182330858",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3182330858",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3182330858",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3020059288",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W3020059288",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W2981183735",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W2981183735",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W2904685632",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W2942546498",
+      "target": "theme-neuroglia-signalling",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "neuroglia-signalling"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W2981585473",
+      "target": "theme-cardiorespiratory-control",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "cardiorespiratory-control"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W2981585473",
+      "target": "theme-hypoxia-cardiovascular",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "hypoxia-cardiovascular"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W2887735192",
+      "target": "theme-neuroglia-signalling",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "neuroglia-signalling"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W2887735192",
+      "target": "theme-stress-adaptation",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "stress-adaptation"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    },
+    {
+      "source": "W2792362299",
+      "target": "theme-neuroglia-signalling",
+      "kind": "paper-theme",
+      "score": 1,
+      "weight": 4,
+      "reasons": {
+        "sharedTopics": [
+          "neuroglia-signalling"
+        ],
+        "sharedAuthors": [],
+        "sharedTokens": [],
+        "sharedReferences": 0
+      }
+    }
+  ]
+}

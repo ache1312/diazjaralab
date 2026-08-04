@@ -1,0 +1,137 @@
+{
+  "id": "publication-curation",
+  "schemaVersion": 1,
+  "maximumFeatured": 5,
+  "protectedFields": [
+    "title",
+    "authors",
+    "doi",
+    "openAlexId",
+    "scholarUrl",
+    "year",
+    "journal",
+    "edges",
+    "weights",
+    "positions"
+  ],
+  "topics": [
+    {
+      "id": "cardiorespiratory-control",
+      "label": {
+        "es": "Control cardiorrespiratorio y quimiorreflejo",
+        "en": "Cardiorespiratory control and chemoreflex"
+      },
+      "color": "#60b8c3",
+      "locked": true
+    },
+    {
+      "id": "neuroglia-signalling",
+      "label": {
+        "es": "Neuroglía y señalización celular",
+        "en": "Neuroglia and cell signalling"
+      },
+      "color": "#e0a660",
+      "locked": true
+    },
+    {
+      "id": "hypoxia-cardiovascular",
+      "label": {
+        "es": "Hipoxia y enfermedad cardiovascular",
+        "en": "Hypoxia and cardiovascular disease"
+      },
+      "color": "#79a8c8",
+      "locked": true
+    },
+    {
+      "id": "stress-adaptation",
+      "label": {
+        "es": "Estrés celular y adaptación",
+        "en": "Cell stress and adaptation"
+      },
+      "color": "#c48282",
+      "locked": true
+    }
+  ],
+  "overrides": [
+    {
+      "publicationId": "W4406198269",
+      "doi": "10.1152/ajplung.00280.2024",
+      "featured": true,
+      "featuredOrder": 1,
+      "hidden": false,
+      "topicIds": [
+        "cardiorespiratory-control",
+        "neuroglia-signalling",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "note": {
+        "es": "",
+        "en": ""
+      }
+    },
+    {
+      "publicationId": "W4388419718",
+      "doi": "10.1186/s40659-023-00463-0",
+      "featured": true,
+      "featuredOrder": 2,
+      "hidden": false,
+      "topicIds": [
+        "cardiorespiratory-control",
+        "neuroglia-signalling",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "note": {
+        "es": "",
+        "en": ""
+      }
+    },
+    {
+      "publicationId": "W4291124933",
+      "doi": "10.1111/apha.13864",
+      "featured": true,
+      "featuredOrder": 3,
+      "hidden": false,
+      "topicIds": [
+        "cardiorespiratory-control",
+        "hypoxia-cardiovascular",
+        "stress-adaptation"
+      ],
+      "note": {
+        "es": "",
+        "en": ""
+      }
+    },
+    {
+      "publicationId": "W4229372041",
+      "doi": "10.1016/j.ebiom.2022.104044",
+      "featured": true,
+      "featuredOrder": 4,
+      "hidden": false,
+      "topicIds": [
+        "cardiorespiratory-control",
+        "neuroglia-signalling",
+        "hypoxia-cardiovascular"
+      ],
+      "note": {
+        "es": "",
+        "en": ""
+      }
+    },
+    {
+      "publicationId": "W2942546498",
+      "doi": "10.1002/glia.23631",
+      "featured": true,
+      "featuredOrder": 5,
+      "hidden": false,
+      "topicIds": [
+        "neuroglia-signalling"
+      ],
+      "note": {
+        "es": "",
+        "en": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BodyOnlyLayout from '@/layouts/BodyOnlyLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { tinaField } from '@tinacms/astro/tina-field';
+import { getContent, type Locale, type SiteContent } from '@/content-data';
+import { blockAttributes } from '@/lib/cms/layout';
+
+interface Props { locale: Locale; content?: SiteContent; embedded?: boolean }
+const { locale, content: suppliedContent, embedded = false } = Astro.props;
+const content = suppliedContent ?? getContent(locale);
+const Layout = embedded ? BodyOnlyLayout : BaseLayout;
+const copy = content.philosophy;
+const heroBlock = blockAttributes(content, 'philosophy', 'hero', 1);
+const statementBlock = blockAttributes(content, 'philosophy', 'statement', 2);
+const valuesBlock = blockAttributes(content, 'philosophy', 'values', 3);
+const editableField = (source: unknown, field: string) => tinaField(source as Record<string, unknown> | undefined, field) || undefined;
+---
+
+<Layout locale={locale} page="philosophy" title={content.seo.philosophy.title} description={content.seo.philosophy.description} content={content}>
+  <PageHero index="05" eyebrow={copy.eyebrow} title={copy.title} introduction={copy.introduction} source={copy} asideLabel={copy.asideLabel} asideText={copy.asideText} block={heroBlock} />
+
+  <section class="content-section compact" {...statementBlock}>
+    <div class="shell lab-practice-intro">
+      <div data-reveal><h2 data-tina-field={editableField(copy, 'generalCriterionLabel')}>{copy.generalCriterionLabel}</h2><p>{copy.statement}</p></div>
+      <dl data-reveal data-reveal-delay="1">
+        <div><dt>{copy.missionLabel}</dt><dd>{copy.mission}</dd></div>
+        <div><dt>{copy.visionLabel}</dt><dd>{copy.vision}</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="content-section paper-band" {...valuesBlock}>
+    <div class="shell">
+      <div class="section-heading">
+        <div data-reveal><span class="eyebrow">{copy.valuesEyebrow}</span><h2 class="section-title">{copy.valuesTitle}</h2></div>
+        <p class="lead" data-reveal data-reveal-delay="1" data-tina-field={editableField(copy, 'valuesIntroduction')}>{copy.valuesIntroduction}</p>
+      </div>
+      <ol class="practice-register">
+        {copy.values.map((value) => (
+          <li data-reveal><span class="number" aria-hidden="true">{value.number}</span><div><h3>{value.title}</h3><p>{value.description}</p></div></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+</Layout>

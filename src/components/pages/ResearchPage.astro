@@ -1,0 +1,130 @@
+---
+import { Image } from 'astro:assets';
+import { tinaField } from '@tinacms/astro/tina-field';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BodyOnlyLayout from '@/layouts/BodyOnlyLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import { getContent, type Locale, type SiteContent } from '@/content-data';
+import { blockAttributes } from '@/lib/cms/layout';
+import { resolveMediaAsset } from '@/lib/media';
+import { preferredPublicationUrl, publicationCatalog } from '@/lib/publications';
+
+interface Props { locale: Locale; content?: SiteContent; embedded?: boolean }
+const { locale, content: suppliedContent, embedded = false } = Astro.props;
+const content = suppliedContent ?? getContent(locale);
+const Layout = embedded ? BodyOnlyLayout : BaseLayout;
+const copy = content.research;
+const heroBlock = blockAttributes(content, 'research', 'hero', 1);
+const areasBlock = blockAttributes(content, 'research', 'researchAreas', 2);
+const fundingBlock = blockAttributes(content, 'research', 'funding', 3);
+const editableField = (source: unknown, field: string) => tinaField(source as Record<string, unknown> | undefined, field) || undefined;
+const resolveImage = (reference: unknown) => {
+  const asset = resolveMediaAsset(reference, { locale, allowedKinds: ['micrograph', 'figure'] });
+  if (asset.type !== 'image') throw new Error(`El medio «${asset.id}» no es una imagen.`);
+  return asset;
+};
+const registeredImages = new Map<string, ReturnType<typeof resolveImage>>([
+  ['brainstem-circuits', resolveImage(copy.media.brainstemCircuits)],
+  ['respiratory-neurodynamics', resolveImage(copy.media.respiratoryNeurodynamics)],
+  ['disease-neurophysiology', resolveImage(copy.media.diseaseNeurophysiology)],
+]);
+const safeLocalImage = (source: string) => source.startsWith('/') && !source.startsWith('//') && !source.includes('\\');
+const imageFor = (area: (typeof copy.areas)[number]) => {
+  if (area.imageMedia) {
+    const registered = resolveImage(area.imageMedia);
+    return { source: registered.image, alt: area.imageAlt || registered.alt, objectPosition: registered.objectPosition };
+  }
+  const source = area.image?.trim();
+  if (source && safeLocalImage(source)) return { source, alt: area.imageAlt, objectPosition: '50% 50%' };
+  const registered = registeredImages.get(area.id);
+  return registered ? { source: registered.image, alt: area.imageAlt || registered.alt, objectPosition: registered.objectPosition } : null;
+};
+const publicationsByDoi = new Map(
+  publicationCatalog.works
+    .filter((work) => work.doi)
+    .map((work) => [work.doi!.toLocaleLowerCase('en'), work]),
+);
+---
+
+<Layout locale={locale} page="research" title={content.seo.research.title} description={content.seo.research.description} content={content}>
+  <PageHero index="01" eyebrow={copy.eyebrow} title={copy.title} introduction={copy.introduction} source={copy} asideLabel={copy.asideLabel} asideText={copy.asideText} block={heroBlock} />
+
+  <section class="content-section" {...areasBlock}>
+    <div class="shell research-chapters">
+      {copy.areas.map((area) => {
+        const image = imageFor(area);
+        return (
+        <article class:list={['research-chapter', { 'research-chapter--text-only': !image }]} id={area.id}>
+          {image && <figure class="research-chapter-media" data-reveal>
+            {typeof image.source === 'string'
+              ? <img src={image.source} alt={image.alt} loading="lazy" decoding="async" style={`object-position: ${image.objectPosition}`} />
+              : <Image src={image.source} alt={image.alt} widths={[360, 480, 760, 900]} sizes="(max-width: 760px) calc(100vw - 36px), min(42vw, 470px)" format="webp" quality={74} loading="lazy" decoding="async" style={`object-position: ${image.objectPosition}`} />}
+            {area.figureCaption && <figcaption>{area.figureCaption}</figcaption>}
+          </figure>}
+          <div class="research-chapter-copy" data-reveal data-reveal-delay="1">
+            <p class="research-line-status"><span aria-hidden="true"></span>{area.status}</p>
+            <h2>{area.title}</h2>
+            <section class="evidence-statement" aria-labelledby={`${area.id}-question`}>
+              <h3 id={`${area.id}-question`} data-tina-field={editableField(copy, 'questionLabel')}>{copy.questionLabel}</h3>
+              <p>{area.question}</p>
+            </section>
+            <section class="evidence-statement" aria-labelledby={`${area.id}-hypothesis`}>
+              <h3 id={`${area.id}-hypothesis`} data-tina-field={editableField(copy, 'hypothesisLabel')}>{copy.hypothesisLabel}</h3>
+              <p>{area.hypothesis}</p>
+            </section>
+            <dl class="research-spec">
+              <div><dt data-tina-field={editableField(copy, 'systemsLabel')}>{copy.systemsLabel}</dt><dd>{area.systems.join(' · ')}</dd></div>
+              <div><dt data-tina-field={editableField(copy, 'measurementsLabel')}>{copy.measurementsLabel}</dt><dd>{area.measurements.join(' · ')}</dd></div>
+            </dl>
+            <div class="research-context">
+              <h3 data-tina-field={editableField(copy, 'contextLabel')}>{copy.contextLabel}</h3>
+              <p>{area.body}</p>
+            </div>
+            <div class="related-evidence">
+              <h3 data-tina-field={editableField(copy, 'relatedEvidenceLabel')}>{copy.relatedEvidenceLabel}</h3>
+              <ol>
+                {area.relatedDois.map((doi) => {
+                  const publication = publicationsByDoi.get(doi.toLocaleLowerCase('en'));
+                  return publication && (
+                    <li>
+                      <a href={preferredPublicationUrl(publication)} target="_blank" rel="noreferrer">
+                        <span>{publication.display_year_recommended} · {publication.journal_or_source}</span>
+                        {publication.title}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
+          </div>
+        </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="content-section ink-band" id="funding" {...fundingBlock}>
+    <div class="shell">
+      <div class="section-heading">
+        <div data-reveal><span class="eyebrow">{copy.fundingEyebrow}</span><h2 class="section-title">{copy.fundingTitle}</h2></div>
+        <p class="lead" data-reveal data-reveal-delay="1">{copy.fundingIntroduction}</p>
+      </div>
+      <div class="grants-list">
+        {copy.grants.map((grant) => (
+          <article class="grant-card" data-reveal>
+            <div class="agency">{grant.agency}<br />{grant.number}</div>
+            <div><h3>{grant.title}</h3><blockquote lang={grant.officialLang}>{grant.officialTitle}</blockquote></div>
+            <div class="grant-meta">{grant.principalInvestigatorLabel}<br />{grant.principalInvestigator}<br /><br />{grant.endDateLabel}<br /><time datetime={grant.endDateIso}>{grant.endDate}</time></div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .research-chapter--text-only {
+    grid-template-columns: minmax(0, 780px);
+    justify-content: end;
+  }
+</style>

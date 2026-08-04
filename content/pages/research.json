@@ -1,0 +1,91 @@
+{
+  "_template": "research",
+  "pageKey": "research",
+  "schemaVersion": 1,
+  "state": "published",
+  "routesLocked": true,
+  "route": {
+    "es": "/investigacion/",
+    "en": "/en/research/"
+  },
+  "seo": {
+    "es": {
+      "title": "Investigación | Díaz-Jara Lab",
+      "description": "Líneas de investigación en circuitos respiratorios, neurodinámica y neurofisiología de la enfermedad."
+    },
+    "en": {
+      "title": "Research | Díaz-Jara Lab",
+      "description": "Research areas in respiratory circuits, neurodynamics, and the neurophysiology of disease."
+    }
+  },
+  "blocks": [
+    {
+      "id": "research-hero",
+      "type": "hero",
+      "enabled": true,
+      "locked": true,
+      "order": 1,
+      "variant": "editorial"
+    },
+    {
+      "id": "research-areas",
+      "type": "researchAreas",
+      "enabled": true,
+      "locked": true,
+      "order": 2,
+      "variant": "chapters"
+    },
+    {
+      "id": "research-funding",
+      "type": "funding",
+      "enabled": true,
+      "locked": false,
+      "order": 3,
+      "variant": "register"
+    }
+  ],
+  "content": {
+    "es": {
+      "eyebrow": "Investigación",
+      "title": "Circuitos respiratorios, astrocitos y enfermedad",
+      "introduction": "Investigamos cómo los circuitos respiratorios del tronco encefálico interactúan con las redes cerebrales que sostienen la fisiología, el comportamiento y la enfermedad. Organizamos nuestro trabajo en tres preguntas complementarias, que van desde el mecanismo celular hasta su impacto en la función cerebral.",
+      "media": {
+        "brainstemCircuits": "content/media/science-rvlm-astrocytes.json",
+        "respiratoryNeurodynamics": "content/media/science-nts-gfap.json",
+        "diseaseNeurophysiology": "content/media/science-cih-iba1.json"
+      },
+      "asideLabel": "Escala de trabajo",
+      "asideText": "Mecanismos celulares → circuitos → fisiología y cognición.",
+      "questionLabel": "Pregunta",
+      "hypothesisLabel": "Hipótesis de trabajo",
+      "systemsLabel": "Sistemas",
+      "measurementsLabel": "Mediciones",
+      "contextLabel": "Contexto y alcance",
+      "relatedEvidenceLabel": "Antecedentes relacionados",
+      "fundingEyebrow": "Financiamiento",
+      "fundingTitle": "Proyectos vigentes",
+      "fundingIntroduction": "Estas iniciativas financian el desarrollo del laboratorio y estudios sobre control cardiorrespiratorio, astrocitos y enfermedad."
+    },
+    "en": {
+      "eyebrow": "Research",
+      "title": "Respiratory circuits, astrocytes, and disease",
+      "introduction": "We investigate how brainstem respiratory circuits interact with the brain networks that sustain physiology, behavior, and disease. Our work is organized around three complementary questions, moving from cellular mechanisms to their impact on brain function.",
+      "media": {
+        "brainstemCircuits": "content/media/science-rvlm-astrocytes.json",
+        "respiratoryNeurodynamics": "content/media/science-nts-gfap.json",
+        "diseaseNeurophysiology": "content/media/science-cih-iba1.json"
+      },
+      "asideLabel": "Scale of inquiry",
+      "asideText": "Cellular mechanisms → circuits → physiology and cognition.",
+      "questionLabel": "Question",
+      "hypothesisLabel": "Working hypothesis",
+      "systemsLabel": "Systems",
+      "measurementsLabel": "Measurements",
+      "contextLabel": "Context and scope",
+      "relatedEvidenceLabel": "Related evidence",
+      "fundingEyebrow": "Funding",
+      "fundingTitle": "Current projects",
+      "fundingIntroduction": "These initiatives support the development of the laboratory and studies of cardiorespiratory control, astrocytes, and disease."
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "learning-from-error",
+  "order": 7,
+  "translations": {
+    "es": {
+      "number": "07",
+      "title": "Aprender del error",
+      "description": "Los errores se registran, se analiza su causa y la corrección se incorpora al protocolo o al flujo de análisis."
+    },
+    "en": {
+      "number": "07",
+      "title": "Learning from mistakes",
+      "description": "Errors are recorded, their cause is examined, and corrections are incorporated into the protocol or analysis workflow."
+    }
+  }
+}
