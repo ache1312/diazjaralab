@@ -20,7 +20,7 @@ const settingsSource = content._tina?.settings as Record<string, any> | undefine
 const navigationSource = settingsSource?.navigation as Record<string, any> | undefined;
 const navigationSourceFor = (key: PageKey) => navigationSource?.items?.find((item: Record<string, unknown>) => item?.page === key);
 const localizedField = (source: unknown) => editableField(source, locale);
-const logoSrc = sanitizeImageSrc(content.brand.primaryLogo ?? '/brand/lab-mark-original-optimized.webp') || '/brand/lab-mark-original-optimized.webp';
+const logoSrc = sanitizeImageSrc(content.brand.primaryLogo ?? '/brand/lab-mark-original-transparent-optimized.webp') || '/brand/lab-mark-original-transparent-optimized.webp';
 const otherLocale = oppositeLocale(locale);
 const primary: PageKey[] = ['research', 'techniques', 'publications', 'team'];
 const secondary: PageKey[] = ['philosophy', 'outreach'];
@@ -30,7 +30,8 @@ const secondary: PageKey[] = ['philosophy', 'outreach'];
   <div class="header-inner shell">
     <a class="brand-link" href={pathFor(locale, 'home')} aria-label={`${content.brand.name} · ${content.common.backToHome}`}>
       <span class="brand-mark" aria-hidden="true">
-        <img src={logoSrc} width="384" height="345" alt="" data-tina-field={editableField(settingsSource?.brand, 'primaryLogo')} />
+        <img class="brand-mark-color" src={logoSrc} width="384" height="345" alt="" data-tina-field={editableField(settingsSource?.brand, 'primaryLogo')} />
+        <img class="brand-mark-contrast" src={logoSrc} width="384" height="345" alt="" />
       </span>
       <span class="brand-name">
         <strong data-tina-field={localizedField(settingsSource?.brand?.name)}>{content.brand.name}</strong>
@@ -81,28 +82,46 @@ const secondary: PageKey[] = ['philosophy', 'outreach'];
 <style>
   .brand-link {
     display: flex;
-    width: 228px;
+    width: auto;
     align-items: center;
-    gap: 10px;
+    gap: 14px;
   }
 
   .brand-mark {
+    position: relative;
     display: block;
-    width: 48px;
-    height: 43px;
-    flex: 0 0 48px;
-    overflow: hidden;
-    border-radius: 5px;
-    background: oklch(98.8% 0.004 190);
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--line-strong) 72%, transparent);
+    width: 72px;
+    height: 65px;
+    flex: 0 0 72px;
   }
 
   .brand-link .brand-mark :global(img) {
+    position: absolute;
+    inset: 0;
     display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: inherit;
+    transition: opacity 180ms cubic-bezier(.25, 1, .5, 1);
+  }
+
+  .brand-mark-color { opacity: 1; }
+  .brand-mark-contrast {
+    opacity: 0;
+    filter: brightness(0) invert(1);
+  }
+
+  :global(:root[data-theme='dark']) .brand-mark-color { opacity: 0; }
+  :global(:root[data-theme='dark']) .brand-mark-contrast { opacity: .96; }
+
+  .site-header.is-home .brand-mark-color { opacity: var(--header-transition-progress); }
+  .site-header.is-home .brand-mark-contrast { opacity: calc(1 - var(--header-transition-progress)); }
+
+  :global(:root[data-theme='dark']) .site-header.is-home .brand-mark-color { opacity: 0; }
+  :global(:root[data-theme='dark']) .site-header.is-home .brand-mark-contrast { opacity: .96; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .brand-link .brand-mark :global(img) { transition: none; }
   }
 
   .brand-name {
@@ -114,7 +133,7 @@ const secondary: PageKey[] = ['philosophy', 'outreach'];
 
   .brand-name strong {
     display: block;
-    font-size: 0.98rem;
+    font-size: 1.12rem;
     font-weight: 720;
     letter-spacing: -0.015em;
     white-space: nowrap;
@@ -122,34 +141,41 @@ const secondary: PageKey[] = ['philosophy', 'outreach'];
 
   .brand-name small {
     display: block;
-    margin-top: 4px;
+    margin-top: 3px;
     font-family: var(--font-body);
-    font-size: 0.51rem;
-    font-weight: 600;
-    letter-spacing: 0.07em;
-    line-height: 1.35;
+    font-size: 0.63rem;
+    font-weight: 650;
+    letter-spacing: 0.045em;
+    line-height: 1.2;
     text-transform: uppercase;
+    white-space: nowrap;
   }
 
   @media (max-width: 1180px) {
-    .brand-link { width: 203px; }
-    .brand-mark { width: 44px; height: 40px; flex-basis: 44px; }
-    .brand-name strong { font-size: 0.91rem; }
-    .brand-name small { font-size: 0.47rem; }
+    .brand-link { gap: 13px; }
+    .brand-mark { width: 64px; height: 58px; flex-basis: 64px; }
+    .brand-name strong { font-size: 1.08rem; }
+    .brand-name small { font-size: 0.61rem; }
   }
 
-  @media (max-width: 480px) {
-    .brand-link { width: 174px; gap: 8px; }
-    .brand-mark { width: 42px; height: 38px; flex-basis: 42px; }
-    .brand-name strong { font-size: 0.88rem; }
-    .brand-name small { font-size: 0.46rem; letter-spacing: 0.045em; }
+  @media (max-width: 760px) {
+    .brand-link { gap: 12px; }
+    .brand-mark { width: 58px; height: 52px; flex-basis: 58px; }
+    .brand-name strong { font-size: 1.02rem; }
+    .brand-name small { font-size: 0.56rem; }
   }
 
-  @media (max-width: 420px) {
-    .brand-link { width: 136px; gap: 7px; }
-    .brand-mark { width: 38px; height: 35px; flex-basis: 38px; }
-    .brand-name strong { font-size: 0.84rem; }
+  @media (max-width: 560px) {
+    .brand-link { gap: 10px; }
+    .brand-mark { width: 52px; height: 47px; flex-basis: 52px; }
+    .brand-name strong { font-size: 0.96rem; }
     .brand-name small { display: none; }
+  }
+
+  @media (max-width: 360px) {
+    .brand-link { gap: 8px; }
+    .brand-mark { width: 40px; height: 36px; flex-basis: 40px; }
+    .brand-name strong { font-size: 0.85rem; }
   }
 </style>
 

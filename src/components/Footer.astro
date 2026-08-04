@@ -12,7 +12,7 @@ const content = suppliedContent ?? getContent(locale);
 const editableField = (source: unknown, field: string) => tinaField(source as Record<string, unknown> | undefined, field) || undefined;
 const settingsSource = content._tina?.settings as Record<string, any> | undefined;
 const localizedField = (source: unknown) => editableField(source, locale);
-const logoSrc = sanitizeImageSrc(content.brand.primaryLogo ?? '/brand/lab-mark-original-optimized.webp') || '/brand/lab-mark-original-optimized.webp';
+const logoSrc = sanitizeImageSrc(content.brand.primaryLogo ?? '/brand/lab-mark-original-transparent-optimized.webp') || '/brand/lab-mark-original-transparent-optimized.webp';
 ---
 
 <footer class="site-footer">
@@ -46,8 +46,7 @@ const logoSrc = sanitizeImageSrc(content.brand.primaryLogo ?? '/brand/lab-mark-o
     height: 57px;
     flex: 0 0 64px;
     object-fit: contain;
-    border-radius: 7px;
-    filter: none;
-    opacity: 1;
+    filter: brightness(0) invert(1);
+    opacity: .94;
   }
 </style>

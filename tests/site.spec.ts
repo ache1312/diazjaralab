@@ -31,6 +31,42 @@ test('language switch preserves the equivalent page', async ({ page }) => {
   await expect(page).toHaveURL(/\/en\/research\/$/);
 });
 
+test('brand lockup keeps the scientific name on one line without crowding mobile controls', async ({ page }) => {
+  for (const width of [1440, 760]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto('/');
+    const scientificName = page.locator('.brand-name small');
+    await expect(scientificName).toBeVisible();
+    const geometry = await scientificName.evaluate((element) => {
+      const styles = getComputedStyle(element);
+      return {
+        height: element.getBoundingClientRect().height,
+        lineHeight: Number.parseFloat(styles.lineHeight),
+        whiteSpace: styles.whiteSpace,
+      };
+    });
+    expect(geometry.whiteSpace).toBe('nowrap');
+    expect(geometry.height).toBeLessThanOrEqual(geometry.lineHeight + 1);
+  }
+
+  await page.setViewportSize({ width: 375, height: 812 });
+  await page.goto('/');
+  await expect(page.locator('.brand-name small')).toBeHidden();
+  await expect(page.locator('.brand-mark-color')).toHaveAttribute('src', '/brand/lab-mark-original-transparent-optimized.webp');
+  const headerGeometry = await page.locator('.header-inner').evaluate((header) => {
+    const brand = header.querySelector('.brand-link')?.getBoundingClientRect();
+    const actions = header.querySelector('.mobile-actions')?.getBoundingClientRect();
+    return {
+      brandRight: brand?.right ?? 0,
+      actionsLeft: actions?.left ?? 0,
+      scrollWidth: document.documentElement.scrollWidth,
+      clientWidth: document.documentElement.clientWidth,
+    };
+  });
+  expect(headerGeometry.brandRight).toBeLessThanOrEqual(headerGeometry.actionsLeft);
+  expect(headerGeometry.scrollWidth).toBeLessThanOrEqual(headerGeometry.clientWidth + 1);
+});
+
 test('theme follows the system, exposes its state, and persists across locales', async ({ page }) => {
   await page.emulateMedia({ colorScheme: 'dark', reducedMotion: 'reduce' });
   await page.goto('/');

@@ -315,7 +315,6 @@ p:last-child { margin-bottom: 0; }
 }
 .header-inner { min-height: var(--header-height); display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .brand-link { flex: 0 0 auto; text-decoration: none; }
-.brand-link img { width: 228px; height: auto; }
 .desktop-nav { display: flex; align-items: center; gap: clamp(15px, 1.7vw, 27px); font-size: 0.88rem; font-weight: 590; }
 .desktop-nav > a:not(.nav-contact, .lang-link), .nav-more > summary {
   position: relative;
@@ -695,7 +694,6 @@ p:last-child { margin-bottom: 0; }
   :root { --header-height: 75px; }
   .desktop-nav { display: none; }
   .mobile-actions { display: flex; }
-  .brand-link img { width: 203px; }
   .home-hero { min-height: max(720px, 100svh); }
   .home-hero-copy { min-height: max(720px, 100svh); }
   .hero-science { min-height: 100%; }
@@ -713,7 +711,6 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 760px) {
   :root { --shell: min(100% - 36px, 640px); }
   body { font-size: 16.5px; }
-  .brand-link img { width: 174px; }
   .header-inner { gap: 8px; }
   .mobile-actions { gap: 4px; }
   .lang-link, .menu-toggle { width: 44px; height: 44px; }
